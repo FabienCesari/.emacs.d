@@ -1,3 +1,9 @@
 [submodule "muse"]
 	path = muse
 	url = git://repo.or.cz/muse-el.git
+[submodule "emacs-rails"]
+	path = emacs-rails
+	url = https://github.com/dima-exe/emacs-rails-reloaded
+[submodule "rinari"]
+	path = rinari
+	url = https://github.com/eschulte/rinari
