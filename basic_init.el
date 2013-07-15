@@ -80,13 +80,7 @@
 ;;;; (require 'windmove)
 (windmove-default-keybindings)
 (setq windmove-wrap-around t)
-
-; swap windows with control-shift-arrows
 (require 'buffer-move)
-(global-set-key (kbd "<C-S-up>")     'buf-move-up)
-(global-set-key (kbd "<C-S-donw>")   'buf-move-down)
-(global-set-key (kbd "<C-S-left>")   'buf-move-left)
-(global-set-key (kbd "<C-S-right>")  'buf-move-right)
 
 (when (eq system-type 'darwin)
 					; forget Command-Q to quit, use M-Q to fill-region

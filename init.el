@@ -11,4 +11,4 @@
   (load-file (expand-file-name file user-init-dir)))
 
 (load-user-file "basic_init.el")
-;;(load-user-file ".el")
+(load-user-file "key_binding.el")

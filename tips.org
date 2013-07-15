@@ -10,7 +10,32 @@
 
 *** TODO sync org mode and google calendar. [[http://orgmode.org/worg/org-tutorials/org-google-sync.html]]
    Open a link in org mode [[C-c C-o]]
-     
+#+begin_quote
+
+   shortcuts:    
+   type: "<" + one of the following + "<TAB>" 
+
+   s 	#+BEGIN_SRC ... #+END_SRC
+   e 	#+BEGIN_EXAMPLE ... #+END_EXAMPLE
+   q 	#+BEGIN_QUOTE ... #+END_QUOTE
+   v 	#+BEGIN_VERSE ... #+END_VERSE
+   c 	#+BEGIN_CENTER ... #+END_CENTER
+   l 	#+BEGIN_LaTeX ... #+END_LaTeX
+   L 	#+LaTeX:
+   h 	#+BEGIN_HTML ... #+END_HTML
+   H 	#+HTML:
+   a 	#+BEGIN_ASCII ... #+END_ASCII
+   A 	#+ASCII:
+   i 	#+INDEX: line
+   I 	#+INCLUDE: line 
+
+#+end_quote
+*** src Blocks
+
+#+begin_src ruby
+,require 'date'
+This File was last evaluated on {Date.today}"    
+#+end_src
 
 ** Emacs
    create a new file C-x b file.name RET and then write the file. C-x C-w file.name RET

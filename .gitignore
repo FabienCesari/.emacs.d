@@ -1,3 +1,5 @@
 #Git Ignore FIle
 auto-save-list
 .DS_Store
+*~
+ac-comphist.dat
