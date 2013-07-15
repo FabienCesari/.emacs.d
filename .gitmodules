@@ -1,12 +1,12 @@
 [submodule "muse"]
-	path = muse
+	path = external/muse
 	url = git://repo.or.cz/muse-el.git
 [submodule "emacs-rails"]
-	path = emacs-rails
+	path = external/emacs-rails
 	url = https://github.com/dima-exe/emacs-rails-reloaded
 [submodule "rinari"]
-	path = rinari
+	path = external/rinari
 	url = https://github.com/eschulte/rinari
 [submodule "org-mode"]
-	path = org-mode
+	path = external/org-mode
 	url = git://orgmode.org/org-mode.git
