@@ -5,6 +5,9 @@
 (add-to-list 'load-path "/opt/local/share/emacs/site-lisp")
 (add-to-list 'load-path "~/.emacs.d/plugins/autocomplete/")
 (add-to-list 'load-path "~/.emacs.d/ruby-mode")
+(add-to-list 'load-path "/usr/share/emacs/site-lisp/cedet-common/")
+(add-to-list 'load-path "/usr/share/emacs/site-lisp/cedet-contrib/")
+(add-to-list 'load-path "/usr/share/emacs/site-lisp/elib/")
 
 (setq mac-option-modifier 'none)
 (setq mac-command-modifier 'meta)
@@ -103,13 +106,6 @@
 (require 'tramp)
 (setq tramp-default-method "ftp")
 
-(require 'org-install)
-(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
-(define-key global-map "\C-cl" 'org-store-link)
-(define-key global-map "\C-ca" 'org-agenda)
-(setq org-log-done t)
-
-
 ;;; This is for GNU Emacs 22
     (defun terminal-init-screen ()
       "Terminal initialization function for screen."
@@ -120,12 +116,8 @@
 
 (require 'git)
 
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/cedet-common/")
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/cedet-contrib/")
 ;;for jde
 (require 'cedet)
-
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/elib/")
 
 (require 'muse-mode)     ; load authoring mode
 

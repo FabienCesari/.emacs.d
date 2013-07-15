@@ -12,3 +12,4 @@
 
 (load-user-file "basic_init.el")
 (load-user-file "key_binding.el")
+(load-user-file "load_org.el")
