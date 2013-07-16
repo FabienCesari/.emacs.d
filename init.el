@@ -1,4 +1,20 @@
-;; init.el --  Fabien Cesari.
+;; init.el --  Fabien Cesari configuration file.
+
+;; Turn off mouse interface early in startup to avoid momentary display
+;;Only usefull on Linux -- Maximize the screen space.
+
+;(when (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+;(when (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+;(when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+
+;; No splash screen 
+(setq inhibit-startup-screen t)
+
+;;ELPA -- package.el
+(when
+    (load
+     (expand-file-name "~/.emacs.d/external/package.el"))
+  (package-initialize))
 
 ;; System load
 (add-to-list 'load-path "/opt/local/share/emacs/site-lisp")
@@ -38,10 +54,10 @@
 (add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
 
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(gdb-max-frames 100)
  '(global-subword-mode t)
  '(ido-enable-flex-matching t)
@@ -49,19 +65,17 @@
  '(ido-mode (quote both) nil (ido))
  '(tool-bar-mode t))
 (custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  )
 
-
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/external/autocomplete/ac-dict")
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/external/autocomplete//ac-dict")
 (ac-config-default)
 
 (require 'psvn)
-
 
 ;;Matlab-emacs config
 ;; add repo to the pah.
@@ -95,7 +109,6 @@
   (setq mac-pass-command-to-system nil) )
 
 (setenv "PATH" "/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Applications/AudioSculpt 3.0.23i/Kernels:/opt/local/bin:/opt/local/sbin:/usr/local/share/python:/Users/cesari/include:/Users/cesari/lib:/Users/cesari/bin:/Applications/MATLAB_R2010b.app/bin")
-
 
 ;; global settings
 (global-set-key (kbd "C-+") 'hs-toggle-hiding)
@@ -141,16 +154,12 @@
 (add-hook 'ruby-mode-hook 'ruby-electric-mode)
 
 (load "~/.emacs.d/external/nxhtml/autostart.el")
-;;(require ' html-mode)
+(require ' html-mode)
 
 
 ;;Emacs lisp key binding. Loaded at startup
-
-
 ; swap windows with control-shift-arrows
-
 (global-set-key (kbd "<C-S-up>")     'buf-move-up)
 (global-set-key (kbd "<C-S-donw>")   'buf-move-down)
 (global-set-key (kbd "<C-S-left>")   'buf-move-left)
 (global-set-key (kbd "<C-S-right>")  'buf-move-right)
- 
