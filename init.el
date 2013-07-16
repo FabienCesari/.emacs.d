@@ -1,6 +1,5 @@
 ;; init.el --  Fabien Cesari.
 
-
 ;; System load
 (add-to-list 'load-path "/opt/local/share/emacs/site-lisp")
 (add-to-list 'load-path "/usr/share/emacs/site-lisp/elib/")
