@@ -1,4 +1,0 @@
-emacsConfig
-===========
-
-My emacs configuration.
