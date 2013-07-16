@@ -1,16 +1,19 @@
-;; init.el -- 
+;; init.el --  Fabien Cesari.
 
 
-(add-to-list 'load-path "~/.emacs.d/jdee-2.4.1/lisp")
-(add-to-list 'load-path "~/.emacs.d/plugins/")
-(add-to-list 'load-path "~/.emacs.d/git/")
-(add-to-list 'load-path "~/.emacs.d/muse/lisp")
+;; System load
 (add-to-list 'load-path "/opt/local/share/emacs/site-lisp")
-(add-to-list 'load-path "~/.emacs.d/plugins/autocomplete/")
-(add-to-list 'load-path "~/.emacs.d/ruby-mode")
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/cedet-common/")
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/cedet-contrib/")
 (add-to-list 'load-path "/usr/share/emacs/site-lisp/elib/")
+
+;;User Load
+(add-to-list 'load-path "~/.emacs.d/external/jdee-2.4.1/lisp")
+(add-to-list 'load-path "~/.emacs.d/external/")
+(add-to-list 'load-path "~/.emacs.d/external/git/")
+(add-to-list 'load-path "~/.emacs.d/external/muse/lisp")
+(add-to-list 'load-path "~/.emacs.d/external/autocomplete/")
+(add-to-list 'load-path "~/.emacs.d/external/ruby-mode")
+(add-to-list 'load-path "~/emacs/external/cedet-1.1/common/")
+(add-to-list 'load-path "~/emacs/external/cedet-1.1/contrib/")
 
 (setq mac-option-modifier 'none)
 (setq mac-command-modifier 'meta)
@@ -55,7 +58,7 @@
 
 
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/plugins/autocomplete//ac-dict")
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/external/autocomplete//ac-dict")
 (ac-config-default)
 
 (require 'psvn)
@@ -63,7 +66,7 @@
 
 ;;Matlab-emacs config
 ;; add repo to the pah.
-(setq load-path (append load-path(list "~/.emacs.d/plugins/matlab-emacs")))
+(setq load-path (append load-path(list "~/.emacs.d/external/matlab-emacs")))
 
 (autoload 'matlab-mode "matlab" "Enter MATLAB Mode." t)
 (setq auto-mode-alist (cons '("\\.m\\'" . matlab-mode) auto-mode-alist))
@@ -138,7 +141,7 @@
 
 (add-hook 'ruby-mode-hook 'ruby-electric-mode)
 
-(load "~/.emacs.d/nxhtml/autostart.el")
+(load "~/.emacs.d/external/nxhtml/autostart.el")
 ;;(require ' html-mode)
 
 
