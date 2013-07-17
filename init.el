@@ -71,9 +71,10 @@
  ;; If there is more than one, they won't work right.
  )
 
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/external/autocomplete/ac-dict")
-(require 'auto-complete-config)
-(ac-config-default)
+
+;;(add-to-list 'ac-dictionary-directories "~/.emacs.d/external/autocomplete/ac-dict")
+;;(require 'auto-complete-config)
+;;(ac-config-default)
 
 (require 'psvn)
 
@@ -154,7 +155,7 @@
 (add-hook 'ruby-mode-hook 'ruby-electric-mode)
 
 (load "~/.emacs.d/external/nxhtml/autostart.el")
-(require ' html-mode)
+;;(require ' html-mode)
 
 
 ;;Emacs lisp key binding. Loaded at startup
@@ -163,3 +164,10 @@
 (global-set-key (kbd "<C-S-donw>")   'buf-move-down)
 (global-set-key (kbd "<C-S-left>")   'buf-move-left)
 (global-set-key (kbd "<C-S-right>")  'buf-move-right)
+
+
+;;Autocomplete
+(add-to-list 'load-path "~/.emacs.d/external/autocomplete/")
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/external/autocomplete//ac-dict")
+(ac-config-default)
