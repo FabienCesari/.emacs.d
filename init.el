@@ -1,11 +1,7 @@
 ;; init.el --  Fabien Cesari configuration file.
 
-;; Turn off mouse interface early in startup to avoid momentary display
-;;Only usefull on Linux -- Maximize the screen space.
-
-;(when (fboundp 'menu-bar-mode) (menu-bar-mode -1))
-;(when (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-;(when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+(setq user-full-name "Fabien Cesari"
+      user-mail-address "fabien.cesari@gmail.com")
 
 ;; No splash screen 
 (setq inhibit-startup-screen t)
@@ -27,8 +23,31 @@
 (add-to-list 'load-path "~/.emacs.d/external/muse/lisp")
 (add-to-list 'load-path "~/.emacs.d/external/autocomplete/")
 (add-to-list 'load-path "~/.emacs.d/external/ruby-mode")
-(add-to-list 'load-path "~/emacs/external/cedet-1.1/common/")
-(add-to-list 'load-path "~/emacs/external/cedet-1.1/contrib/")
+(add-to-list 'load-path "~/.emacs/external/cedet-1.1/common/")
+(add-to-list 'load-path "~/.emacs/external/cedet-1.1/contrib/")
+(add-to-list 'load-path "~/.emacs.d/external/autocomplete/")
+(add-to-list 'load-path "~/.emacs.d/external/org-mode/lisp")
+(add-to-list 'load-path "~/.emacs.d/external/org-mode/contrib/lisp" t)
+(require 'cl)
+
+;;Org Babel Setup.
+(setq org-babel-load-languages '((emacs-lisp . t )))
+(setq org-confirm-babel-evaluate nil)
+(require 'org-install)
+(require 'org)
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((sh         . t)
+   (emacs-lisp . t)
+   (lisp       . t)
+   (gnuplot    . t)
+   (R          . t)
+   (dot        . t)
+   (python     . t)))
+(setq org-confirm-babel-evaluate nil)
+
+;; load neatly organized org file!
+;;(org-babel-load-file "~/.emacs.d/emacs-config.org")
 
 (setq mac-option-modifier 'none)
 (setq mac-command-modifier 'meta)
@@ -36,6 +55,7 @@
 (load "tempo")
 (load "doxymacs")
 (load "xml-parse")
+
 (require 'doxymacs)
 (add-hook 'c-mode-common-hook'doxymacs-mode)
 (defun my-c-font-lock-doxy-html (limit)
@@ -157,7 +177,6 @@
 (load "~/.emacs.d/external/nxhtml/autostart.el")
 ;;(require ' html-mode)
 
-
 ;;Emacs lisp key binding. Loaded at startup
 ; swap windows with control-shift-arrows
 (global-set-key (kbd "<C-S-up>")     'buf-move-up)
@@ -165,9 +184,8 @@
 (global-set-key (kbd "<C-S-left>")   'buf-move-left)
 (global-set-key (kbd "<C-S-right>")  'buf-move-right)
 
-
 ;;Autocomplete
-(add-to-list 'load-path "~/.emacs.d/external/autocomplete/")
+
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/external/autocomplete//ac-dict")
 (ac-config-default)

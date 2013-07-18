@@ -1,0 +1,9 @@
+* Load local file
+  Loads settings stored in init.local to load different settings for different machines
+  
+#+BEGIN_SRC emacs-lisp
+;;load local settings if file exist
+(let((local-settings "~/.emacs.d/init.local"))
+(if(file-exists-p local-settings)
+(load-file local-settings))
+#+END_SRC
