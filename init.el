@@ -1,9 +1,6 @@
 ;; init.el --  Fabien Cesari configuration file.
-;(setq user-full-name "Fabien Cesari"
- ;     user-mail-address "fabien.cesari@gmail.com")
+;; Load the org mode configuaration file to generate the actual emacs-lisp file.
 
-;; No splash screen 
-;;(setq inhibit-startup-screen t)
 ;;Org mode de-activate Shift + arrow keybinding
 (setq org-replace-disputed-keys t)
 
