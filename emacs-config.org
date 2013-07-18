@@ -20,6 +20,7 @@
 #+END_SRC
 
 ** User Load
+
 #+BEGIN_SRC emacs-lisp
 (add-to-list 'load-path "~/.emacs.d/external/jdee-2.4.1/lisp")
 (add-to-list 'load-path "~/.emacs.d/external/")
@@ -30,7 +31,8 @@
 (add-to-list 'load-path "~/.emacs/external/cedet-1.1/common/")
 (add-to-list 'load-path "~/.emacs/external/cedet-1.1/contrib/")
 (add-to-list 'load-path "~/.emacs.d/external/autocomplete/")
-
+(add-to-list 'load-path "~/.emacs.d/external/nxhtml/util")
+(add-to-list 'load-path "~/.emacs.d/external//rhtml")
 #+END_SRC
    
 ** Tempo mode: provides a simple way to define powerful templates, or macros
@@ -119,8 +121,8 @@
 #+BEGIN_SRC emacs-lisp
 (setenv "PATH" "/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Applications/AudioSculpt 3.0.23i/Kernels:/opt/local/bin:/opt/local/sbin:/usr/local/share/python:/Users/cesari/include:/Users/cesari/lib:/Users/cesari/bin:/Applications/MATLAB_R2010b.app/bin")
 #+END_SRC
-
-
+   
+   
 * External plugins    
 ** ELPA -- package.el
 #+BEGIN_SRC emacs-lisp
@@ -129,7 +131,7 @@
      (expand-file-name "~/.emacs.d/external/package.el"))
   (package-initialize))
 #+END_SRC
-      
+   
 ** Doxymacs: Documentation shortcuts:
    C-c d ? will look up documentation for the symbol under the point.
    C-c d r will rescan your Doxygen tags file.
@@ -191,38 +193,32 @@
 ** Emacs muse
 #+BEGIN_SRC emacs-lisp
 (require 'muse-mode)     ; load authoring mode
-
 (require 'muse-html)     ; load publishing styles I use
 (require 'muse-latex)
 (require 'muse-texinfo)
 (require 'muse-docbook)
-
 (require 'muse-project)  ; publish files in projects
 #+END_SRC
 
-** Ruby mode
+** nxhtml 
 #+BEGIN_SRC emacs-lisp
-(require 'ruby-mode)
-(require 'ruby-style)
-(require 'ruby-electric)
-
-(add-hook 'ruby-mode-hook 'ruby-electric-mode)
-#+END_SRC
-   
-** nxhtml (not activated)
-#+BEGIN_SRC emacs-lisp
-;(load "~/.emacs.d/external/nxhtml/autostart.el")
-;;(require ' html-mode)
+(load "~/.emacs.d/external/nxhtml/autostart.el")
+(setq
+      nxhtml-global-minor-mode t
+      mumamo-chunk-coloring 'submode-colored
+      nxhtml-skip-welcome t
+      indent-region-mode t
+      rng-nxml-auto-validate-flag nil
+      nxml-degraded t)
+     (add-to-list 'auto-mode-alist '("\\.html\\.erb\\'" . eruby-nxhtml-mumamo))
 #+END_SRC
 
-;;Emacs lisp key binding. Loaded at startup
-; swap windows with control-shift-arrows
-
-
+** rhtml mode
 #+BEGIN_SRC emacs-lisp
-
+     (require 'rhtml-mode)
+     (add-hook 'rhtml-mode-hook
+     (lambda () (rinari-launch)))
 #+END_SRC
-
 ** Autocomplete
 #+BEGIN_SRC emacs-lisp
 (require 'auto-complete-config)
@@ -232,3 +228,31 @@
 
 
    
+** MuMaMo: Multiple Major Mode, for rhtml files
+#+BEGIN_SRC emacs-lisp     
+     (require 'mumamo-fun)
+     (setq mumamo-chunk-coloring 'submode-colored)
+     (add-to-list 'auto-mode-alist '("\\.rhtml\\'" . eruby-html-mumamo))
+     (add-to-list 'auto-mode-alist '("\\.html\\.erb\\'" . eruby-html-mumamo))
+#+END_SRC
+** Ruby mode
+#+BEGIN_SRC emacs-lisp
+(require 'ruby-mode)
+(require 'ruby-style)
+(require 'ruby-electric)
+
+(add-hook 'ruby-mode-hook 'ruby-electric-mode)
+#+END_SRC
+   
+** Emacs Rails (in fact rails reloaded)
+   #+BEGIN_SRC emacs-lisp
+   (setq load-path (cons (expand-file-name "~/.emacs.d/external/emacs-rails") load-path))
+   (require 'rails-autoload)      
+   #+END_SRC
+** RINARI - Rinari Is Not A Ruby IDE - Interactively Do Things (highly recommended, but not strictly required)   
+   #+BEGIN_SRC emacs-lisp              
+    (add-to-list 'load-path "~/.emacs.d/external/rinari")
+    (require 'rinari)
+    (setq rinari-tags-file-name "TAGS")
+   #+END_SRC
+

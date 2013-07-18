@@ -10,3 +10,6 @@
 [submodule "external/org-mode"]
 	path = external/org-mode
 	url = git://orgmode.org/org-mode.git
+[submodule "external/rhtml"]
+	path = external/rhtml
+	url = https://github.com/eschulte/rhtml

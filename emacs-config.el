@@ -16,6 +16,8 @@
 (add-to-list 'load-path "~/.emacs/external/cedet-1.1/common/")
 (add-to-list 'load-path "~/.emacs/external/cedet-1.1/contrib/")
 (add-to-list 'load-path "~/.emacs.d/external/autocomplete/")
+(add-to-list 'load-path "~/.emacs.d/external/nxhtml/util")
+(add-to-list 'load-path "~/.emacs.d/external//rhtml")
 
 (load "tempo")
 
@@ -119,13 +121,34 @@
 (require 'cedet)
 
 (require 'muse-mode)     ; load authoring mode
-
 (require 'muse-html)     ; load publishing styles I use
 (require 'muse-latex)
 (require 'muse-texinfo)
 (require 'muse-docbook)
-
 (require 'muse-project)  ; publish files in projects
+
+(load "~/.emacs.d/external/nxhtml/autostart.el")
+(setq
+      nxhtml-global-minor-mode t
+      mumamo-chunk-coloring 'submode-colored
+      nxhtml-skip-welcome t
+      indent-region-mode t
+      rng-nxml-auto-validate-flag nil
+      nxml-degraded t)
+     (add-to-list 'auto-mode-alist '("\\.html\\.erb\\'" . eruby-nxhtml-mumamo))
+
+(require 'rhtml-mode)
+(add-hook 'rhtml-mode-hook
+(lambda () (rinari-launch)))
+
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/external/autocomplete//ac-dict")
+(ac-config-default)
+
+(require 'mumamo-fun)
+(setq mumamo-chunk-coloring 'submode-colored)
+(add-to-list 'auto-mode-alist '("\\.rhtml\\'" . eruby-html-mumamo))
+(add-to-list 'auto-mode-alist '("\\.html\\.erb\\'" . eruby-html-mumamo))
 
 (require 'ruby-mode)
 (require 'ruby-style)
@@ -133,11 +156,9 @@
 
 (add-hook 'ruby-mode-hook 'ruby-electric-mode)
 
-;(load "~/.emacs.d/external/nxhtml/autostart.el")
-;;(require ' html-mode)
+(setq load-path (cons (expand-file-name "~/.emacs.d/external/emacs-rails") load-path))
+(require 'rails-autoload)
 
-
-
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/external/autocomplete//ac-dict")
-(ac-config-default)
+(add-to-list 'load-path "~/.emacs.d/external/rinari")
+(require 'rinari)
+(setq rinari-tags-file-name "TAGS")
