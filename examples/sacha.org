@@ -2067,7 +2067,7 @@ This isn't a package yet, so I manually load it when I want to.
      (require 'org-compat)
      (org-agenda nil "a")
 #+end_src
-** Autoconnect to IRC so that I don't forget
+** TODO Autoconnect to IRC so that I don't forget
 
 #+begin_src emacs-lisp
 (erc :server "irc.freenode.net" :port 6667 :nick "sachac")
