@@ -17,7 +17,8 @@
 (add-to-list 'load-path "~/.emacs/external/cedet-1.1/contrib/")
 (add-to-list 'load-path "~/.emacs.d/external/autocomplete/")
 (add-to-list 'load-path "~/.emacs.d/external/nxhtml/util")
-(add-to-list 'load-path "~/.emacs.d/external//rhtml")
+(add-to-list 'load-path "~/.emacs.d/external/rhtml")
+(add-to-list 'load-path "~/.emacs.d/external/php-mode")
 
 (load "tempo")
 
@@ -66,6 +67,9 @@
 
 (require 'tramp)
 (setq tramp-default-method "ftp")
+
+;(require 'multi-term)
+;(setq multi-term-program "/bin/zsh")
 
 (setq mac-option-modifier 'none)
 (setq mac-command-modifier 'meta)
@@ -162,3 +166,9 @@
 (add-to-list 'load-path "~/.emacs.d/external/rinari")
 (require 'rinari)
 (setq rinari-tags-file-name "TAGS")
+
+(require 'php-mode)
+(add-to-list 'auto-mode-alist '("\\.module$" . php-mode))
+(add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
+(add-to-list 'auto-mode-alist '("\\.install$" . php-mode))
+(add-to-list 'auto-mode-alist '("\\.engine$" . php-mode))

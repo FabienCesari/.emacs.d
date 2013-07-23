@@ -32,7 +32,8 @@
 (add-to-list 'load-path "~/.emacs/external/cedet-1.1/contrib/")
 (add-to-list 'load-path "~/.emacs.d/external/autocomplete/")
 (add-to-list 'load-path "~/.emacs.d/external/nxhtml/util")
-(add-to-list 'load-path "~/.emacs.d/external//rhtml")
+(add-to-list 'load-path "~/.emacs.d/external/rhtml")
+(add-to-list 'load-path "~/.emacs.d/external/php-mode")
 #+END_SRC
    
 ** Tempo mode: provides a simple way to define powerful templates, or macros
@@ -102,6 +103,12 @@
 #+BEGIN_SRC emacs-lisp
 (require 'tramp)
 (setq tramp-default-method "ftp")
+#+END_SRC
+
+** Emacs multi-term
+#+BEGIN_SRC emacs-lisp
+;(require 'multi-term)
+;(setq multi-term-program "/bin/zsh")
 #+END_SRC
 
 
@@ -225,8 +232,6 @@
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/external/autocomplete//ac-dict")
 (ac-config-default)
 #+END_SRC
-
-
    
 ** MuMaMo: Multiple Major Mode, for rhtml files
 #+BEGIN_SRC emacs-lisp     
@@ -256,3 +261,16 @@
     (setq rinari-tags-file-name "TAGS")
    #+END_SRC
 
+** php Mode. byte compiled.
+
+#+BEGIN_SRC emacs-lisp
+(require 'php-mode)
+(add-to-list 'auto-mode-alist '("\\.module$" . php-mode))
+(add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
+(add-to-list 'auto-mode-alist '("\\.install$" . php-mode))
+(add-to-list 'auto-mode-alist '("\\.engine$" . php-mode))
+#+END_SRC
+
+
+   
+   
