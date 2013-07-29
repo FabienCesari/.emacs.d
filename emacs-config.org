@@ -249,7 +249,7 @@
 #+END_SRC
    
 ** Emacs Rails (in fact rails reloaded)
-   #+BEGIN_SRC emacs-lisp         
+   #+BEGIN_SRC emacs-lisp      
    ;(setq load-path (cons (expand-file-name "~/.emacs.d/external/emacs-rails") load-path))
    ;(require 'rails-autoload)      
    #+END_SRC
