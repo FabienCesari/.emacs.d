@@ -228,7 +228,7 @@
       nxml-degraded t)
      (add-to-list 'auto-mode-alist '("\\.html\\.erb\\'" . eruby-nxhtml-mumamo))
 #+END_SRC
-
+   
 ** rhtml mode
 #+BEGIN_SRC emacs-lisp
      (require 'rhtml-mode)
@@ -237,9 +237,9 @@
 #+END_SRC
 ** Autocomplete
 #+BEGIN_SRC emacs-lisp
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/external/autocomplete//ac-dict")
-(ac-config-default)
+   (require 'auto-complete-config)
+   (add-to-list 'ac-dictionary-directories "~/.emacs.d/external/autocomplete//ac-dict")
+   (ac-config-default)
 #+END_SRC
    
 ** MuMaMo: Multiple Major Mode, for rhtml files
@@ -254,20 +254,19 @@
 (require 'ruby-mode)
 (require 'ruby-style)
 (require 'ruby-electric)
-
 (add-hook 'ruby-mode-hook 'ruby-electric-mode)
 #+END_SRC
    
 ** Emacs Rails (in fact rails reloaded)
-   #+BEGIN_SRC emacs-lisp
-   (setq load-path (cons (expand-file-name "~/.emacs.d/external/emacs-rails") load-path))
-   (require 'rails-autoload)      
+   #+BEGIN_SRC emacs-lisp      
+   ;(setq load-path (cons (expand-file-name "~/.emacs.d/external/emacs-rails") load-path))
+   ;(require 'rails-autoload)      
    #+END_SRC
 ** RINARI - Rinari Is Not A Ruby IDE - Interactively Do Things (highly recommended, but not strictly required)   
-   #+BEGIN_SRC emacs-lisp              
-    (add-to-list 'load-path "~/.emacs.d/external/rinari")
-    (require 'rinari)
-    (setq rinari-tags-file-name "TAGS")
+   #+BEGIN_SRC emacs-lisp                   
+    ;(add-to-list 'load-path "~/.emacs.d/external/rinari")
+    ;(require 'rinari)
+    ;(setq rinari-tags-file-name "TAGS")
    #+END_SRC
 
 ** php Mode. byte compiled.

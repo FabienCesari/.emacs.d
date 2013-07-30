@@ -166,15 +166,14 @@
 (require 'ruby-mode)
 (require 'ruby-style)
 (require 'ruby-electric)
-
 (add-hook 'ruby-mode-hook 'ruby-electric-mode)
 
-(setq load-path (cons (expand-file-name "~/.emacs.d/external/emacs-rails") load-path))
-(require 'rails-autoload)
+;(setq load-path (cons (expand-file-name "~/.emacs.d/external/emacs-rails") load-path))
+;(require 'rails-autoload)
 
-(add-to-list 'load-path "~/.emacs.d/external/rinari")
-(require 'rinari)
-(setq rinari-tags-file-name "TAGS")
+;(add-to-list 'load-path "~/.emacs.d/external/rinari")
+;(require 'rinari)
+;(setq rinari-tags-file-name "TAGS")
 
 (require 'php-mode)
 (add-to-list 'auto-mode-alist '("\\.module$" . php-mode))
