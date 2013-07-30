@@ -131,6 +131,15 @@
 (require 'muse-docbook)
 (require 'muse-project)  ; publish files in projects
 
+(setq my-muse-dir "~/Work/documents")
+(setq muse-project-alist
+   '(
+     ("home"
+     (,(concat my-muse-dir "/muse/home")
+       :default "index")
+       (:base "html" :path ,(concat my-muse-base-dir "/html/home")))
+    ))
+
 (load "~/.emacs.d/external/nxhtml/autostart.el")
 (setq
       nxhtml-global-minor-mode t

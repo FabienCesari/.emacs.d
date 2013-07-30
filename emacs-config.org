@@ -205,8 +205,17 @@
 (require 'muse-texinfo)
 (require 'muse-docbook)
 (require 'muse-project)  ; publish files in projects
-#+END_SRC
 
+(setq my-muse-dir "~/Work/documents")
+(setq muse-project-alist
+   '(
+     ("home"
+     (,(concat my-muse-dir "/muse/home")
+       :default "index")
+       (:base "html" :path ,(concat my-muse-base-dir "/html/home")))
+    ))
+#+END_SRC
+   
 ** nxhtml 
 #+BEGIN_SRC emacs-lisp
 (load "~/.emacs.d/external/nxhtml/autostart.el")
@@ -274,3 +283,4 @@
 
    
    
+** latex - 
