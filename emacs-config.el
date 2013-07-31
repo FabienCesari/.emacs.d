@@ -77,7 +77,8 @@
 (when (eq system-type 'darwin)
   (setq mac-pass-command-to-system nil) )
 
-(setenv "PATH" "/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Applications/AudioSculpt 3.0.23i/Kernels:/opt/local/bin:/opt/local/sbin:/usr/local/share/python:/Users/cesari/include:/Users/cesari/lib:/Users/cesari/bin:/Applications/MATLAB_R2010b.app/bin")
+(require 'exec-path-from-shell) ;; if not using the ELPA package
+     (exec-path-from-shell-initialize)
 
 (when
     (load
@@ -131,6 +132,9 @@
 (require 'muse-docbook)
 (require 'muse-project)  ; publish files in projects
 
+
+
+;; Muse project configuration -- May be system dependend, so not Ideal.
 (setq my-muse-dir "~/Work/documents")
 (setq muse-project-alist
    '(
@@ -180,3 +184,31 @@
 (add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
 (add-to-list 'auto-mode-alist '("\\.install$" . php-mode))
 (add-to-list 'auto-mode-alist '("\\.engine$" . php-mode))
+
+(add-hook 'svn-log-edit-mode-hook
+         '(lambda () "SVN log edit mode"
+            (flyspell-mode 1 )
+            (auto-fill-mode 0) ) )
+
+   (autoload 'markdown-mode "markdown-mode.el"
+             "Major mode for editing Markdown files" t)
+   (setq auto-mode-alist (cons '("\\.mdt$" . markdown-mode) auto-mode-alist))
+   (add-hook 'markdown-mode-hook 'turn-on-flyspell)
+
+   (load "auctex.el" nil t t)
+
+;;;; (require 'tex-site)
+;;;; (if window-system (require 'font-latex))
+(add-hook 'LaTeX-mode-hook 'turn-on-flyspell)
+(add-hook 'LaTeX-mode-hook 'turn-on-auto-fill)
+(add-hook 'LaTeX-mode-hook 'turn-on-reftex)
+(add-hook 'LaTeX-mode-hook 'turn-on-bib-cite)
+
+;; spell
+(add-hook 'c-mode-common-hook 'flyspell-prog-mode)
+(global-set-key (kbd "C-$") 'flyspell-auto-correct-word)
+
+
+ '(ispell-dictionary "en_GB-ise")
+;;'(ispell-program-name "/opt/local/bin/aspell")
+'(flyspell-issue-message-flag nil)
