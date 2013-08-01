@@ -194,10 +194,10 @@
              "Major mode for editing Markdown files" t)
    (setq auto-mode-alist (cons '("\\.mdt$" . markdown-mode) auto-mode-alist))
    (add-hook 'markdown-mode-hook 'turn-on-flyspell)
-
+   ;(require 'tex)
    (load "auctex.el" nil t t)
 
-;;;; (require 'tex-site)
+(require 'tex-site)
 ;;;; (if window-system (require 'font-latex))
 (add-hook 'LaTeX-mode-hook 'turn-on-flyspell)
 (add-hook 'LaTeX-mode-hook 'turn-on-auto-fill)
@@ -210,5 +210,5 @@
 
 
  '(ispell-dictionary "en_GB-ise")
-;;'(ispell-program-name "/opt/local/bin/aspell")
-'(flyspell-issue-message-flag nil)
+ '(ispell-program-name "aspell")
+ '(flyspell-issue-message-flag nil)
