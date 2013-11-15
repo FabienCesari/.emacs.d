@@ -212,3 +212,7 @@
  '(ispell-dictionary "en_GB-ise")
  '(ispell-program-name "aspell")
  '(flyspell-issue-message-flag nil)
+
+(autoload 'processing-mode "processing-mode" "Processing mode" t)
+(add-to-list 'auto-mode-alist '("\\.pde$" . processing-mode))
+(setq processing-location "/usr/bin/processing-java")
