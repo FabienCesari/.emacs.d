@@ -184,16 +184,16 @@
 (add-to-list 'auto-mode-alist '("\\.engine$" . php-mode))
 
 (add-hook 'svn-log-edit-mode-hook
-         '(lambda () "SVN log edit mode"
-            (flyspell-mode 1 )
-            (auto-fill-mode 0) ) )
+          '(lambda () "SVN log edit mode"
+             (flyspell-mode 1 )
+             (auto-fill-mode 0)))
 
-   (autoload 'markdown-mode "markdown-mode.el"
-             "Major mode for editing Markdown files" t)
-   (setq auto-mode-alist (cons '("\\.mdt$" . markdown-mode) auto-mode-alist))
-   (add-hook 'markdown-mode-hook 'turn-on-flyspell)
-   ;(require 'tex)
-   (load "auctex.el" nil t t)
+(autoload 'markdown-mode "markdown-mode.el"
+  "Major mode for editing Markdown files" t)
+(setq auto-mode-alist (cons '("\\.mdt$" . markdown-mode) auto-mode-alist))
+(add-hook 'markdown-mode-hook 'turn-on-flyspell)
+                                        ;(require 'tex)
+(load "auctex.el" nil t t)
 
 (require 'tex-site)
 ;;;; (if window-system (require 'font-latex))
@@ -206,10 +206,21 @@
 (add-hook 'c-mode-common-hook 'flyspell-prog-mode)
 (global-set-key (kbd "C-$") 'flyspell-auto-correct-word)
 
+'(ispell-dictionary "en_GB-ise")
+'(ispell-program-name "aspell")
+'(flyspell-issue-message-flag nil)
 
- '(ispell-dictionary "en_GB-ise")
- '(ispell-program-name "aspell")
- '(flyspell-issue-message-flag nil)
+(let ((langs '("american" "francais")))
+  (setq lang-ring (make-ring (length langs)))
+  (dolist (elem langs) (ring-insert lang-ring elem)))
+
+(defun cycle-ispell-languages ()
+  (interactive)
+  (let ((lang (ring-ref lang-ring -1)))
+    (ring-insert lang-ring lang)
+    (ispell-change-dictionary lang)))
+
+(global-set-key [f6] 'cycle-ispell-languages)
 
 (autoload 'processing-mode "processing-mode" "Processing mode" t)
 (add-to-list 'auto-mode-alist '("\\.pde$" . processing-mode))

@@ -13,7 +13,13 @@
 ;;Org Babel Setup.
 (setq org-babel-load-languages '((emacs-lisp . t )))
 (setq org-confirm-babel-evaluate nil)
+;;Org install and keylist
 (require 'org-install)
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
+
 (require 'org)
 (org-babel-do-load-languages
  'org-babel-load-languages
@@ -34,4 +40,3 @@
 (if (file-exists-p "~/org/agenda.org")
     (setq org-agenda-files (list "~/org/agenda.org"))
   )
-  
