@@ -28,3 +28,10 @@
 
 ;;load neatly organized org file!
 (org-babel-load-file "~/.emacs.d/emacs-config.org")
+
+;;Load agneda files. 
+
+(if (file-exists-p "~/org/agenda.org")
+    (setq org-agenda-files (list "~/org/agenda.org"))
+  )
+  

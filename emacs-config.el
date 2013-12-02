@@ -132,8 +132,6 @@
 (require 'muse-docbook)
 (require 'muse-project)  ; publish files in projects
 
-
-
 ;; Muse project configuration -- May be system dependend, so not Ideal.
 (setq my-muse-dir "~/Work/documents")
 (setq muse-project-alist

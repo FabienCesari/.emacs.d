@@ -207,8 +207,6 @@
 (require 'muse-docbook)
 (require 'muse-project)  ; publish files in projects
 
-
-
 ;; Muse project configuration -- May be system dependend, so not Ideal.
 (setq my-muse-dir "~/Work/documents")
 (setq muse-project-alist
@@ -285,7 +283,6 @@
 #+END_SRC
 
 
-      
 ** Spell checking
    #+BEGIN_SRC emacs-lisp
    (add-hook 'svn-log-edit-mode-hook
@@ -315,7 +312,7 @@
  '(ispell-dictionary "en_GB-ise")
  '(ispell-program-name "aspell")
  '(flyspell-issue-message-flag nil)
- #+END_SRC
+   #+END_SRC
 ** Processing
 #+BEGIN_SRC emacs-lisp
   (autoload 'processing-mode "processing-mode" "Processing mode" t)
@@ -323,3 +320,4 @@
   (setq processing-location "/usr/bin/processing-java")
   
 #+END_SRC
+   
