@@ -385,3 +385,8 @@
      (autoload 'arduino-mode "arduino-mode" "Arduino editing mode." t)
    #+END_SRC
    
+** sudo save
+   #+BEGIN_SRC emacs-lisp
+     (require 'sudo-save)     
+   #+END_SRC
+
