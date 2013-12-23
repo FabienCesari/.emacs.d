@@ -1,13 +1,13 @@
 * EMACS *
 ** Org Mode
- org-todo [[C-c C-t]]
+   org-todo [[C-c C-t]]
+ 
+   insert todo heading [[M-shift-RET]]
 
- insert todo heading [[M-shift-RET]]
+   [[ insert-link-here ]][links are between two double right brackets [[]] ]
 
- [[ insert-link-here ]][links are between two double right brackets [[]] ]
-
- M + -> or M + <- for adding asteriscs.
-
+   M + -> or M + <- for adding asteriscs.
+   
 *** TODO sync org mode and google calendar. [[http://orgmode.org/worg/org-tutorials/org-google-sync.html]]
    Open a link in org mode [[C-c C-o]]
 #+begin_quote
@@ -36,7 +36,7 @@
 ,require 'date'
 This File was last evaluated on {Date.today}"    
 #+end_src
-
+    
 ** Emacs
    create a new file C-x b file.name RET and then write the file. C-x C-w file.name RET
    
@@ -46,7 +46,6 @@ This File was last evaluated on {Date.today}"
     2/select multiple files 'm' to mark files 'u' to Unmark files
     3/activate the regex mode avec "M-x dired-do-query-replace-regexp"   
     4/seek and replace like in the normal regex mode. ( C-M-Shift-% )
-
 
 ** Doxymacs Shortcuts  
   C-c d ? will look up documentation for the symbol under the point.
@@ -83,7 +82,7 @@ Stack Overflow [[http://stackoverflow.com/questions/4102469/makefile-to-put-obje
    * merge the two branches. (git merge name_of_the_branch)
    * push to the origin. (git push)
 
-
+     
 * SYSTEME
 ** MacPorts
    see installed packages  [[port installed]]

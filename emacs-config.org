@@ -195,7 +195,29 @@
 
 ** Emacs cedet
 #+BEGIN_SRC emacs-lisp
-(require 'cedet)
+  (require 'cedet)
+  ;; Load CEDET.
+  ;; See cedet/common/cedet.info for configuration details.
+  ;; IMPORTANT: For Emacs >= 23.2, you must place this *before* any
+  ;; CEDET component (including EIEIO) gets activated by another 
+  ;; package (Gnus, auth-source, ...).
+  
+  ;; Add further minor-modes to be enabled by semantic-mode.
+  ;; See doc-string of `semantic-default-submodes' for other things
+  ;; you can use here.
+  (add-to-list 'semantic-default-submodes 'global-semantic-idle-summary-mode t)
+  (add-to-list 'semantic-default-submodes 'global-semantic-idle-completions-mode t)
+  (add-to-list 'semantic-default-submodes 'global-cedet-m3-minor-mode t)
+  
+  ;; Enable Semantic
+  (semantic-mode 1)
+  
+  ;; Enable EDE (Project Management) features
+  (global-ede-mode 1)
+  
+  ;; Configure arduino OS X dirs.
+  (setq ede-arduino-appdir "/Applications/Arduino.app/Contents/Resources/Java")
+  
 #+END_SRC
 
 ** Emacs muse
@@ -342,4 +364,24 @@
   (setq processing-location "/usr/bin/processing-java")
   
 #+END_SRC
+   
+** Blog publishing
+
+#+BEGIN_SRC emacs-lisp
+  (setq org-publish-project-alist
+        '(("blog"
+           :base-directory "~/work/magnizdat/site/blog_emacs"
+           :html-extension "html"
+           :base-extension "org"
+           :publishing-directory "~/work/magnizdat/site/blog_emacs/public_html"
+           :publishing-function (org-html-publish-to-html)
+           :html-preamble nil
+           :html-postamble nil)))
+#+END_SRC
+   
+** Arduino Mode
+   #+BEGIN_SRC emacs-lisp
+     (setq auto-mode-alist (cons '("\\.\\(pde\\|ino\\)$" . arduino-mode) auto-mode-alist))
+     (autoload 'arduino-mode "arduino-mode" "Arduino editing mode." t)
+   #+END_SRC
    

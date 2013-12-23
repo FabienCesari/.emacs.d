@@ -124,6 +124,27 @@
 (setq matlab-shell-command-switches '("-nojvm"))
 
 (require 'cedet)
+;; Load CEDET.
+;; See cedet/common/cedet.info for configuration details.
+;; IMPORTANT: For Emacs >= 23.2, you must place this *before* any
+;; CEDET component (including EIEIO) gets activated by another 
+;; package (Gnus, auth-source, ...).
+
+;; Add further minor-modes to be enabled by semantic-mode.
+;; See doc-string of `semantic-default-submodes' for other things
+;; you can use here.
+(add-to-list 'semantic-default-submodes 'global-semantic-idle-summary-mode t)
+(add-to-list 'semantic-default-submodes 'global-semantic-idle-completions-mode t)
+(add-to-list 'semantic-default-submodes 'global-cedet-m3-minor-mode t)
+
+;; Enable Semantic
+(semantic-mode 1)
+
+;; Enable EDE (Project Management) features
+(global-ede-mode 1)
+
+;; Configure arduino OS X dirs.
+(setq ede-arduino-appdir "/Applications/Arduino.app/Contents/Resources/Java")
 
 (require 'muse-mode)     ; load authoring mode
 (require 'muse-html)     ; load publishing styles I use
@@ -220,8 +241,33 @@
     (ring-insert lang-ring lang)
     (ispell-change-dictionary lang)))
 
+;; easy spell check
 (global-set-key [f6] 'cycle-ispell-languages)
+(global-set-key (kbd "<f8>") 'ispell-word)
+(global-set-key (kbd "C-S-<f8>") 'flyspell-mode)
+(global-set-key (kbd "C-M-<f8>") 'flyspell-buffer)
+(global-set-key (kbd "C-<f8>") 'flyspell-check-previous-highlighted-word)
+(defun flyspell-check-next-highlighted-word ()
+  "Custom function to spell check next highlighted word"
+  (interactive)
+  (flyspell-goto-next-error)
+  (ispell-word)
+  )
+(global-set-key (kbd "M-<f8>") 'flyspell-check-next-highlighted-word)
 
 (autoload 'processing-mode "processing-mode" "Processing mode" t)
 (add-to-list 'auto-mode-alist '("\\.pde$" . processing-mode))
 (setq processing-location "/usr/bin/processing-java")
+
+(setq org-publish-project-alist
+      '(("blog"
+         :base-directory "~/work/magnizdat/site/blog_emacs"
+         :html-extension "html"
+         :base-extension "org"
+         :publishing-directory "~/work/magnizdat/site/blog_emacs/public_html"
+         :publishing-function (org-html-publish-to-html)
+         :html-preamble nil
+         :html-postamble nil)))
+
+(setq auto-mode-alist (cons '("\\.\\(pde\\|ino\\)$" . arduino-mode) auto-mode-alist))
+(autoload 'arduino-mode "arduino-mode" "Arduino editing mode." t)

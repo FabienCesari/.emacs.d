@@ -36,7 +36,15 @@
 (org-babel-load-file "~/.emacs.d/emacs-config.org")
 
 ;;Load agneda files. 
-
 (if (file-exists-p "~/org/agenda.org")
     (setq org-agenda-files (list "~/org/agenda.org"))
   )
+
+;;LaTeX export
+(require 'org-latex)
+(unless (boundp 'org-export-latex-classes)
+  (setq org-export-latex-classes nil))
+(add-to-list 'org-export-latex-classes
+             '("article"
+               "\\documentclass{article}"
+               ("\\section{%s}" . "\\section*{%s}")))
