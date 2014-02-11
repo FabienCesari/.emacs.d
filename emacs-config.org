@@ -193,7 +193,7 @@
 (setq matlab-shell-command-switches '("-nojvm"))
 #+END_SRC
 
-** Emacs cedet
+** Emacs CEDET
 #+BEGIN_SRC emacs-lisp
   (require 'cedet)
   ;; Load CEDET.
@@ -201,6 +201,7 @@
   ;; IMPORTANT: For Emacs >= 23.2, you must place this *before* any
   ;; CEDET component (including EIEIO) gets activated by another 
   ;; package (Gnus, auth-source, ...).
+  (load-file "~/.emacs.d/external/cedet/cedet-devel-load.el")
   
   ;; Add further minor-modes to be enabled by semantic-mode.
   ;; See doc-string of `semantic-default-submodes' for other things
@@ -381,8 +382,11 @@
    
 ** Arduino Mode
    #+BEGIN_SRC emacs-lisp
-     (setq auto-mode-alist (cons '("\\.\\(pde\\|ino\\)$" . arduino-mode) auto-mode-alist))
-     (autoload 'arduino-mode "arduino-mode" "Arduino editing mode." t)
+
+(add-to-list 'load-path "~/.emacs.d/vendor/arduino")
+(setq auto-mode-alist (cons '("\\.\\(pde\\|ino\\)$" . arduino-mode) auto-mode-alist))
+(autoload 'arduino-mode "arduino-mode" "Arduino editing mode." t)
+
    #+END_SRC
    
 ** sudo save

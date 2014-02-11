@@ -4,6 +4,7 @@
 
 ;; Author: Christopher Grim <christopher.grim@gmail.com>
 ;; Keywords: languages, arduino
+;; Version: 1.0
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -108,6 +109,7 @@ Each list item should be a regexp matching a single identifier." :group 'arduino
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.pde\\'" . arduino-mode))
+;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.ino\\'" . arduino-mode))
 
 ;;;###autoload

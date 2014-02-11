@@ -87,5 +87,8 @@ Stack Overflow [[http://stackoverflow.com/questions/4102469/makefile-to-put-obje
 ** MacPorts
    see installed packages  [[port installed]]
    update [[sudo port -v selfupdat]]e --> if outdated [[sudo port upgrade outdated]]
-
+   remove packages: 
+   sudo port uninstall <package>
+   sudo port uninstall inactive
+   
  
