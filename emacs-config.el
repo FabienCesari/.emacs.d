@@ -13,12 +13,13 @@
 (add-to-list 'load-path "~/.emacs.d/external/muse/lisp")
 (add-to-list 'load-path "~/.emacs.d/external/autocomplete/")
 (add-to-list 'load-path "~/.emacs.d/external/ruby-mode")
-(add-to-list 'load-path "~/.emacs/external/cedet-1.1/common/")
-(add-to-list 'load-path "~/.emacs/external/cedet-1.1/contrib/")
+(add-to-list 'load-path "~/.emacs/external/cedet/common/")
+(add-to-list 'load-path "~/.emacs/external/cedet/contrib/")
 (add-to-list 'load-path "~/.emacs.d/external/autocomplete/")
 (add-to-list 'load-path "~/.emacs.d/external/nxhtml/util")
 (add-to-list 'load-path "~/.emacs.d/external/rhtml")
 (add-to-list 'load-path "~/.emacs.d/external/php-mode")
+(add-to-list 'load-path "~/.emacs.d/external/arduino-mode")
 
 (load "tempo")
 
@@ -273,3 +274,10 @@
 (autoload 'arduino-mode "arduino-mode" "Arduino editing mode." t)
 
 (require 'sudo-save)
+
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+
+(add-hook 'yaml-mode-hook
+          '(lambda ()
+             (define-key yaml-mode-map "\C-m" 'newline-and-indent)))

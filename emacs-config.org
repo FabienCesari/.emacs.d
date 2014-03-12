@@ -28,12 +28,13 @@
 (add-to-list 'load-path "~/.emacs.d/external/muse/lisp")
 (add-to-list 'load-path "~/.emacs.d/external/autocomplete/")
 (add-to-list 'load-path "~/.emacs.d/external/ruby-mode")
-(add-to-list 'load-path "~/.emacs/external/cedet-1.1/common/")
-(add-to-list 'load-path "~/.emacs/external/cedet-1.1/contrib/")
+(add-to-list 'load-path "~/.emacs/external/cedet/common/")
+(add-to-list 'load-path "~/.emacs/external/cedet/contrib/")
 (add-to-list 'load-path "~/.emacs.d/external/autocomplete/")
 (add-to-list 'load-path "~/.emacs.d/external/nxhtml/util")
 (add-to-list 'load-path "~/.emacs.d/external/rhtml")
 (add-to-list 'load-path "~/.emacs.d/external/php-mode")
+(add-to-list 'load-path "~/.emacs.d/external/arduino-mode")
 #+END_SRC
    
 ** Tempo mode: provides a simple way to define powerful templates, or macros
@@ -201,7 +202,6 @@
   ;; IMPORTANT: For Emacs >= 23.2, you must place this *before* any
   ;; CEDET component (including EIEIO) gets activated by another 
   ;; package (Gnus, auth-source, ...).
-  (load-file "~/.emacs.d/external/cedet/cedet-devel-load.el")
   
   ;; Add further minor-modes to be enabled by semantic-mode.
   ;; See doc-string of `semantic-default-submodes' for other things
@@ -381,12 +381,9 @@
 #+END_SRC
    
 ** Arduino Mode
-   #+BEGIN_SRC emacs-lisp
-
-(add-to-list 'load-path "~/.emacs.d/vendor/arduino")
-(setq auto-mode-alist (cons '("\\.\\(pde\\|ino\\)$" . arduino-mode) auto-mode-alist))
-(autoload 'arduino-mode "arduino-mode" "Arduino editing mode." t)
-
+   #+BEGIN_SRC emacs-lisp     
+     (setq auto-mode-alist (cons '("\\.\\(pde\\|ino\\)$" . arduino-mode) auto-mode-alist))
+     (autoload 'arduino-mode "arduino-mode" "Arduino editing mode." t)     
    #+END_SRC
    
 ** sudo save
@@ -394,3 +391,13 @@
      (require 'sudo-save)     
    #+END_SRC
 
+** YAML Mode
+   #+BEGIN_SRC emacs-lisp
+     (require 'yaml-mode)
+     (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+     
+     (add-hook 'yaml-mode-hook
+               '(lambda ()
+                  (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
+     
+   #+END_SRC
