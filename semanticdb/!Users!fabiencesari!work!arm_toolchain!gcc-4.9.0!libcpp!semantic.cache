@@ -1,0 +1,1130 @@
+;; Object libcpp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "libcpp/"
+  :tables (list 
+   (semanticdb-table "lex.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("config.h" include nil nil [914 933])
+            ("system.h" include nil nil [934 953])
+            ("cpplib.h" include nil nil [954 973])
+            ("internal.h" include nil nil [974 995])
+            ("spell_type" type
+               (:members 
+                  ( ("SPELL_OPERATOR" variable
+                       (:constant-flag t
+                        :default-value (1034 1035)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1017 1035])
+                    ("SPELL_IDENT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1039 1051])
+                    ("SPELL_LITERAL" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1054 1068])
+                    ("SPELL_NONE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1071 1083]))                  
+                :type "enum")
+                nil [997 1084])
+            ("token_spelling" type
+               (:members 
+                  ( ("category" variable (:type ("spell_type" type (:type "enum") nil nil)) (reparse-symbol classsubparts) [1112 1137])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "unsigned char")
+                        (reparse-symbol classsubparts) [1140 1166]))                  
+                :type "struct")
+                nil [1086 1169])
+            ("digraph_spellings" variable
+               (:pointer 1
+                :dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type "unsigned char")
+                nil [1171 1280])
+            ("OP" variable (:constant-flag t) nil [1290 1292])
+            ("TK" variable (:constant-flag t) nil [1334 1336])
+            ("token_spellings" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("token_spelling" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1370 1449])
+            ("TOKEN_SPELL" variable (:constant-flag t) nil [1479 1490])
+            ("TOKEN_NAME" variable (:constant-flag t) nil [1548 1558])
+            ("add_line_note" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("cpp_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1632 1645])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1646 1660])
+                    ("" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1661 1674]))                  
+                :type "void")
+                nil [1605 1675])
+            ("skip_line_comment" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1706 1719]))                  
+                :type "int")
+                nil [1676 1720])
+            ("skip_whitespace" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1750 1763])
+                    ("" variable (:type ("cppchar_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1764 1774]))                  
+                :type "void")
+                nil [1721 1775])
+            ("lex_string" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1800 1813])
+                    ("" variable
+                       (:pointer 1
+                        :type ("cpp_token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1814 1826])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1827 1841]))                  
+                :type "void")
+                nil [1776 1842])
+            ("save_comment" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1869 1882])
+                    ("" variable
+                       (:pointer 1
+                        :type ("cpp_token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1883 1895])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1896 1910])
+                    ("" variable (:type ("cppchar_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1911 1921]))                  
+                :type "void")
+                nil [1843 1922])
+            ("store_comment" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1950 1963])
+                    ("" variable
+                       (:pointer 1
+                        :type ("cpp_token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1964 1976]))                  
+                :type "void")
+                nil [1923 1977])
+            ("create_literal" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2006 2019])
+                    ("" variable
+                       (:pointer 1
+                        :type ("cpp_token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2020 2032])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2033 2047])
+                    ("" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2055 2068])
+                    ("" variable (:type ("cpp_ttype" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [2069 2084]))                  
+                :type "void")
+                nil [1978 2085])
+            ("warn_in_comment" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2115 2128])
+                    ("" variable
+                       (:pointer 1
+                        :type ("_cpp_line_note" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2129 2146]))                  
+                :type "bool")
+                nil [2086 2147])
+            ("name_p" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2167 2180])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cpp_string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2181 2200]))                  
+                :type "int")
+                nil [2148 2201])
+            ("next_tokenrun" function
+               (:prototype-flag t
+                :pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("tokenrun" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2234 2245]))                  
+                :type ("tokenrun" type (:type "class") nil nil))
+                nil [2202 2246])
+            ("new_buff" function
+               (:prototype-flag t
+                :pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2276 2283]))                  
+                :type ("_cpp_buff" type (:type "class") nil nil))
+                nil [2248 2284])
+            ("cpp_ideq" function
+               (:arguments 
+                  ( ("token" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cpp_token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2458 2481])
+                    ("string" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2482 2501]))                  
+                :type "int")
+                nil [2444 2629])
+            ("add_line_note" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type ("cpp_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2738 2757])
+                    ("pos" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2758 2775])
+                    ("type" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2776 2794]))                  
+                :type "void")
+                nil [2711 3152])
+            ("WORDS_BIGENDIAN" variable (:constant-flag t) nil [3877 3892])
+            ("word_type" type
+               (:typedef ("unsigned int")
+                :superclasses "unsigned int"
+                :type "typedef")
+                nil [4184 4251])
+            ("check_word_type_size" type
+               (:typedef ("char")
+                :superclasses "char"
+                :type "typedef")
+                nil [4409 4506])
+            ("acc_char_mask_misalign" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("val" variable (:type ("word_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4703 4717])
+                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4718 4733]))                  
+                :type ("word_type" type (:type "class") nil nil))
+                nil [4655 4851])
+            ("acc_char_replicate" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("x" variable (:type ("uchar" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4965 4973]))                  
+                :type ("word_type" type (:type "class") nil nil))
+                nil [4921 5120])
+            ("acc_char_cmp" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("val" variable (:type ("word_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5221 5235])
+                    ("c" variable (:type ("word_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5236 5248]))                  
+                :type ("word_type" type (:type "class") nil nil))
+                nil [5183 5647])
+            ("acc_char_index" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("cmp" variable (:type ("word_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5823 5853])
+                    ("" variable (:type ("ATTRIBUTE_UNUSED" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5837 5854])
+                    ("val" variable (:type ("word_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5857 5887])
+                    ("" variable (:type ("ATTRIBUTE_UNUSED" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5871 5888]))                  
+                :type "int")
+                nil [5789 6519])
+            ("ATTRIBUTE_UNUSED" variable (:type "int") nil [7126 7143])
+            ("search_line_acc_char" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7188 7203])
+                    ("end" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7204 7237])
+                    ("" variable (:type ("ATTRIBUTE_UNUSED" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7221 7238]))                  
+                :type ("uchar" type (:type "class") nil nil))
+                nil [7145 8149])
+            ("repl_chars" variable
+               (:dereference 2
+                :typemodifiers ("static")
+                :constant-flag t
+                :type "char")
+                nil [8883 9362])
+            ("search_line_mmx" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9816 9831])
+                    ("end" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9832 9865])
+                    ("" variable (:type ("ATTRIBUTE_UNUSED" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9849 9866]))                  
+                :type ("uchar" type (:type "class") nil nil))
+                nil [9720 11660])
+            ("search_line_sse2" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11841 11856])
+                    ("end" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11857 11890])
+                    ("" variable (:type ("ATTRIBUTE_UNUSED" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11874 11891]))                  
+                :type ("uchar" type (:type "class") nil nil))
+                nil [11742 13277])
+            ("search_line_sse42" variable (:constant-flag t) nil [15093 15110])
+            ("../gcc/config/i386/cpuid.h" include nil nil [15172 15209])
+            ("search_line_fast_type" variable
+               (:functionpointer-flag t
+                :type ("uchar" type (:type "class") nil nil))
+                nil [15219 15289])
+            ("search_line_fast" variable
+               (:typemodifiers ("static")
+                :type ("search_line_fast_type" type (:type "class") nil nil))
+                nil [15290 15336])
+            ("HAVE_init_vectorized_lexer" variable (:constant-flag t) nil [15346 15372])
+            ("init_vectorized_lexer" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [15417 15422]))                  
+                :type "void")
+                nil [15375 16242])
+            ("search_line_fast" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16604 16619])
+                    ("end" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16620 16653])
+                    ("" variable (:type ("ATTRIBUTE_UNUSED" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16637 16654]))                  
+                :type ("uchar" type (:type "class") nil nil))
+                nil [16565 19744])
+            ("arm_neon.h" include nil nil [19775 19796])
+            ("search_line_fast" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19837 19852])
+                    ("end" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19853 19886])
+                    ("" variable (:type ("ATTRIBUTE_UNUSED" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19870 19887]))                  
+                :type ("uchar" type (:type "class") nil nil))
+                nil [19798 21592])
+            ("_cpp_init_lexer" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [21823 21828]))                  
+                :type "void")
+                nil [21801 21901])
+            ("_cpp_clean_line" function
+               (:arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22048 22066]))                  
+                :type "void")
+                nil [22026 25389])
+            ("warn_in_comment" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25513 25531])
+                    ("note" variable
+                       (:pointer 1
+                        :type ("_cpp_line_note" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25532 25553]))                  
+                :type "bool")
+                nil [25484 26214])
+            ("_cpp_process_line_notes" function
+               (:arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26331 26349])
+                    ("in_comment" variable (:type "int") (reparse-symbol arg-sub-list) [26350 26365]))                  
+                :type "void")
+                nil [26301 28004])
+            ("_cpp_skip_block_comment" function
+               (:arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [28296 28314]))                  
+                :type "bool")
+                nil [28266 29515])
+            ("skip_line_comment" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [29710 29728]))                  
+                :type "int")
+                nil [29680 29981])
+            ("skip_whitespace" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30079 30097])
+                    ("c" variable (:type ("cppchar_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [30098 30110]))                  
+                :type "void")
+                nil [30050 30835])
+            ("name_p" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30948 30966])
+                    ("string" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cpp_string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30967 30992]))                  
+                :type "int")
+                nil [30929 31118])
+            ("warn_about_normalization" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [31266 31284])
+                    ("token" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cpp_token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [31291 31314])
+                    ("s" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("normalize_state" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [31320 31352]))                  
+                :type "void")
+                nil [31228 32050])
+            ("forms_identifier_p" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [32221 32239])
+                    ("first" variable (:type "int") (reparse-symbol arg-sub-list) [32240 32250])
+                    ("state" variable
+                       (:pointer 1
+                        :type ("normalize_state" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [32257 32287]))                  
+                :type "bool")
+                nil [32189 33021])
+            ("lex_identifier_intern" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [33139 33157])
+                    ("base" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [33158 33176]))                  
+                :type ("cpp_hashnode" type (:type "class") nil nil))
+                nil [33094 34543])
+            ("_cpp_lex_identifier" function
+               (:pointer 1
+                :arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [34718 34736])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [34737 34754]))                  
+                :type ("cpp_hashnode" type (:type "class") nil nil))
+                nil [34682 34857])
+            ("lex_identifier" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [34951 34969])
+                    ("base" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [34970 34988])
+                    ("starts_ucn" variable (:type "bool") (reparse-symbol arg-sub-list) [34989 35005])
+                    ("nst" variable
+                       (:pointer 1
+                        :type ("normalize_state" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [35008 35036]))                  
+                :type ("cpp_hashnode" type (:type "class") nil nil))
+                nil [34913 36983])
+            ("lex_number" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [37068 37086])
+                    ("number" variable
+                       (:pointer 1
+                        :type ("cpp_string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [37087 37106])
+                    ("nst" variable
+                       (:pointer 1
+                        :type ("normalize_state" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [37112 37140]))                  
+                :type "void")
+                nil [37044 37746])
+            ("create_literal" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [37836 37854])
+                    ("token" variable
+                       (:pointer 1
+                        :type ("cpp_token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [37855 37872])
+                    ("base" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [37873 37891])
+                    ("len" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [37894 37911])
+                    ("type" variable (:type ("cpp_ttype" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [37912 37932]))                  
+                :type "void")
+                nil [37808 38120])
+            ("bufring_append" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38276 38294])
+                    ("base" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38295 38313])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [38314 38325])
+                    ("first_buff_p" variable
+                       (:pointer 2
+                        :type ("_cpp_buff" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38328 38353])
+                    ("last_buff_p" variable
+                       (:pointer 2
+                        :type ("_cpp_buff" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38354 38378]))                  
+                :type "void")
+                nil [38248 38975])
+            ("is_macro" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [39147 39165])
+                    ("base" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [39166 39184]))                  
+                :type "bool")
+                nil [39126 39623])
+            ("lex_raw_string" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [40052 40070])
+                    ("token" variable
+                       (:pointer 1
+                        :type ("cpp_token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [40071 40088])
+                    ("base" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [40089 40107])
+                    ("cur" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [40110 40127]))                  
+                :type "void")
+                nil [40024 49152])
+            ("lex_string" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [49699 49717])
+                    ("token" variable
+                       (:pointer 1
+                        :type ("cpp_token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [49718 49735])
+                    ("base" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [49736 49754]))                  
+                :type "void")
+                nil [49675 52459])
+            ("cpp_get_comments" function
+               (:pointer 1
+                :arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [52607 52625]))                  
+                :type ("cpp_comment_table" type (:type "class") nil nil))
+                nil [52569 52656])
+            ("store_comment" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [52742 52760])
+                    ("token" variable
+                       (:pointer 1
+                        :type ("cpp_token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [52761 52778]))                  
+                :type "void")
+                nil [52714 53799])
+            ("save_comment" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [53900 53918])
+                    ("token" variable
+                       (:pointer 1
+                        :type ("cpp_token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [53919 53936])
+                    ("from" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [53937 53963])
+                    ("type" variable (:type ("cppchar_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [53971 53986]))                  
+                :type "void")
+                nil [53874 55506])
+            ("_cpp_init_tokenrun" function
+               (:arguments 
+                  ( ("run" variable
+                       (:pointer 1
+                        :type ("tokenrun" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [55571 55585])
+                    ("count" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [55586 55605]))                  
+                :type "void")
+                nil [55546 55705])
+            ("next_tokenrun" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("run" variable
+                       (:pointer 1
+                        :type ("tokenrun" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [55807 55821]))                  
+                :type ("tokenrun" type (:type "class") nil nil))
+                nil [55774 55990])
+            ("_cpp_remaining_tokens_num_in_context" function
+               (:arguments 
+                  ( ("context" variable
+                       (:pointer 1
+                        :type ("cpp_context" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [56109 56130]))                  
+                :type "int")
+                nil [56067 56436])
+            ("_cpp_token_from_context_at" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :arguments 
+                  ( ("context" variable
+                       (:pointer 1
+                        :type ("cpp_context" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [56624 56645])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [56646 56656]))                  
+                :type ("cpp_token" type (:type "class") nil nil))
+                nil [56572 56924])
+            ("cpp_peek_token" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [56999 57017])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [57018 57028]))                  
+                :type ("cpp_token" type (:type "class") nil nil))
+                nil [56965 57803])
+            ("_cpp_temp_token" function
+               (:pointer 1
+                :arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [58060 58078]))                  
+                :type ("cpp_token" type (:type "class") nil nil))
+                nil [58031 58996])
+            ("_cpp_lex_token" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [59199 59217]))                  
+                :type ("cpp_token" type (:type "class") nil nil))
+                nil [59165 60959])
+            ("_cpp_get_fresh_line" function
+               (:arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [61040 61058]))                  
+                :type "bool")
+                nil [61014 61921])
+            ("IF_NEXT_IS" variable (:constant-flag t) nil [61931 61941])
+            ("_cpp_lex_direct" function
+               (:pointer 1
+                :arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [62748 62766]))                  
+                :type ("cpp_token" type (:type "class") nil nil))
+                nil [62719 73425])
+            ("cpp_token_len" function
+               (:arguments 
+                  ( ("token" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cpp_token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [73565 73588]))                  
+                :type "unsigned int")
+                nil [73537 73835])
+            ("utf8_to_ucn" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [74029 74051])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [74052 74078]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [74002 74658])
+            ("cpp_digraph2name" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :arguments 
+                  ( ("type" variable (:type ("cpp_ttype" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [74813 74833]))                  
+                :type "unsigned char")
+                nil [74766 74903])
+            ("cpp_spell_token" function
+               (:pointer 1
+                :arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [75319 75337])
+                    ("token" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cpp_token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [75338 75361])
+                    ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [75365 75387])
+                    ("forstring" variable (:type "bool") (reparse-symbol arg-sub-list) [75388 75403]))                  
+                :type "unsigned char")
+                nil [75286 76598])
+            ("cpp_token_as_text" function
+               (:pointer 1
+                :arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [76770 76788])
+                    ("token" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cpp_token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [76789 76812]))                  
+                :type "unsigned char")
+                nil [76735 77020])
+            ("cpp_type2name" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("type" variable (:type ("cpp_ttype" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [77219 77239])
+                    ("flags" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [77240 77260]))                  
+                :type "char")
+                nil [77191 77463])
+            ("cpp_output_token" function
+               (:arguments 
+                  ( ("token" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cpp_token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [77647 77670])
+                    ("fp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [77671 77680]))                  
+                :type "void")
+                nil [77624 78658])
+            ("_cpp_equiv_tokens" function
+               (:arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cpp_token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [78710 78729])
+                    ("b" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cpp_token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [78730 78749]))                  
+                :type "int")
+                nil [78687 79429])
+            ("cpp_avoid_paste" function
+               (:arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [79675 79693])
+                    ("token1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cpp_token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [79694 79718])
+                    ("token2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cpp_token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [79722 79746]))                  
+                :type "int")
+                nil [79654 81653])
+            ("cpp_output_line" function
+               (:arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [81869 81887])
+                    ("fp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [81888 81897]))                  
+                :type "void")
+                nil [81847 82153])
+            ("cpp_output_line_to_string" function
+               (:pointer 1
+                :arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [82363 82381])
+                    ("dir_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [82382 82412]))                  
+                :type "unsigned char")
+                nil [82320 83379])
+            ("MIN_BUFF_SIZE" variable (:constant-flag t) nil [83766 83779])
+            ("BUFF_SIZE_UPPER_BOUND" variable (:constant-flag t) nil [83793 83814])
+            ("EXTENDED_BUFF_SIZE" variable (:constant-flag t) nil [83870 83888])
+            ("new_buff" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [84262 84273]))                  
+                :type ("_cpp_buff" type (:type "class") nil nil))
+                nil [84233 84917])
+            ("_cpp_release_buff" function
+               (:arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [85013 85031])
+                    ("buff" variable
+                       (:pointer 1
+                        :type ("_cpp_buff" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [85032 85048]))                  
+                :type "void")
+                nil [84989 85180])
+            ("_cpp_get_buff" function
+               (:pointer 1
+                :arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [85264 85282])
+                    ("min_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [85283 85299]))                  
+                :type ("_cpp_buff" type (:type "class") nil nil))
+                nil [85237 85793])
+            ("_cpp_append_extend_buff" function
+               (:pointer 1
+                :arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [86078 86096])
+                    ("buff" variable
+                       (:pointer 1
+                        :type ("_cpp_buff" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [86097 86113])
+                    ("min_extra" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [86114 86131]))                  
+                :type ("_cpp_buff" type (:type "class") nil nil))
+                nil [86041 86343])
+            ("_cpp_extend_buff" function
+               (:arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [86691 86709])
+                    ("pbuff" variable
+                       (:pointer 2
+                        :type ("_cpp_buff" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [86710 86728])
+                    ("min_extra" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [86729 86746]))                  
+                :type "void")
+                nil [86668 87008])
+            ("_cpp_free_buff" function
+               (:arguments 
+                  ( ("buff" variable
+                       (:pointer 1
+                        :type ("_cpp_buff" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [87080 87096]))                  
+                :type "void")
+                nil [87059 87274])
+            ("_cpp_unaligned_alloc" function
+               (:pointer 1
+                :arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [87374 87392])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [87393 87404]))                  
+                :type "unsigned char")
+                nil [87336 87713])
+            ("_cpp_aligned_alloc" function
+               (:pointer 1
+                :arguments 
+                  ( ("pfile" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [88292 88310])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [88311 88322]))                  
+                :type "unsigned char")
+                nil [88256 88631])
+            ("cpp_token_val_index" function
+               (:arguments 
+                  ( ("tok" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cpp_token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [88720 88741]))                  
+                :type ("cpp_token_fld_kind" type (:type "enum") nil nil))
+                nil [88675 89333])
+            ("cpp_force_token_locations" function
+               (:arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [89574 89588])
+                    ("p" variable
+                       (:pointer 1
+                        :type ("source_location" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [89589 89608]))                  
+                :type "void")
+                nil [89542 89646])
+            ("cpp_stop_forcing_token_locations" function
+               (:arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("cpp_reader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [89754 89768]))                  
+                :type "void")
+                nil [89715 89809]))          
+    :file "lex.c"
+    :pointmax 89805
+    :fsize 89809
+    :lastmodtime '(21485 17533)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("EXTENDED_BUFF_SIZE" (spp-arg-list ("BUFF" "MIN_EXTRA") 83883 . 83900) . ((semantic-list "(MIN_EXTRA + ((BUFF)->limit - (BUFF)->cur) * 2)" 83904 . 83951)))
+          ("MIN_SIZE")
+          ("HAVE_init_vectorized_lexer" . ((number "1" 15373 . 15374)))
+          ("MIN_BUFF_SIZE" . ((number "8000" 83775 . 83779)))
+          ("search_line_sse42" . ((symbol "search_line_sse2" 15111 . 15127)))
+          ("TOKEN_NAME" (spp-arg-list ("token") 1558 . 1565) . ((semantic-list "(token_spellings[(token)->type].name)" 1566 . 1603)))
+          ("IF_NEXT_IS" (spp-arg-list ("CHAR" "THEN_TYPE" "ELSE_TYPE") 61936 . 61964) . 
+              ((DO "do" 61970 . 61972) (semantic-list "{							\\
+      result->type = ELSE_TYPE;				\\
+      if (*buffer->cur == CHAR)				\\
+	buffer->cur++, result->type = THEN_TYPE;	\\
+    }" 61985 . 62118) (WHILE "while" 62129 . 62134) (semantic-list "(0)" 62135 . 62138)))
+          ("BUFF_SIZE_UPPER_BOUND" (spp-arg-list ("MIN_SIZE") 83809 . 83819) . ((semantic-list "(MIN_BUFF_SIZE + (MIN_SIZE) * 3 / 2)" 83820 . 83856)))
+          ("BUF_APPEND" (spp-arg-list ("STR" "LEN") 40938 . 40947) . 
+              ((DO "do" 40960 . 40962) (semantic-list "{							\\
+	bufring_append (pfile, (const uchar *)(STR), (LEN),	\\
+			&first_buff, &last_buff);		\\
+	total_len += (LEN);					\\
+	if (__builtin_expect (temp_buffer_len < 17, 0)		\\
+	    && (const uchar *)(STR) != base			\\
+	    && (LEN) <= 2)					\\
+	  {							\\
+	    memcpy (temp_buffer + temp_buffer_len,		\\
+		    (const uchar *)(STR), (LEN));		\\
+	    temp_buffer_len += (LEN);				\\
+	  }							\\
+      }" 40963 . 41360) (WHILE "while" 41361 . 41366) (semantic-list "(0)" 41367 . 41370) (punctuation ";" 41370 . 41371)))
+          ("TOKEN_SPELL" (spp-arg-list ("token") 1490 . 1497) . ((semantic-list "(token_spellings[(token)->type].category)" 1498 . 1539)))
+          ("WORDS_BIGENDIAN" . ((number "0" 3893 . 3894)))
+          )
+
+    )
+   (semanticdb-table "system.h"
+    :file "system.h"
+    :fsize 11678
+    :lastmodtime '(21189 59181)
+    )
+   (semanticdb-table "internal.h"
+    :file "internal.h"
+    :fsize 30041
+    :lastmodtime '(21189 59181)
+    )
+   )
+  :file "!Users!fabiencesari!work!arm_toolchain!gcc-4.9.0!libcpp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,41 @@
+;; Object hello_world/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "hello_world/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-bsdmake-mode
+    :tags 
+        '( ("CC" variable (:default-value ("/usr/local/carlson-minot/crosscompilers/bin/arm-none-linux-gnueabi-g++")) nil [1 75])
+            ("CFLAGS" variable (:default-value ("-c" "-Wall" "--sysroot=/usr/local/carlson-minot/crosscompilers/arm-none-linux-gnueabi/libc-2013.05-24-sysroot")) nil [76 189])
+            ("LDFLAGS" variable (:default-value ("--sysroot=/usr/local/carlson-minot/crosscompilers/arm-none-linux-gnueabi/libc-2013.05-24-sysroot" "-lstdc++")) nil [190 304])
+            ("SOURCES" variable (:default-value ("hello_world.cpp")) nil [305 329])
+            ("INCDIR" variable nil nil [330 338])
+            ("LIBS" variable nil nil [338 344])
+            ("OBJECTS" variable (:default-value ("$(SOURCES:.cpp=.o)")) nil [345 372])
+            ("EXECUTABLE" variable (:default-value ("hello_world")) nil [372 395])
+            ("all" function (:arguments ("$(SOURCES)" "$(EXECUTABLE)")) nil [396 426])
+            ("$(EXECUTABLE)" function (:arguments ("$(OBJECTS)" "$(LIBS)")) nil [427 505])
+            (".cpp.o" function nil nil [506 553])
+            ("clean" function nil nil [554 587]))          
+    :file "Makefile"
+    :pointmax 539
+    :fsize 586
+    :lastmodtime '(21479 61194)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "hello_world.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("main" function (:type "int") nil [22 168]))          
+    :file "hello_world.cpp"
+    :pointmax 38
+    :fsize 168
+    :lastmodtime '(21479 60689)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!fabiencesari!work!electronic!beagle_bone_black!hello_world!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

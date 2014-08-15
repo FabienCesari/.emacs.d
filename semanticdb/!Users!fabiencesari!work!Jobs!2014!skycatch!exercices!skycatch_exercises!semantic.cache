@@ -1,0 +1,112 @@
+;; Object skycatch_exercises/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "skycatch_exercises/"
+  :tables (list 
+   (semanticdb-table "aces.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [814 832])
+            ("stdlib.h" include (:system-flag t) nil [833 852])
+            ("math.h" include (:system-flag t) nil [853 870])
+            ("NB_OF_TRIALS" variable (:constant-flag t) nil [880 892])
+            ("main" function (:type "int") nil [902 3937]))          
+    :file "aces.c"
+    :pointmax 3938
+    :fsize 3937
+    :lastmodtime '(21323 31154)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "ip_packet_analysis.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [814 832])
+            ("stdlib.h" include (:system-flag t) nil [833 852])
+            ("stdbool.h" include (:system-flag t) nil [853 873])
+            ("stdint.h" include (:system-flag t) nil [874 893])
+            ("winsock2.h" include (:system-flag t) nil [977 998])
+            ("is_local_adress" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("ipv4_header" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1057 1079])
+                    ("address" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1080 1097])
+                    ("subnet" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1098 1114]))                  
+                :type "bool")
+                nil [1036 1115])
+            ("dec_to_bin_32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("dec_num" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1135 1152])
+                    ("bin_ptr" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1153 1171])
+                    ("print" variable (:type "bool") (reparse-symbol arg-sub-list) [1172 1183]))                  
+                :type "int")
+                nil [1116 1184])
+            ("find_addr_class" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("msb_1" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1206 1220])
+                    ("msb_2" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1221 1235])
+                    ("msb_3" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1236 1250])
+                    ("subnet_mask" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1251 1274]))                  
+                :type "int")
+                nil [1185 1275])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1286 1295])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1296 1309]))                  
+                :type "int")
+                nil [1277 2795])
+            ("is_local_adress" function
+               (:arguments 
+                  ( ("ipv4_header" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2818 2840])
+                    ("address" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2841 2858])
+                    ("subnet" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2859 2875]))                  
+                :type "bool")
+                nil [2797 5109])
+            ("find_addr_class" function
+               (:arguments 
+                  ( ("msb_1" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5131 5145])
+                    ("msb_2" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5146 5160])
+                    ("msb_3" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5161 5175])
+                    ("subnet_mask" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5176 5200]))                  
+                :type "int")
+                nil [5111 6163])
+            ("dec_to_bin_32" function
+               (:arguments 
+                  ( ("dec_num" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6184 6201])
+                    ("bin_ptr" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6202 6220])
+                    ("print" variable (:type "bool") (reparse-symbol arg-sub-list) [6221 6232]))                  
+                :type "int")
+                nil [6166 6534]))          
+    :file "ip_packet_analysis.c"
+    :pointmax 6539
+    :fsize 6538
+    :lastmodtime '(21324 5136)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!fabiencesari!work!Jobs!2014!skycatch!exercices!skycatch_exercises!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

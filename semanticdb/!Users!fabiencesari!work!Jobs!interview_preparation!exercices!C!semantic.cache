@@ -1,0 +1,36 @@
+;; Object C/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "C/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-bsdmake-mode
+    :tags 
+        '( ("CC" variable (:default-value ("gcc")) nil [51 58])
+            ("EXEC" variable (:default-value ("training")) nil [60 76])
+            (".PHONY" function (:arguments ("clean")) nil [77 91])
+            ("all" function (:arguments ("$(EXEC)")) nil [92 105])
+            ("debug" function (:arguments ("CC" "+=" "-DDEBUG" "-g")) nil [105 129])
+            ("training" function (:arguments ("training.c")) nil [146 198])
+            ("clean" function nil nil [199 226]))          
+    :file "Makefile"
+    :pointmax 238
+    :fsize 225
+    :lastmodtime '(21474 26444)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "training.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [32 50])
+            ("main" function (:type "int") nil [52 317]))          
+    :file "training.c"
+    :pointmax 288
+    :fsize 322
+    :lastmodtime '(21474 48157)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!fabiencesari!work!Jobs!interview_preparation!exercices!C!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,18 @@
+;; Object js/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "js/"
+  :tables (list 
+   (semanticdb-table "parralax.js"
+    :major-mode 'js-mode
+    :tags nil
+    :file "parralax.js"
+    :pointmax 1
+    :fsize 0
+    :lastmodtime '(21234 48057)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!fabiencesari!work!magnizdat!site!site_v3!magnizdat.org!js!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,76 @@
+;; Object source/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "source/"
+  :tables (list 
+   (semanticdb-table "main.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("pic18fregs.h" include (:system-flag t) nil [1842 1865])
+            ("typedef.h" include (:system-flag t) nil [1866 1886])
+            ("const.h" include (:system-flag t) nil [1887 1905])
+            ("macro.h" include (:system-flag t) nil [1906 1924])
+            ("define.h" include nil nil [2298 2317])
+            ("pin.h" include (:system-flag t) nil [2392 2408])
+            ("io.c" include (:system-flag t) nil [2451 2466])
+            ("user.c" include nil nil [2584 2601])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3622 3627]))                  
+                :type "void")
+                nil [3612 8244]))          
+    :file "main.c"
+    :pointmax 11307
+    :fsize 11312
+    :lastmodtime '(21473 2204)
+    :unmatched-syntax '((semantic-list 10466 . 10896) (number 10464 . 10465) (symbol 10452 . 10463) (semantic-list 10445 . 10451) (symbol 10429 . 10445) (VOID 10424 . 10428) (semantic-list 9023 . 10136) (number 9021 . 9022) (symbol 9009 . 9020) (semantic-list 9002 . 9008) (symbol 8985 . 9002) (VOID 8980 . 8984) (number 10464 . 10465) (symbol 10452 . 10463) (semantic-list 10445 . 10451) (symbol 10429 . 10445) (VOID 10424 . 10428) (semantic-list 9023 . 10136) (number 9021 . 9022) (symbol 9009 . 9020) (semantic-list 9002 . 9008) (symbol 8985 . 9002) (VOID 8980 . 8984))
+    )
+   (semanticdb-table "main32.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("p32xxxx.h" include (:system-flag t) nil [1190 1210])
+            ("typedef.h" include (:system-flag t) nil [1272 1292])
+            ("const.h" include (:system-flag t) nil [1327 1345])
+            ("pin.h" include (:system-flag t) nil [1385 1401])
+            ("macro.h" include (:system-flag t) nil [1436 1454])
+            ("system.c" include (:system-flag t) nil [1491 1510])
+            ("define.h" include nil nil [1545 1564])
+            ("io.c" include (:system-flag t) nil [1597 1612])
+            ("newlib.c" include (:system-flag t) nil [1772 1791])
+            ("user.c" include nil nil [1841 1858])
+            ("main" function (:type "int") nil [1889 3023])
+            ("Serial1Interrupt" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3066 3071]))                  
+                :type "void")
+                nil [3044 3090])
+            ("Serial2Interrupt" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3114 3119]))                  
+                :type "void")
+                nil [3092 3138])
+            ("Tmr2Interrupt" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3492 3497]))                  
+                :type "void")
+                nil [3473 3516])
+            ("SPIxInterrupt" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3577 3582]))                  
+                :type "void")
+                nil [3558 3601])
+            ("RTCCInterrupt" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3673 3678]))                  
+                :type "void")
+                nil [3654 3697]))          
+    :file "main32.c"
+    :pointmax 3720
+    :fsize 3720
+    :lastmodtime '(21473 2204)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!fabiencesari!work!electronic!pinguino!source!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

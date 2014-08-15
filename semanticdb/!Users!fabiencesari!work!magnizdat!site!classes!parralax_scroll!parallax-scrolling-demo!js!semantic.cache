@@ -1,0 +1,38 @@
+;; Object js/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "js/"
+  :tables (list 
+   (semanticdb-table "modernizr.custom.37797.js"
+    :major-mode 'js-mode
+    :tags nil
+    :file "modernizr.custom.37797.js"
+    :pointmax 7410
+    :fsize 7409
+    :lastmodtime '(19955 62260)
+    :unmatched-syntax '((FUNCTION 7349 . 7357) (PAREN_BLOCK 7357 . 7359) (COMMA 7333 . 7334) (PAREN_BLOCK 7313 . 7333) (PAREN_BLOCK 3985 . 3992) (COMMA 3976 . 3977) (PAREN_BLOCK 3956 . 3976) (VARIABLE 187 . 193) (FUNCTION 204 . 212) (PAREN_BLOCK 212 . 219))
+    )
+   (semanticdb-table "parallax.js"
+    :major-mode 'js-mode
+    :tags 
+        '( ("parallaxScroll" function nil nil [1379 1613])
+            ("redrawDotNav" function nil nil [1680 2786]))          
+    :file "parallax.js"
+    :pointmax 2787
+    :fsize 2868
+    :lastmodtime '(21233 33862)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "jquery-1.6.1.min.js"
+    :major-mode 'js-mode
+    :tags nil
+    :file "jquery-1.6.1.min.js"
+    :pointmax 91342
+    :fsize 91358
+    :lastmodtime '(19955 62384)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!fabiencesari!work!magnizdat!site!classes!parralax_scroll!parallax-scrolling-demo!js!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

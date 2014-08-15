@@ -1,0 +1,21 @@
+;; Object pt_1/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "pt_1/"
+  :tables (list 
+   (semanticdb-table "tuto_1.php"
+    :major-mode 'html-mode
+    :tags 
+        '( ("Ceci est une page de test avec des balises PHP" section nil nil [192 345])
+            ("Page de test" section (:members 
+              ( ("Page de test" section nil nil [356 814]))              ) nil [345 814]))          
+    :file "tuto_1.php"
+    :pointmax 814
+    :fsize 813
+    :lastmodtime '(21217 50564)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!fabiencesari!work!magnizdat!site!php!pt_1!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

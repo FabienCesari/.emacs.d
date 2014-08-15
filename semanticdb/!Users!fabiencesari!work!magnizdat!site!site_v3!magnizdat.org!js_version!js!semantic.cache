@@ -1,0 +1,22 @@
+;; Object js/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "js/"
+  :tables (list 
+   (semanticdb-table "background.js"
+    :major-mode 'js-mode
+    :tags 
+        '( ("sketch_selection" variable (:default-value "1") nil [73 98])
+            ("main_color" variable (:default-value "200") nil [99 120])
+            ("sketchProc" function (:arguments 
+              ( ("processing" variable nil (reparse-symbol FormalParameterList) [142 152]))              ) nil [122 3939]))          
+    :file "background.js"
+    :pointmax 5788
+    :fsize 4107
+    :lastmodtime '(21266 33536)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!fabiencesari!work!magnizdat!site!site_v3!magnizdat.org!js_version!js!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

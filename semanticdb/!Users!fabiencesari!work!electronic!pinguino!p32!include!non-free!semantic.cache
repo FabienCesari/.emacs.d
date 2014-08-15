@@ -1,0 +1,170 @@
+;; Object non-free/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "non-free/"
+  :tables (list 
+   (semanticdb-table "p32xxxx.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_P32XXXX_H" variable (:constant-flag t) nil [28 38])
+            ("__C32__" variable (:constant-flag t) nil [64 71])
+            ("__C32_UART" variable
+               (:typemodifiers ("extern")
+                :type "int")
+                nil [7018 7040])
+            ("_reg_t" type
+               (:typedef ("unsigned long")
+                :superclasses "unsigned long"
+                :type "typedef")
+                nil [7042 7071])
+            ("_nop" variable (:constant-flag t) nil [7209 7213])
+            ("Nop" variable (:constant-flag t) nil [7334 7337])
+            ("_ehb" variable (:constant-flag t) nil [7377 7381])
+            ("_sync" variable (:constant-flag t) nil [7516 7521])
+            ("_wait" variable (:constant-flag t) nil [7585 7590])
+            ("_mfc0" variable (:constant-flag t) nil [7662 7667])
+            ("_mtc0" variable (:constant-flag t) nil [7719 7724])
+            ("_mxc0" variable (:constant-flag t) nil [7829 7834])
+            ("_bcc0" variable (:constant-flag t) nil [7951 7956])
+            ("_bsc0" variable (:constant-flag t) nil [8073 8078])
+            ("_bcsc0" variable (:constant-flag t) nil [8215 8221])
+            ("_clz" variable (:constant-flag t) nil [9784 9788])
+            ("_ctz" variable (:constant-flag t) nil [9847 9851])
+            ("_clo" variable (:constant-flag t) nil [9907 9911])
+            ("_dclz" variable (:constant-flag t) nil [10107 10112])
+            ("_dclo" variable (:constant-flag t) nil [10304 10309])
+            ("_dctz" variable (:constant-flag t) nil [10507 10512])
+            ("_wsbh" variable (:constant-flag t) nil [10742 10747])
+            ("_bswapw" variable (:constant-flag t) nil [10942 10949])
+            ("_ins" variable (:constant-flag t) nil [11153 11157])
+            ("_ext" variable (:constant-flag t) nil [11401 11405])
+            ("_jr_hb" variable (:constant-flag t) nil [11626 11632])
+            ("_wrpgpr" variable (:constant-flag t) nil [11887 11894])
+            ("_rdpgpr" variable (:constant-flag t) nil [12113 12120])
+            ("_xchsrspss" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [12416 12429]))                  
+                :type "unsigned int")
+                nil [12384 12430])
+            ("sys/appio.h" include (:system-flag t) nil [12431 12453])
+            ("_get_byte" variable (:constant-flag t) nil [12471 12480])
+            ("_get_half" variable (:constant-flag t) nil [12539 12548])
+            ("_get_word" variable (:constant-flag t) nil [12608 12617])
+            ("_get_dword" variable (:constant-flag t) nil [12675 12685])
+            ("_put_byte" variable (:constant-flag t) nil [12749 12758])
+            ("_put_half" variable (:constant-flag t) nil [12824 12833])
+            ("_put_word" variable (:constant-flag t) nil [12900 12909])
+            ("_put_dword" variable (:constant-flag t) nil [12974 12984])
+            ("cp0defs.h" include (:system-flag t) nil [13054 13074]))          
+    :file "p32xxxx.h"
+    :pointmax 13101
+    :fsize 13100
+    :lastmodtime '(21473 2185)
+    :unmatched-syntax '((punctuation 4646 . 4647) (symbol 4637 . 4646) (symbol 4629 . 4636) (symbol 4623 . 4628) (punctuation 4622 . 4623))
+    :lexical-table 
+        '(("_mtc0" (spp-arg-list ("rn" "sel" "v") 7724 . 7736) . ((symbol "__builtin_mtc0" 7745 . 7759) (semantic-list "(rn,sel,v)" 7759 . 7769)))
+          ("_dclz" (spp-arg-list ("x") 10112 . 10115) . ((symbol "__extension__" 10116 . 10129) (semantic-list "({ \\
+    unsigned long long __x = (x); \\
+    unsigned int __hx = (__x >> 32); \\
+    __hx ? _clz(__hx) : 32 + _clz(__x); \\
+})" 10129 . 10253)))
+          ("_mfc0" (spp-arg-list ("rn" "sel") 7667 . 7676) . ((symbol "__builtin_mfc0" 7688 . 7702) (semantic-list "(rn,sel)" 7702 . 7710)))
+          ("_bcc0" (spp-arg-list ("rn" "sel" "clr") 7956 . 7970) . ((symbol "__builtin_bcc0" 7977 . 7991) (semantic-list "(rn,sel,clr)" 7991 . 8003)))
+          ("_ctz" (spp-arg-list ("x") 9851 . 9854) . ((symbol "__builtin_ctz" 9855 . 9868) (semantic-list "(x)" 9869 . 9872)))
+          ("_get_word" (spp-arg-list ("addr" "errp") 12617 . 12629) . ((semantic-list "(*(volatile unsigned int *)(addr))" 12632 . 12666)))
+          ("_put_half" (spp-arg-list ("addr" "v") 12833 . 12842) . ((semantic-list "(*(volatile unsigned short *)(addr)=(v), 0)" 12848 . 12891)))
+          ("_wait" (spp-arg-list nil 7590 . 7592) . 
+              ((symbol "__asm__" 7593 . 7600) (symbol "__volatile__" 7601 . 7613) (semantic-list "(\"wait\")" 7614 . 7622)))
+          ("_clz" (spp-arg-list ("x") 9788 . 9791) . ((symbol "__builtin_clz" 9792 . 9805) (semantic-list "(x)" 9806 . 9809)))
+          ("_dclo" (spp-arg-list ("x") 10309 . 10312) . ((symbol "__extension__" 10313 . 10326) (semantic-list "({ \\
+    unsigned long long __x = (x); \\
+    unsigned int __hx = (__x >> 32); \\
+    (~__hx) ? _clo(__hx) : 32 + _clo(__x); \\
+})" 10326 . 10453)))
+          ("Nop" (spp-arg-list nil 7337 . 7339) . ((symbol "_nop" 7341 . 7345) (semantic-list "()" 7345 . 7347)))
+          ("_clo" (spp-arg-list ("x") 9911 . 9914) . ((symbol "__extension__" 9915 . 9928) (semantic-list "({ \\
+    unsigned int __x = (x); \\
+    unsigned int __v; \\
+    __asm__ (\"clo %0,%1\" : \"=d\" (__v) : \"d\" (__x)); \\
+    __v; \\
+})" 9928 . 10054)))
+          ("_put_word" (spp-arg-list ("addr" "v") 12909 . 12918) . ((semantic-list "(*(volatile unsigned int *)(addr)=(v), 0)" 12924 . 12965)))
+          ("_nop" (spp-arg-list nil 7213 . 7215) . 
+              ((symbol "__asm__" 7217 . 7224) (symbol "__volatile__" 7225 . 7237) (semantic-list "(\"%(ssnop%)\" : :)" 7238 . 7255)))
+          ("_ins" (spp-arg-list ("tgt" "val" "pos" "sz") 11157 . 11173) . ((symbol "__extension__" 11174 . 11187) (semantic-list "({ \\
+    unsigned int __t = (tgt), __v = (val); \\
+    __asm__ (\"ins %0,%z1,%2,%3\" \\
+             : \"+d\" (__t) \\
+             : \"dJ\" (__v), \"I\" (pos), \"I\" (sz)); \\
+    __t; \\
+})" 11187 . 11363)))
+          ("_put_dword" (spp-arg-list ("addr" "v") 12984 . 12993) . ((semantic-list "(*(volatile unsigned long long *)(addr)=(v), 0)" 12998 . 13045)))
+          ("_sync" (spp-arg-list nil 7521 . 7523) . 
+              ((symbol "__asm__" 7524 . 7531) (symbol "__volatile__" 7532 . 7544) (semantic-list "(\"sync\" : : : \"memory\")" 7545 . 7568)))
+          ("_wsbh" (spp-arg-list ("x") 10747 . 10750) . ((symbol "__extension__" 10751 . 10764) (semantic-list "({ \\
+    unsigned int __x = (x), __v; \\
+    __asm__ (\"wsbh %0,%1\" \\
+             : \"=d\" (__v) \\
+             : \"d\" (__x)); \\
+    __v; \\
+})" 10764 . 10902)))
+          ("_bswapw" (spp-arg-list ("x") 10949 . 10952) . ((symbol "__extension__" 10953 . 10966) (semantic-list "({ \\
+    unsigned int __x = (x), __v; \\
+    __asm__ (\"wsbh %0,%1; rotr %0,16\" \\
+             : \"=d\" (__v) \\
+             : \"d\" (__x)); \\
+    __v; \\
+})" 10966 . 11116)))
+          ("_jr_hb" (spp-arg-list nil 11632 . 11634) . 
+              ((symbol "__asm__" 11635 . 11642) (symbol "__volatile__" 11643 . 11655) (semantic-list "( \\
+       \"bltzal  $0,0f\\n\"               \\
+\"0:     addiu   $31,1f-0b\\n\"           \\
+\"       jr.hb   $31\\n\"                 \\
+\"1:\"                                   \\
+        : : : \"$31\")" 11655 . 11843)))
+          ("_get_byte" (spp-arg-list ("addr" "errp") 12480 . 12492) . ((semantic-list "(*(volatile unsigned char *)(addr))" 12495 . 12530)))
+          ("_get_dword" (spp-arg-list ("addr" "errp") 12685 . 12697) . ((semantic-list "(*(volatile unsigned long long *)(addr))" 12699 . 12739)))
+          ("_ehb" (spp-arg-list nil 7381 . 7383) . 
+              ((symbol "__asm__" 7385 . 7392) (symbol "__volatile__" 7393 . 7405) (semantic-list "(\"%(ehb%)\" : :)" 7406 . 7421)))
+          ("_mxc0" (spp-arg-list ("rn" "sel" "v") 7834 . 7846) . ((symbol "__builtin_mxc0" 7855 . 7869) (semantic-list "(rn,sel,v)" 7869 . 7879)))
+          ("_rdpgpr" (spp-arg-list ("regno") 12120 . 12127) . ((symbol "__extension__" 12130 . 12143) (semantic-list "({ \\
+    _reg_t __val; \\
+    __asm __volatile__ (\"rdpgpr %0,$%1\" \\
+                        : \"=d\" (__val) \\
+                        : \"JK\" (regno)); \\
+    __val; \\
+})" 12143 . 12309)))
+          ("_put_byte" (spp-arg-list ("addr" "v") 12758 . 12767) . ((semantic-list "(*(volatile unsigned char *)(addr)=(v), 0)" 12773 . 12815)))
+          ("_P32XXXX_H")
+          ("__C32__" . ((number "1" 72 . 73)))
+          ("_bsc0" (spp-arg-list ("rn" "sel" "set") 8078 . 8092) . ((symbol "__builtin_bsc0" 8099 . 8113) (semantic-list "(rn,sel,set)" 8113 . 8125)))
+          ("_bcsc0" (spp-arg-list ("rn" "sel" "clr" "set") 8221 . 8240) . ((symbol "__builtin_bcsc0" 8241 . 8256) (semantic-list "(rn,sel,clr,set)" 8256 . 8272)))
+          ("_wrpgpr" (spp-arg-list ("regno" "val") 11894 . 11906) . 
+              ((DO "do" 11909 . 11911) (semantic-list "{ \\
+    __asm __volatile__ (\"wrpgpr $%0,%z1\" \\
+                        : /* no outputs */ \\
+                        : \"JK\" (regno), \"dJ\" (val)); \\
+}" 11912 . 12060) (WHILE "while" 12061 . 12066) (semantic-list "(0)" 12067 . 12070)))
+          ("_get_half" (spp-arg-list ("addr" "errp") 12548 . 12560) . ((semantic-list "(*(volatile unsigned short *)(addr))" 12563 . 12599)))
+          ("_dctz" (spp-arg-list ("x") 10512 . 10515) . ((symbol "__extension__" 10516 . 10529) (semantic-list "({ \\
+    unsigned long long __dx = (x); \\
+    unsigned int __ldx = __dx; \\
+    unsigned int __hdx = __dx >> 32; \\
+    __ldx ? _ctz(__ldx) : (63 ^ _clz(__hdx & -__hdx)); \\
+   })" 10529 . 10705)))
+          ("_ext" (spp-arg-list ("x" "pos" "sz") 11405 . 11415) . ((symbol "__extension__" 11416 . 11429) (semantic-list "({ \\
+    unsigned int __x = (x), __v; \\
+    __asm__ (\"ext %0,%z1,%2,%3\" \\
+             : \"=d\" (__v) \\
+             : \"dJ\" (__x), \"I\" (pos), \"I\" (sz)); \\
+    __v; \\
+})" 11429 . 11595)))
+          )
+
+    )
+   )
+  :file "!Users!fabiencesari!work!electronic!pinguino!p32!include!non-free!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )
