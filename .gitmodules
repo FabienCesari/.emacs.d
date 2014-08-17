@@ -13,3 +13,6 @@
 [submodule "external/rhtml"]
 	path = external/rhtml
 	url = https://github.com/eschulte/rhtml
+[submodule "external/cedet"]
+	path = external/cedet
+	url = http://git.randomsample.de/cedet.git
