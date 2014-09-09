@@ -28,8 +28,7 @@
 (add-to-list 'load-path "~/.emacs.d/external/muse/lisp")
 (add-to-list 'load-path "~/.emacs.d/external/autocomplete/")
 (add-to-list 'load-path "~/.emacs.d/external/ruby-mode")
-(add-to-list 'load-path "~/.emacs/external/cedet/common/")
-(add-to-list 'load-path "~/.emacs/external/cedet/contrib/")
+(add-to-list 'load-path "~/.emacs.d/external/cedet/")
 (add-to-list 'load-path "~/.emacs.d/external/autocomplete/")
 (add-to-list 'load-path "~/.emacs.d/external/nxhtml/util")
 (add-to-list 'load-path "~/.emacs.d/external/rhtml")
@@ -121,8 +120,8 @@
 * OS specific configuaration
 ** OSX keyboard adaptation 
 #+BEGIN_SRC emacs-lisp
-(setq mac-option-modifier 'none)
-(setq mac-command-modifier 'meta)
+;;(setq mac-option-modifier 'none)
+;;(setq mac-command-modifier 'meta)
 #+END_SRC
 ** forget Command-Q to quit, use M-Q to fill-region
 #+BEGIN_SRC emacs-lisp
@@ -201,7 +200,10 @@
 
 ** Emacs CEDET
 #+BEGIN_SRC emacs-lisp
+
   (require 'cedet)
+  (load "~/.emacs.d/external/cedet/lisp/cedet/cedet.el")
+  
   ;; Load CEDET.
   ;; See cedet/common/cedet.info for configuration details.
   ;; IMPORTANT: For Emacs >= 23.2, you must place this *before* any
@@ -213,7 +215,7 @@
   ;; you can use here.
   (add-to-list 'semantic-default-submodes 'global-semantic-idle-summary-mode t)
   (add-to-list 'semantic-default-submodes 'global-semantic-idle-completions-mode t)
-  (add-to-list 'semantic-default-submodes 'global-cedet-m3-minor-mode t)
+  ;;(add-to-list 'semantic-default-submodes 'global-cedet-m3-minor-mode t)
   
   ;; Enable Semantic
   (semantic-mode 1)
@@ -222,7 +224,7 @@
   (global-ede-mode 1)
   
   ;; Configure arduino OS X dirs.
-  (setq ede-arduino-appdir "/Applications/Arduino.app/Contents/Resources/Java")
+  ;;(setq ede-arduino-appdir "/Applications/Arduino.app/Contents/Resources/Java")
   
 #+END_SRC
 
@@ -235,16 +237,8 @@
 (require 'muse-docbook)
 (require 'muse-project)  ; publish files in projects
 
-;; Muse project configuration -- May be system dependend, so not Ideal.
-(setq my-muse-dir "~/Work/documents")
-(setq muse-project-alist
-   '(
-     ("home"
-     (,(concat my-muse-dir "/muse/home")
-       :default "index")
-       (:base "html" :path ,(concat my-muse-base-dir "/html/home")))
-    ))
 
+;; Muse project configuration -- May be system dependend, so not Ideal.
 #+END_SRC
    
 ** nxhtml 
