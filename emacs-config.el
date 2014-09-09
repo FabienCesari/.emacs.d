@@ -72,6 +72,8 @@
 ;(require 'multi-term)
 ;(setq multi-term-program "/bin/zsh")
 
+(require 'sudo-save)
+
 (setq mac-option-modifier 'none)
 (setq mac-command-modifier 'meta)
 
