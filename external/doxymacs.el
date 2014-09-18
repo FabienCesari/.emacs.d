@@ -112,7 +112,7 @@
 ;;
 ;; If you have success or failure with other version of {X}Emacs, please
 ;; let the authors know.
-
+
 ;; Change log:
 ;;
 ;; 10/06/2007 - version 1.8.0 

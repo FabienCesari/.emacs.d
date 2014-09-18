@@ -13,8 +13,7 @@
 (add-to-list 'load-path "~/.emacs.d/external/muse/lisp")
 (add-to-list 'load-path "~/.emacs.d/external/autocomplete/")
 (add-to-list 'load-path "~/.emacs.d/external/ruby-mode")
-(add-to-list 'load-path "~/.emacs/external/cedet/common/")
-(add-to-list 'load-path "~/.emacs/external/cedet/contrib/")
+(add-to-list 'load-path "~/.emacs.d/external/cedet/")
 (add-to-list 'load-path "~/.emacs.d/external/autocomplete/")
 (add-to-list 'load-path "~/.emacs.d/external/nxhtml/util")
 (add-to-list 'load-path "~/.emacs.d/external/rhtml")
@@ -34,6 +33,8 @@
  '(ido-everywhere t)
  '(ido-mode (quote both) nil (ido))
  '(tool-bar-mode t))
+
+(set-face-attribute 'default nil :height 100)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -66,14 +67,17 @@
 (global-set-key (kbd "<C-S-left>")   'buf-move-left)
 (global-set-key (kbd "<C-S-right>")  'buf-move-right)
 
+;;; I prefer cmd key for meta
+(setq mac-command-modifier 'meta)
+
 (require 'tramp)
 (setq tramp-default-method "ftp")
 
 ;(require 'multi-term)
 ;(setq multi-term-program "/bin/zsh")
 
-(setq mac-option-modifier 'none)
-(setq mac-command-modifier 'meta)
+;;(setq mac-option-modifier 'none)
+;;(setq mac-command-modifier 'meta)
 
 (when (eq system-type 'darwin)
   (setq mac-pass-command-to-system nil) )
@@ -87,21 +91,21 @@
   (package-initialize))
 
 (load "doxymacs")
-(load "xml-parse")
-(require 'doxymacs)
-(add-hook 'c-mode-common-hook'doxymacs-mode)
-(defun my-c-font-lock-doxy-html (limit)
-  (while (re-search-forward "<.+?>" limit 'move)
-    (let ((beg (match-beginning 0))
-          (end (match-end 0)))
-      (if (nth 4 (syntax-ppss beg))
-          (when (nth 4 (syntax-ppss end))
-            (c-put-font-lock-face beg end 'font-lock-keyword-face))
-        (goto-char end))))
-  nil)
-(defun my-c-mode-common-hook ()
-  (font-lock-add-keywords nil '((my-c-font-lock-doxy-html))))
-(add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
+ (load "xml-parse")
+ (require 'doxymacs)
+ (add-hook 'c-mode-common-hook'doxymacs-mode)
+ (defun my-c-font-lock-doxy-html (limit)
+   (while (re-search-forward "<.+?>" limit 'move)
+     (let ((beg (match-beginning 0))
+           (end (match-end 0)))
+       (if (nth 4 (syntax-ppss beg))
+           (when (nth 4 (syntax-ppss end))
+             (c-put-font-lock-face beg end 'font-lock-keyword-face))
+         (goto-char end))))
+   nil)
+ (defun my-c-mode-common-hook ()
+   (font-lock-add-keywords nil '((my-c-font-lock-doxy-html))))
+ (add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
 
 ;;Matlab-emacs config
 ;; add repo to the pah.
@@ -125,6 +129,8 @@
 (setq matlab-shell-command-switches '("-nojvm"))
 
 (require 'cedet)
+(load "~/.emacs.d/external/cedet/lisp/cedet/cedet.el")
+
 ;; Load CEDET.
 ;; See cedet/common/cedet.info for configuration details.
 ;; IMPORTANT: For Emacs >= 23.2, you must place this *before* any
@@ -136,7 +142,7 @@
 ;; you can use here.
 (add-to-list 'semantic-default-submodes 'global-semantic-idle-summary-mode t)
 (add-to-list 'semantic-default-submodes 'global-semantic-idle-completions-mode t)
-(add-to-list 'semantic-default-submodes 'global-cedet-m3-minor-mode t)
+;;(add-to-list 'semantic-default-submodes 'global-cedet-m3-minor-mode t)
 
 ;; Enable Semantic
 (semantic-mode 1)
@@ -145,7 +151,7 @@
 (global-ede-mode 1)
 
 ;; Configure arduino OS X dirs.
-(setq ede-arduino-appdir "/Applications/Arduino.app/Contents/Resources/Java")
+;;(setq ede-arduino-appdir "/Applications/Arduino.app/Contents/Resources/Java")
 
 (require 'muse-mode)     ; load authoring mode
 (require 'muse-html)     ; load publishing styles I use
@@ -154,15 +160,8 @@
 (require 'muse-docbook)
 (require 'muse-project)  ; publish files in projects
 
+
 ;; Muse project configuration -- May be system dependend, so not Ideal.
-(setq my-muse-dir "~/Work/documents")
-(setq muse-project-alist
-   '(
-     ("home"
-     (,(concat my-muse-dir "/muse/home")
-       :default "index")
-       (:base "html" :path ,(concat my-muse-base-dir "/html/home")))
-    ))
 
 (load "~/.emacs.d/external/nxhtml/autostart.el")
 (setq

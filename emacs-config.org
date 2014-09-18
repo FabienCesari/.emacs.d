@@ -54,6 +54,8 @@
  '(ido-everywhere t)
  '(ido-mode (quote both) nil (ido))
  '(tool-bar-mode t))
+
+(set-face-attribute 'default nil :height 100)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -97,6 +99,10 @@
 (global-set-key (kbd "<C-S-donw>")   'buf-move-down)
 (global-set-key (kbd "<C-S-left>")   'buf-move-left)
 (global-set-key (kbd "<C-S-right>")  'buf-move-right)
+
+;;; I prefer cmd key for meta
+(setq mac-command-modifier 'meta)
+     
 #+END_SRC
 
 ** ftp configuration with TRAMP (Transparent Remote Access, Multiple Protocols) 
@@ -152,21 +158,21 @@
 
 #+BEGIN_SRC emacs-lisp
 (load "doxymacs")
-(load "xml-parse")
-(require 'doxymacs)
-(add-hook 'c-mode-common-hook'doxymacs-mode)
-(defun my-c-font-lock-doxy-html (limit)
-  (while (re-search-forward "<.+?>" limit 'move)
-    (let ((beg (match-beginning 0))
-          (end (match-end 0)))
-      (if (nth 4 (syntax-ppss beg))
-          (when (nth 4 (syntax-ppss end))
-            (c-put-font-lock-face beg end 'font-lock-keyword-face))
-        (goto-char end))))
-  nil)
-(defun my-c-mode-common-hook ()
-  (font-lock-add-keywords nil '((my-c-font-lock-doxy-html))))
-(add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
+ (load "xml-parse")
+ (require 'doxymacs)
+ (add-hook 'c-mode-common-hook'doxymacs-mode)
+ (defun my-c-font-lock-doxy-html (limit)
+   (while (re-search-forward "<.+?>" limit 'move)
+     (let ((beg (match-beginning 0))
+           (end (match-end 0)))
+       (if (nth 4 (syntax-ppss beg))
+           (when (nth 4 (syntax-ppss end))
+             (c-put-font-lock-face beg end 'font-lock-keyword-face))
+         (goto-char end))))
+   nil)
+ (defun my-c-mode-common-hook ()
+   (font-lock-add-keywords nil '((my-c-font-lock-doxy-html))))
+ (add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
 #+END_SRC
 
 ** Matlab from emacs

@@ -21,10 +21,7 @@
 -> make EMACS=emacs
 
 
- May need to install auctex and aspell for the configuration to work properely
+ Install auctex and aspell for the configuration to work properely
+ Install doxygen in order to use doxymacs.
 
-    
-* TODO
-  . Fix the emacs-rails and rinari
-  . Fix the muse project file.
-
+  
