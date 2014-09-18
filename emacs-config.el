@@ -76,8 +76,15 @@
 ;(require 'multi-term)
 ;(setq multi-term-program "/bin/zsh")
 
+<<<<<<< HEAD
 ;;(setq mac-option-modifier 'none)
 ;;(setq mac-command-modifier 'meta)
+=======
+(require 'sudo-save)
+
+(setq mac-option-modifier 'none)
+(setq mac-command-modifier 'meta)
+>>>>>>> 95055ea94bf0c21994af25a218cde8c99b8a3457
 
 (when (eq system-type 'darwin)
   (setq mac-pass-command-to-system nil) )
