@@ -55,7 +55,8 @@
  '(ido-mode (quote both) nil (ido))
  '(tool-bar-mode t))
 
-(set-face-attribute 'default nil :height 100)
+
+(set-face-attribute 'default nil :height 120)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -405,4 +406,9 @@
                '(lambda ()
                   (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
      
+   #+END_SRC
+** Python Mode
+   #+BEGIN_SRC emacs-lisp
+     
+    (require 'python-mode)          
    #+END_SRC

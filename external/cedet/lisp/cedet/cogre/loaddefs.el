@@ -3,8 +3,8 @@
 ;;; Code:
 
 
-;;;### (autoloads (cogre-export-ascii) "cogre/ascii" "ascii.el" (21488
-;;;;;;  63297 594402 999000))
+;;;### (autoloads (cogre-export-ascii) "cogre/ascii" "ascii.el" (21531
+;;;;;;  22791 0 0))
 ;;; Generated autoloads from ascii.el
 
 (autoload 'cogre-export-ascii "cogre/ascii" "\
@@ -15,8 +15,8 @@ Export the current diagram into an ASCII buffer.
 ;;;***
 
 ;;;### (autoloads (cogre-export-dot-postscript-print cogre-export-dot-png
-;;;;;;  cogre-export-dot) "cogre/convert" "convert.el" (21488 63297
-;;;;;;  594402 999000))
+;;;;;;  cogre-export-dot) "cogre/convert" "convert.el" (21531 22791
+;;;;;;  0 0))
 ;;; Generated autoloads from convert.el
 
 (autoload 'cogre-export-dot "cogre/convert" "\
@@ -43,7 +43,7 @@ DOT is a part of GraphVis.
 ;;;***
 
 ;;;### (autoloads (cogre-dot-mode) "cogre/dot-mode" "dot-mode.el"
-;;;;;;  (21488 63297 594402 999000))
+;;;;;;  (21531 22791 0 0))
 ;;; Generated autoloads from dot-mode.el
 
 (autoload 'cogre-dot-mode "cogre/dot-mode" "\
@@ -59,8 +59,8 @@ as a parsing engine.
 
 ;;;***
 
-;;;### (autoloads (cogre-layout) "cogre/layout" "layout.el" (21488
-;;;;;;  63297 594402 999000))
+;;;### (autoloads (cogre-layout) "cogre/layout" "layout.el" (21531
+;;;;;;  22791 0 0))
 ;;; Generated autoloads from layout.el
 
 (autoload 'cogre-layout "cogre/layout" "\
@@ -71,8 +71,8 @@ This function depends on graphviz `dot' program.
 
 ;;;***
 
-;;;### (autoloads (cogre-mode) "cogre/mode" "mode.el" (21488 63297
-;;;;;;  594402 999000))
+;;;### (autoloads (cogre-mode) "cogre/mode" "mode.el" (21531 22791
+;;;;;;  0 0))
 ;;; Generated autoloads from mode.el
 
 (autoload 'cogre-mode "cogre/mode" "\
@@ -86,7 +86,7 @@ Connected Graph Editor Mode.
 ;;;***
 
 ;;;### (autoloads (cogre-periodic) "cogre/periodic" "periodic.el"
-;;;;;;  (21488 63297 594402 999000))
+;;;;;;  (21531 22791 0 0))
 ;;; Generated autoloads from periodic.el
 
 (autoload 'cogre-periodic "cogre/periodic" "\
@@ -97,7 +97,7 @@ Create a periodic table of COGRE objects.
 ;;;***
 
 ;;;### (autoloads (cogre-picture-insert-rectangle) "cogre/picture-hack"
-;;;;;;  "picture-hack.el" (21488 63297 594402 999000))
+;;;;;;  "picture-hack.el" (21531 22791 0 0))
 ;;; Generated autoloads from picture-hack.el
 
 (autoload 'cogre-picture-insert-rectangle "cogre/picture-hack" "\
@@ -109,7 +109,7 @@ Leaves the region surrounding the rectangle.
 ;;;***
 
 ;;;### (autoloads (cogre-uml-quick-class cogre-export-code cogre-semantic-tag-to-node)
-;;;;;;  "cogre/semantic" "semantic.el" (21488 63297 594402 999000))
+;;;;;;  "cogre/semantic" "semantic.el" (21531 22791 0 0))
 ;;; Generated autoloads from semantic.el
 
 (autoload 'cogre-semantic-tag-to-node "cogre/semantic" "\
@@ -136,8 +136,8 @@ The parent to CLASS, CLASS, and all of CLASSes children will be shown.
 ;;;***
 
 ;;;### (autoloads (srecode-semantic-handle-:dot srecode-semantic-handle-:cogre
-;;;;;;  cogre-srecode-setup) "cogre/srecode" "srecode.el" (21488
-;;;;;;  63297 594402 999000))
+;;;;;;  cogre-srecode-setup) "cogre/srecode" "srecode.el" (21531
+;;;;;;  22791 0 0))
 ;;; Generated autoloads from srecode.el
 
 (autoload 'cogre-srecode-setup "cogre/srecode" "\
@@ -160,7 +160,7 @@ Add macros to dictionary DICT based on the current DOT buffer.
 ;;;***
 
 ;;;### (autoloads (cogre-uml-sort-for-lineage cogre-uml-enable-unicode)
-;;;;;;  "cogre/uml" "uml.el" (21488 63297 594402 999000))
+;;;;;;  "cogre/uml" "uml.el" (21531 22791 0 0))
 ;;; Generated autoloads from uml.el
 
 (autoload 'cogre-uml-enable-unicode "cogre/uml" "\
@@ -185,7 +185,7 @@ Return it as a list of lists.  Each entry is of the form:
 ;;;***
 
 ;;;### (autoloads (wisent-dot-setup-parser) "cogre/wisent-dot" "wisent-dot.el"
-;;;;;;  (21488 63297 594402 999000))
+;;;;;;  (21531 22791 0 0))
 ;;; Generated autoloads from wisent-dot.el
 
 (autoload 'wisent-dot-setup-parser "cogre/wisent-dot" "\
@@ -199,8 +199,8 @@ Setup buffer for parse.
 
 ;;;***
 
-;;;### (autoloads nil nil ("wisent-dot-wy.el") (21488 64207 604059
-;;;;;;  614000))
+;;;### (autoloads nil nil ("wisent-dot-wy.el") (21531 22942 865414
+;;;;;;  0))
 
 ;;;***
 

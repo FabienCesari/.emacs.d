@@ -34,7 +34,8 @@
  '(ido-mode (quote both) nil (ido))
  '(tool-bar-mode t))
 
-(set-face-attribute 'default nil :height 100)
+
+(set-face-attribute 'default nil :height 120)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -76,15 +77,10 @@
 ;(require 'multi-term)
 ;(setq multi-term-program "/bin/zsh")
 
-<<<<<<< HEAD
-;;(setq mac-option-modifier 'none)
-;;(setq mac-command-modifier 'meta)
-=======
 (require 'sudo-save)
 
-(setq mac-option-modifier 'none)
-(setq mac-command-modifier 'meta)
->>>>>>> 95055ea94bf0c21994af25a218cde8c99b8a3457
+;;(setq mac-option-modifier 'none)
+;;(setq mac-command-modifier 'meta)
 
 (when (eq system-type 'darwin)
   (setq mac-pass-command-to-system nil) )
@@ -287,3 +283,5 @@
 (add-hook 'yaml-mode-hook
           '(lambda ()
              (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
+
+;;(require 'python-mode)
