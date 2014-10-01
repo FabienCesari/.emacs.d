@@ -103,7 +103,8 @@
 
 ;;; I prefer cmd key for meta
 (setq mac-command-modifier 'meta)
-     
+(setq mac-right-option-modifier nil)
+
 #+END_SRC
 
 ** ftp configuration with TRAMP (Transparent Remote Access, Multiple Protocols) 
@@ -123,7 +124,14 @@
 (require 'sudo-save)
 #+END_SRC
 
+** Python Mode
+   #+BEGIN_SRC emacs-lisp
+    ;;;(autoload 'python-mode "python-mode" "Python Mode." t)
+    ;;;(add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
+    ;;;(add-to-list 'interpreter-mode-alist '("python" . python-mode)) 
+   #+END_SRC
    
+
 * OS specific configuaration
 ** OSX keyboard adaptation 
 #+BEGIN_SRC emacs-lisp
@@ -406,10 +414,4 @@
                '(lambda ()
                   (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
      
-   #+END_SRC
-** Python Mode
-   #+BEGIN_SRC emacs-lisp
-    (autoload 'python-mode "python-mode" "Python Mode." t)
-    (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
-    (add-to-list 'interpreter-mode-alist '("python" . python-mode)) 
    #+END_SRC

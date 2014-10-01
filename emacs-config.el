@@ -70,6 +70,7 @@
 
 ;;; I prefer cmd key for meta
 (setq mac-command-modifier 'meta)
+(setq mac-right-option-modifier nil)
 
 (require 'tramp)
 (setq tramp-default-method "ftp")
@@ -78,6 +79,10 @@
 ;(setq multi-term-program "/bin/zsh")
 
 (require 'sudo-save)
+
+;;;(autoload 'python-mode "python-mode" "Python Mode." t)
+;;;(add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
+;;;(add-to-list 'interpreter-mode-alist '("python" . python-mode))
 
 ;;(setq mac-option-modifier 'none)
 ;;(setq mac-command-modifier 'meta)
@@ -283,7 +288,3 @@
 (add-hook 'yaml-mode-hook
           '(lambda ()
              (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
-
-(autoload 'python-mode "python-mode" "Python Mode." t)
-(add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
-(add-to-list 'interpreter-mode-alist '("python" . python-mode))
