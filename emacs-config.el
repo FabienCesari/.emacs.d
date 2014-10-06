@@ -19,6 +19,7 @@
 (add-to-list 'load-path "~/.emacs.d/external/rhtml")
 (add-to-list 'load-path "~/.emacs.d/external/php-mode")
 (add-to-list 'load-path "~/.emacs.d/external/arduino-mode")
+(add-to-list 'load-path "~/.emacs.d/external/ess")
 
 (load "tempo")
 
@@ -288,3 +289,5 @@
 (add-hook 'yaml-mode-hook
           '(lambda ()
              (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
+
+;;;(load "ess-site")

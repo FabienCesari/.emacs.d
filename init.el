@@ -1,6 +1,8 @@
 ;; init.el --  Fabien Cesari configuration file.
 ;; Load the org mode configuaration file to generate the actual emacs-lisp file.
 
+;; Configure defore loading org mode
+(package-initialize)
 
 ;;Org mode de-activate Shift + arrow keybinding
 (setq org-replace-disputed-keys t)
