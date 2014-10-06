@@ -17,9 +17,10 @@
 -> git submodule update
 
 -> cd externals/cedet
-
 -> make EMACS=emacs
 
+-> cd externals/org-mode
+-> make autoloads
 
  Install auctex and aspell for the configuration to work properely
  Install doxygen in order to use doxymacs.
