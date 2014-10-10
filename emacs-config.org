@@ -34,7 +34,7 @@
 (add-to-list 'load-path "~/.emacs.d/external/rhtml")
 (add-to-list 'load-path "~/.emacs.d/external/php-mode")
 (add-to-list 'load-path "~/.emacs.d/external/arduino-mode")
-(add-to-list 'load-path "~/.emacs.d/external/ess")
+
 #+END_SRC
    
 ** Tempo mode: provides a simple way to define powerful templates, or macros
@@ -384,15 +384,38 @@
 ** Blog publishing
 
 #+BEGIN_SRC emacs-lisp
+  
+  (require 'ox-publish)
   (setq org-publish-project-alist
-        '(("blog"
-           :base-directory "~/work/magnizdat/site/blog_emacs"
-           :html-extension "html"
+        '(
+          ("org-notes"
+           :base-directory "~/org/site/"
            :base-extension "org"
-           :publishing-directory "~/work/magnizdat/site/blog_emacs/public_html"
-           :publishing-function (org-html-publish-to-html)
-           :html-preamble nil
-           :html-postamble nil)))
+           :publishing-directory "~/public_html/"
+           :recursive t
+           :publishing-function org-html-publish-to-html
+           :headline-levels 4             ; Just the default for this project.
+           :auto-preamble t
+           :auto-sitemap t
+           :sitemap-filename "sitemap.org"
+           :sitemap-title "sitemap"        
+           :export-creator-info nil
+           :export-author-info nil
+           :auto-postamble nil
+           :table-of-contents nil
+           :section-number nil
+           :html-postamble " <p class=\"postamble\">Last Updated %d.</p> "
+           :style-include-default nil
+           )
+          ("org-static"
+           :base-directory "~/org/site/"
+           :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+           :publishing-directory "~/public_html/"
+           :recursive t
+           :publishing-function org-publish-attachment
+           )
+          ("org" :components ("org-notes" "org-static"))         
+          ))
 #+END_SRC
    
 ** Arduino Mode
@@ -415,9 +438,4 @@
                '(lambda ()
                   (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
      
-   #+END_SRC
-
-** Emacs Speaks Statistics -- ESS
-   #+BEGIN_SRC emacs-lisp
-     ;;;(load "ess-site")
    #+END_SRC

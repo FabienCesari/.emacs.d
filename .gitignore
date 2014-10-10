@@ -1,5 +1,5 @@
 #Git Ignore FIle
-
+tramp
 auto-save-list
 .DS_Store
 *~

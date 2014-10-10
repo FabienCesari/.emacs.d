@@ -268,15 +268,37 @@
 (add-to-list 'auto-mode-alist '("\\.pde$" . processing-mode))
 (setq processing-location "/usr/bin/processing-java")
 
+(require 'ox-publish)
 (setq org-publish-project-alist
-      '(("blog"
-         :base-directory "~/work/magnizdat/site/blog_emacs"
-         :html-extension "html"
+      '(
+        ("org-notes"
+         :base-directory "~/org/site/"
          :base-extension "org"
-         :publishing-directory "~/work/magnizdat/site/blog_emacs/public_html"
-         :publishing-function (org-html-publish-to-html)
-         :html-preamble nil
-         :html-postamble nil)))
+         :publishing-directory "~/public_html/"
+         :recursive t
+         :publishing-function org-html-publish-to-html
+         :headline-levels 4             ; Just the default for this project.
+         :auto-preamble t
+         :auto-sitemap t
+         :sitemap-filename "sitemap.org"
+         :sitemap-title "sitemap"        
+         :export-creator-info nil
+         :export-author-info nil
+         :auto-postamble nil
+         :table-of-contents nil
+         :section-number nil
+         :html-postamble " <p class=\"postamble\">Last Updated %d.</p> "
+         :style-include-default nil
+         )
+        ("org-static"
+         :base-directory "~/org/site/"
+         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+         :publishing-directory "~/public_html/"
+         :recursive t
+         :publishing-function org-publish-attachment
+         )
+        ("org" :components ("org-notes" "org-static"))         
+        ))
 
 (setq auto-mode-alist (cons '("\\.\\(pde\\|ino\\)$" . arduino-mode) auto-mode-alist))
 (autoload 'arduino-mode "arduino-mode" "Arduino editing mode." t)

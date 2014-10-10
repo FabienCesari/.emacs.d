@@ -24,5 +24,6 @@
 
  Install auctex and aspell for the configuration to work properely
  Install doxygen in order to use doxymacs.
+ Install Latex if you want to export pdf with the org mode
 
   

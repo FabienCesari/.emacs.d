@@ -1,7 +1,7 @@
-;; init.el --  Fabien Cesari configuration file.
+; init.el --  Fabien Cesari configuration file.
 ;; Load the org mode configuaration file to generate the actual emacs-lisp file.
 
-;; Configure defore loading org mode
+;; Configure before loading org mode
 (package-initialize)
 
 ;;Org mode de-activate Shift + arrow keybinding
@@ -17,9 +17,12 @@
 (setq org-confirm-babel-evaluate nil)
 ;;Org install and keylist
 (require 'org-install)
-(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
-(define-key global-map "\C-cl" 'org-store-link)
-(define-key global-map "\C-ca" 'org-agenda)
+(add-to-list 'auto-mode-alist '("\\.org" . org-mode))
+
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cb" 'org-iswitchb)
 (setq org-log-done t)
 
 (require 'org)
