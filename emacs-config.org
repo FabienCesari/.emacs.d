@@ -9,33 +9,32 @@
 #+END_SRC
 
 ** No splash screen 
-#+BEGIN_SRC emacs-lisp
-(setq inhibit-startup-screen t)
-#+END_SRC
+   #+BEGIN_SRC emacs-lisp
+     (setq inhibit-startup-screen t)
+   #+END_SRC
 
 ** System load
-#+BEGIN_SRC emacs-lisp
-(add-to-list 'load-path "/opt/local/share/emacs/site-lisp")
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/elib/")
-#+END_SRC
+   #+BEGIN_SRC emacs-lisp
+     (add-to-list 'load-path "/opt/local/share/emacs/site-lisp")
+     (add-to-list 'load-path "/usr/share/emacs/site-lisp/elib/")
+   #+END_SRC
 
 ** User Load
-
-#+BEGIN_SRC emacs-lisp
-(add-to-list 'load-path "~/.emacs.d/external/jdee-2.4.1/lisp")
-(add-to-list 'load-path "~/.emacs.d/external/")
-(add-to-list 'load-path "~/.emacs.d/external/git/")
-(add-to-list 'load-path "~/.emacs.d/external/muse/lisp")
-(add-to-list 'load-path "~/.emacs.d/external/autocomplete/")
-(add-to-list 'load-path "~/.emacs.d/external/ruby-mode")
-(add-to-list 'load-path "~/.emacs.d/external/cedet/")
-(add-to-list 'load-path "~/.emacs.d/external/autocomplete/")
-(add-to-list 'load-path "~/.emacs.d/external/nxhtml/util")
-(add-to-list 'load-path "~/.emacs.d/external/rhtml")
-(add-to-list 'load-path "~/.emacs.d/external/php-mode")
-(add-to-list 'load-path "~/.emacs.d/external/arduino-mode")
-
-#+END_SRC
+   #+BEGIN_SRC emacs-lisp
+     (add-to-list 'load-path "~/.emacs.d/external/jdee-2.4.1/lisp")
+     (add-to-list 'load-path "~/.emacs.d/external/")
+     (add-to-list 'load-path "~/.emacs.d/external/git/")
+     (add-to-list 'load-path "~/.emacs.d/external/muse/lisp")
+     (add-to-list 'load-path "~/.emacs.d/external/autocomplete/")
+     (add-to-list 'load-path "~/.emacs.d/external/ruby-mode")
+     (add-to-list 'load-path "~/.emacs.d/external/cedet/")
+     (add-to-list 'load-path "~/.emacs.d/external/autocomplete/")
+     (add-to-list 'load-path "~/.emacs.d/external/nxhtml/util")
+     (add-to-list 'load-path "~/.emacs.d/external/rhtml")
+     (add-to-list 'load-path "~/.emacs.d/external/php-mode")
+     (add-to-list 'load-path "~/.emacs.d/external/arduino-mode")
+     
+   #+END_SRC
    
 ** Tempo mode: provides a simple way to define powerful templates, or macros
 #+BEGIN_SRC emacs-lisp
@@ -389,9 +388,9 @@
   (setq org-publish-project-alist
         '(
           ("org-notes"
-           :base-directory "~/org/site/"
+           :base-directory "~/work/org/site/"
            :base-extension "org"
-           :publishing-directory "~/public_html/"
+           :publishing-directory "~/work/public_html/"
            :recursive t
            :publishing-function org-html-publish-to-html
            :headline-levels 4             ; Just the default for this project.
@@ -404,13 +403,13 @@
            :auto-postamble nil
            :table-of-contents nil
            :section-number nil
-           :html-postamble " <p class=\"postamble\">Last Updated %d.</p> "
+           :html-postamble nil
            :style-include-default nil
            )
           ("org-static"
-           :base-directory "~/org/site/"
+           :base-directory "~/work/org/site/"
            :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
-           :publishing-directory "~/public_html/"
+           :publishing-directory "~/work/public_html/"
            :recursive t
            :publishing-function org-publish-attachment
            )
