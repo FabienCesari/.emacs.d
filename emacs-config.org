@@ -135,20 +135,8 @@
      (add-to-list 'load-path "/opt/local/share/emacs/site-lisp")
      (add-to-list 'load-path "/usr/share/emacs/site-lisp/elib/")
      ;;User load
-     (add-to-list 'load-path "~/.emacs.d/external/jdee-2.4.1/lisp")
-     (add-to-list 'load-path "~/.emacs.d/external/")
-     (add-to-list 'load-path "~/.emacs.d/external/git/")
-     (add-to-list 'load-path "~/.emacs.d/external/muse/lisp")
-     (add-to-list 'load-path "~/.emacs.d/external/autocomplete/")
-     (add-to-list 'load-path "~/.emacs.d/external/ruby-mode")
-     (add-to-list 'load-path "~/.emacs.d/external/cedet/")
-     (add-to-list 'load-path "~/.emacs.d/external/autocomplete/")
-     (add-to-list 'load-path "~/.emacs.d/external/nxhtml/util")
-     (add-to-list 'load-path "~/.emacs.d/external/rhtml")
-     (add-to-list 'load-path "~/.emacs.d/external/php-mode")
-     (add-to-list 'load-path "~/.emacs.d/external/arduino-mode")
-     (add-to-list 'load-path "~/.emacs.d/external/git-modes")
-     (add-to-list 'load-path "~/.emacs.d/external/magit")
+     ;;(add-to-list 'load-path "~/.emacs.d/external/jdee-2.4.1/lisp")
+     (add-to-list 'load-path "~/.emacs.d/external/")      
    #+END_SRC
    
 ** Emacs auto generated 
@@ -219,9 +207,12 @@
      
      ;;Git & Svn
      (require 'psvn)
+     ;;(add-to-list 'load-path "~/.emacs.d/external/git/")
      ;;(require 'git)
      
      ;;Magit
+     (add-to-list 'load-path "~/.emacs.d/external/git-modes")
+     (add-to-list 'load-path "~/.emacs.d/external/magit")
      (eval-after-load 'info
        '(progn (info-initialize)
                (add-to-list 'Info-directory-list "external/magit/")))
@@ -229,32 +220,31 @@
      
      
    #+END_SRC
-* OS specific configuaration
-** OSX keyboard adaptation 
-#+BEGIN_SRC emacs-lisp
-;;(setq mac-option-modifier 'none)
-;;(setq mac-command-modifier 'meta)
-#+END_SRC
-** forget Command-Q to quit, use M-Q to fill-region
-#+BEGIN_SRC emacs-lisp
-(when (eq system-type 'darwin)
-  (setq mac-pass-command-to-system nil) )
-#+END_SRC
 
+
+* OS specific configuaration
+** OSX key bindings
+   #+BEGIN_SRC emacs-lisp
+     ;;(setq mac-option-modifier 'none)
+     ;;(setq mac-command-modifier 'meta)
+     (when (eq system-type 'darwin)
+       (setq mac-pass-command-to-system nil) )
+   #+END_SRC
 ** exec path from shell
    #+BEGIN_SRC emacs-lisp
-  (require 'exec-path-from-shell) ;; if not using the ELPA package
-       (exec-path-from-shell-initialize)  
+     (require 'exec-path-from-shell) ;; if not using the ELPA package
+     (exec-path-from-shell-initialize)  
    #+END_SRC
      
+
 * External plugins    
 ** ELPA -- package.el
-#+BEGIN_SRC emacs-lisp
-(when
-    (load
-     (expand-file-name "~/.emacs.d/external/package.el"))
-  (package-initialize))
-#+END_SRC
+   #+BEGIN_SRC emacs-lisp
+     (when
+         (load
+          (expand-file-name "~/.emacs.d/external/package.el"))
+       (package-initialize))
+   #+END_SRC
    
 ** Doxymacs: Documentation shortcuts:
    C-c d ? will look up documentation for the symbol under the point.
@@ -266,96 +256,106 @@
    C-c d s will insert a blank single-line Doxygen comment.
    C-c d @ will insert grouping comments around the current region.
 
-#+BEGIN_SRC emacs-lisp
-(load "doxymacs")
- (load "xml-parse")
- (require 'doxymacs)
- (add-hook 'c-mode-common-hook'doxymacs-mode)
- (defun my-c-font-lock-doxy-html (limit)
-   (while (re-search-forward "<.+?>" limit 'move)
-     (let ((beg (match-beginning 0))
-           (end (match-end 0)))
-       (if (nth 4 (syntax-ppss beg))
-           (when (nth 4 (syntax-ppss end))
-             (c-put-font-lock-face beg end 'font-lock-keyword-face))
-         (goto-char end))))
-   nil)
- (defun my-c-mode-common-hook ()
-   (font-lock-add-keywords nil '((my-c-font-lock-doxy-html))))
- (add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
-#+END_SRC
+   #+BEGIN_SRC emacs-lisp
+     (load "doxymacs")
+      (load "xml-parse")
+      (require 'doxymacs)
+      (add-hook 'c-mode-common-hook'doxymacs-mode)
+      (defun my-c-font-lock-doxy-html (limit)
+        (while (re-search-forward "<.+?>" limit 'move)
+          (let ((beg (match-beginning 0))
+                (end (match-end 0)))
+            (if (nth 4 (syntax-ppss beg))
+                (when (nth 4 (syntax-ppss end))
+                  (c-put-font-lock-face beg end 'font-lock-keyword-face))
+              (goto-char end))))
+        nil)
+      (defun my-c-mode-common-hook ()
+        (font-lock-add-keywords nil '((my-c-font-lock-doxy-html))))
+      (add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
+   #+END_SRC
 
 ** Matlab from emacs
-#+BEGIN_SRC emacs-lisp
-  ;;Matlab-emacs config
-  ;; add repo to the pah.
-  (setq load-path (append load-path(list "~/.emacs.d/external/matlab-emacs")))
-  
-  (autoload 'matlab-mode "matlab" "Enter MATLAB Mode." t)
-  (setq auto-mode-alist (cons '("\\.m\\'" . matlab-mode) auto-mode-alist))
-  (autoload 'matlab-shell "matlab" "Interactive MATLAB mode." t)
-  
-  ;; Customization:
-  (setq matlab-indent-function t) ; if you want function bodies indented
-  (setq matlab-verify-on-save-flag nil) ; turn off auto-verify on save
-  (defun my-matlab-mode-hook ()
-    (setq fill-column 76))                ; where auto-fill should wrap
-  (add-hook 'matlab-mode-hook 'my-matlab-mode-hook)
-  (defun my-matlab-shell-mode-hook ()
-    '())
-  (add-hook 'matlab-shell-mode-hook 'my-matlab-shell-mode-hook)
-  
-  ;; Turn off Matlab desktop
-  (setq matlab-shell-command-switches '("-nojvm"))
-#+END_SRC
+   #+BEGIN_SRC emacs-lisp
+     ;;Matlab-emacs config
+     ;; add repo to the pah.
+     (setq load-path (append load-path(list "~/.emacs.d/external/matlab-emacs")))
+     
+     (autoload 'matlab-mode "matlab" "Enter MATLAB Mode." t)
+     (setq auto-mode-alist (cons '("\\.m\\'" . matlab-mode) auto-mode-alist))
+     (autoload 'matlab-shell "matlab" "Interactive MATLAB mode." t)
+     
+     ;; Customization:
+     (setq matlab-indent-function t) ; if you want function bodies indented
+     (setq matlab-verify-on-save-flag nil) ; turn off auto-verify on save
+     (defun my-matlab-mode-hook ()
+       (setq fill-column 76))                ; where auto-fill should wrap
+     (add-hook 'matlab-mode-hook 'my-matlab-mode-hook)
+     (defun my-matlab-shell-mode-hook ()
+       '())
+     (add-hook 'matlab-shell-mode-hook 'my-matlab-shell-mode-hook)
+     
+     ;; Turn off Matlab desktop
+     (setq matlab-shell-command-switches '("-nojvm"))
+   #+END_SRC
 
 ** Emacs CEDET
-#+BEGIN_SRC emacs-lisp
-
-  (require 'cedet)
-  (load "~/.emacs.d/external/cedet/lisp/cedet/cedet.el")
-  
-  ;; Load CEDET.
-  ;; See cedet/common/cedet.info for configuration details.
-  ;; IMPORTANT: For Emacs >= 23.2, you must place this *before* any
-  ;; CEDET component (including EIEIO) gets activated by another 
-  ;; package (Gnus, auth-source, ...).
-  
-  ;; Add further minor-modes to be enabled by semantic-mode.
-  ;; See doc-string of `semantic-default-submodes' for other things
-  ;; you can use here.
-  (add-to-list 'semantic-default-submodes 'global-semantic-idle-summary-mode t)
-  (add-to-list 'semantic-default-submodes 'global-semantic-idle-completions-mode t)
-  ;;(add-to-list 'semantic-default-submodes 'global-cedet-m3-minor-mode t)
-  
-  ;; Enable Semantic
-  (semantic-mode 1)
-  
-  ;; Enable EDE (Project Management) features
-  (global-ede-mode 1)
-  
-  ;; Configure arduino OS X dirs.
-  ;;(setq ede-arduino-appdir "/Applications/Arduino.app/Contents/Resources/Java")
-  
-#+END_SRC
+   #+BEGIN_SRC emacs-lisp     
+     (require 'cedet)
+     (add-to-list 'load-path "~/.emacs.d/external/cedet/")
+     (load "~/.emacs.d/external/cedet/lisp/cedet/cedet.el")
+     
+     ;; Load CEDET.
+     ;; See cedet/common/cedet.info for configuration details.
+     ;; IMPORTANT: For Emacs >= 23.2, you must place this *before* any
+     ;; CEDET component (including EIEIO) gets activated by another 
+     ;; package (Gnus, auth-source, ...).
+     
+     ;; Add further minor-modes to be enabled by semantic-mode.
+     ;; See doc-string of `semantic-default-submodes' for other things
+     ;; you can use here.
+     (add-to-list 'semantic-default-submodes 'global-semantic-idle-summary-mode t)
+     (add-to-list 'semantic-default-submodes 'global-semantic-idle-completions-mode t)
+     ;;(add-to-list 'semantic-default-submodes 'global-cedet-m3-minor-mode t)
+     
+     ;; Enable Semantic
+     (semantic-mode 1)
+     
+     ;; Enable EDE (Project Management) features
+     (global-ede-mode 1)
+     
+     ;; Configure arduino OS X dirs.
+     ;;(setq ede-arduino-appdir "/Applications/Arduino.app/Contents/Resources/Java")
+     
+   #+END_SRC
 
 ** Emacs muse
+   #+BEGIN_SRC emacs-lisp
+     ;;Not activated since I use org-mode
+     ;;(add-to-list 'load-path "~/.emacs.d/external/muse/lisp")     
+     ;;(require 'muse-mode)     ; load authoring mode
+     ;;(require 'muse-html)     ; load publishing styles I use
+     ;;(require 'muse-latex)
+     ;;(require 'muse-texinfo)
+     ;;(require 'muse-docbook)
+     ;;(require 'muse-project)  ; publish files in projects
+     ;; Muse project configuration -- May be system dependend, so not Ideal.
+   #+END_SRC
+   
+** Autocomplete
 #+BEGIN_SRC emacs-lisp
-(require 'muse-mode)     ; load authoring mode
-(require 'muse-html)     ; load publishing styles I use
-(require 'muse-latex)
-(require 'muse-texinfo)
-(require 'muse-docbook)
-(require 'muse-project)  ; publish files in projects
-
-
-;; Muse project configuration -- May be system dependend, so not Ideal.
+  (add-to-list 'load-path "~/.emacs.d/external/autocomplete/")   
+  (require 'auto-complete-config)
+  (add-to-list 'ac-dictionary-directories "~/.emacs.d/external/autocomplete//ac-dict")
+  (ac-config-default)
 #+END_SRC
    
 ** nxhtml 
-#+BEGIN_SRC emacs-lisp
-(load "~/.emacs.d/external/nxhtml/autostart.el")
-(setq
+   #+BEGIN_SRC emacs-lisp
+     
+     (add-to-list 'load-path "~/.emacs.d/external/nxhtml/util")
+     (load "~/.emacs.d/external/nxhtml/autostart.el")
+     (setq
       nxhtml-global-minor-mode t
       mumamo-chunk-coloring 'submode-colored
       nxhtml-skip-welcome t
@@ -363,56 +363,63 @@
       rng-nxml-auto-validate-flag nil
       nxml-degraded t)
      (add-to-list 'auto-mode-alist '("\\.html\\.erb\\'" . eruby-nxhtml-mumamo))
-#+END_SRC
+   #+END_SRC
    
-** rhtml mode
-#+BEGIN_SRC emacs-lisp
-     (require 'rhtml-mode)
-     (add-hook 'rhtml-mode-hook
-     (lambda () (rinari-launch)))
-#+END_SRC
-** Autocomplete
-#+BEGIN_SRC emacs-lisp
-   (require 'auto-complete-config)
-   (add-to-list 'ac-dictionary-directories "~/.emacs.d/external/autocomplete//ac-dict")
-   (ac-config-default)
-#+END_SRC
-   
+
 ** MuMaMo: Multiple Major Mode, for rhtml files
 #+BEGIN_SRC emacs-lisp     
-     (require 'mumamo-fun)
-     (setq mumamo-chunk-coloring 'submode-colored)
-     (add-to-list 'auto-mode-alist '("\\.rhtml\\'" . eruby-html-mumamo))
-     (add-to-list 'auto-mode-alist '("\\.html\\.erb\\'" . eruby-html-mumamo))
+  (require 'mumamo-fun)
+  (setq mumamo-chunk-coloring 'submode-colored)
+  (add-to-list 'auto-mode-alist '("\\.rhtml\\'" . eruby-html-mumamo))
+  (add-to-list 'auto-mode-alist '("\\.html\\.erb\\'" . eruby-html-mumamo))
+  
+  (when (and (>= emacs-major-version 24) 
+             (>= emacs-minor-version 2))
+    (eval-after-load "mumamo"
+      '(setq mumamo-per-buffer-local-vars
+             (delq 'buffer-file-name mumamo-per-buffer-local-vars))))
+  
+  ;; Mumamo is making emacs 23.3 freak out:
+  (when (and (equal emacs-major-version 23)
+             (equal emacs-minor-version 3))
+    (eval-after-load "bytecomp"
+      '(add-to-list 'byte-compile-not-obsolete-vars
+                    'font-lock-beginning-of-syntax-function))
+    ;; tramp-compat.el clobbers this variable!
+    (eval-after-load "tramp-compat"
+      '(add-to-list 'byte-compile-not-obsolete-vars
+                    'font-lock-beginning-of-syntax-function)))
 #+END_SRC
 ** Ruby mode
-#+BEGIN_SRC emacs-lisp
-(require 'ruby-mode)
-(require 'ruby-style)
-(require 'ruby-electric)
-(add-hook 'ruby-mode-hook 'ruby-electric-mode)
-#+END_SRC
+   #+BEGIN_SRC emacs-lisp
+     ;;(add-to-list 'load-path "~/.emacs.d/external/ruby-mode")
+     ;;(require 'ruby-mode)
+     ;;(require 'ruby-style)
+     ;;(require 'ruby-electric)
+     ;;(add-hook 'ruby-mode-hook 'ruby-electric-mode)
+   #+END_SRC
    
 ** Emacs Rails (in fact rails reloaded)
    #+BEGIN_SRC emacs-lisp      
-   ;(setq load-path (cons (expand-file-name "~/.emacs.d/external/emacs-rails") load-path))
-   ;(require 'rails-autoload)      
+   ;;(setq load-path (cons (expand-file-name "~/.emacs.d/external/emacs-rails") load-path))
+   ;;(require 'rails-autoload)      
    #+END_SRC
 ** RINARI - Rinari Is Not A Ruby IDE - Interactively Do Things (highly recommended, but not strictly required)   
    #+BEGIN_SRC emacs-lisp                   
-    ;(add-to-list 'load-path "~/.emacs.d/external/rinari")
-    ;(require 'rinari)
-    ;(setq rinari-tags-file-name "TAGS")
+    ;;(add-to-list 'load-path "~/.emacs.d/external/rinari")
+    ;;(require 'rinari)
+    ;;(setq rinari-tags-file-name "TAGS")
    #+END_SRC
 
 ** php Mode. byte compiled.
-#+BEGIN_SRC emacs-lisp
-(require 'php-mode)
-(add-to-list 'auto-mode-alist '("\\.module$" . php-mode))
-(add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
-(add-to-list 'auto-mode-alist '("\\.install$" . php-mode))
-(add-to-list 'auto-mode-alist '("\\.engine$" . php-mode))
-#+END_SRC
+   #+BEGIN_SRC emacs-lisp
+     (add-to-list 'load-path "~/.emacs.d/external/php-mode")
+     (require 'php-mode)
+     (add-to-list 'auto-mode-alist '("\\.module$" . php-mode))
+     (add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
+     (add-to-list 'auto-mode-alist '("\\.install$" . php-mode))
+     (add-to-list 'auto-mode-alist '("\\.engine$" . php-mode))
+   #+END_SRC
 
 ** Spell checking
    #+BEGIN_SRC emacs-lisp
@@ -469,16 +476,14 @@
    #+END_SRC
 ** Processing
    #+BEGIN_SRC emacs-lisp
-  (autoload 'processing-mode "processing-mode" "Processing mode" t)
-  (add-to-list 'auto-mode-alist '("\\.pde$" . processing-mode))
-  (setq processing-location "/usr/bin/processing-java")
-  
+     (autoload 'processing-mode "processing-mode" "Processing mode" t)
+     (add-to-list 'auto-mode-alist '("\\.pde$" . processing-mode))
+     (setq processing-location "/usr/bin/processing-java")
+     
    #+END_SRC
    
-** Blog publishing
-
-   #+BEGIN_SRC emacs-lisp
-     
+** Org-mode projects
+   #+BEGIN_SRC emacs-lisp     
      ;;Load agneda files. 
      (if (file-exists-p "~/work/org/agenda.org")
          (setq org-agenda-files (list "~/work/org/agenda.org"))
@@ -528,6 +533,7 @@
    
 ** Arduino Mode
    #+BEGIN_SRC emacs-lisp     
+     (add-to-list 'load-path "~/.emacs.d/external/arduino-mode")
      (setq auto-mode-alist (cons '("\\.\\(pde\\|ino\\)$" . arduino-mode) auto-mode-alist))
      (autoload 'arduino-mode "arduino-mode" "Arduino editing mode." t)     
    #+END_SRC
@@ -544,8 +550,7 @@
      
      (add-hook 'yaml-mode-hook
                '(lambda ()
-                  (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
-     
+                  (define-key yaml-mode-map "\C-m" 'newline-and-indent)))     
    #+END_SRC
 
 ** O-Blog - blogging with org mode (how exciting!")
