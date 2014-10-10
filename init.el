@@ -1,6 +1,5 @@
-; init.el --  Fabien Cesari configuration file.
+;; init.el --  Fabien Cesari configuration file.
 ;; Load the org mode configuaration file to generate the actual emacs-lisp file.
-
 ;; Configure before loading org mode
 (package-initialize)
 
@@ -15,6 +14,7 @@
 ;;Org Babel Setup.
 (setq org-babel-load-languages '((emacs-lisp . t )))
 (setq org-confirm-babel-evaluate nil)
+
 ;;Org install and keylist
 (require 'org-install)
 (add-to-list 'auto-mode-alist '("\\.org" . org-mode))
@@ -40,16 +40,4 @@
 ;;load neatly organized org file!
 (org-babel-load-file "~/.emacs.d/emacs-config.org")
 
-;;Load agneda files. 
-(if (file-exists-p "~/org/agenda.org")
-    (setq org-agenda-files (list "~/org/agenda.org"))
-  )
-
-;;LaTeX export
-(require 'org-latex)
-(unless (boundp 'org-export-latex-classes)
-  (setq org-export-latex-classes nil))
-(add-to-list 'org-export-latex-classes
-             '("article"
-               "\\documentclass{article}"
-               ("\\section{%s}" . "\\section*{%s}")))
+;; End of init.el
