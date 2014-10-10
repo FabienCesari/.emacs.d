@@ -439,3 +439,10 @@
                   (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
      
    #+END_SRC
+
+** O-Blog - blogging with org mode (how exciting!")
+
+#+BEGIN_SRC emacs-lisp
+  (add-to-list 'load-path "~/.emacs.d/external/o-blog/lisp/")
+  (require 'o-blog)
+#+END_SRC
