@@ -39,5 +39,4 @@
 
 ;;load neatly organized org file!
 (org-babel-load-file "~/.emacs.d/emacs-config.org")
-
 ;; End of init.el
