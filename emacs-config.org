@@ -1,5 +1,5 @@
 #+TITLE: Emacs Documented Configuration File.
-#+OPTIONS: toc:4 h:4
+#+OPTIONS: toc:4 h:4 
 
 * Basic configuration
 ** Personal Informations
@@ -8,19 +8,30 @@
       user-mail-address "fabien.cesari@gmail.com")
 #+END_SRC
 
-** No splash screen 
+** Removing distractions 
    #+BEGIN_SRC emacs-lisp
      (setq inhibit-startup-screen t)
+     ;; Prevent the cursor from blinking
+     (blink-cursor-mode 0)
+     ;; Don't use messages that you don't read
+     (setq initial-scratch-message "")
+     (setq inhibit-startup-message t)
+     ;; Don't let Emacs hurt your ears
+     (setq visible-bell t)
+     
+     ;; You need to set `inhibit-startup-echo-area-message' from the
+     ;; customization interface:
+     ;; M-x customize-variable RET inhibit-startup-echo-area-message RET
+     ;; then enter your username
+     (setq inhibit-startup-echo-area-message "guerry")
    #+END_SRC
-
-** System load
+   
+** Loading stuffs
    #+BEGIN_SRC emacs-lisp
+     ;;System load
      (add-to-list 'load-path "/opt/local/share/emacs/site-lisp")
      (add-to-list 'load-path "/usr/share/emacs/site-lisp/elib/")
-   #+END_SRC
-
-** User Load
-   #+BEGIN_SRC emacs-lisp
+     ;;User load
      (add-to-list 'load-path "~/.emacs.d/external/jdee-2.4.1/lisp")
      (add-to-list 'load-path "~/.emacs.d/external/")
      (add-to-list 'load-path "~/.emacs.d/external/git/")
@@ -36,102 +47,79 @@
      
    #+END_SRC
    
-** Tempo mode: provides a simple way to define powerful templates, or macros
-#+BEGIN_SRC emacs-lisp
-(load "tempo")
-#+END_SRC
-
 ** Emacs auto generated 
-#+BEGIN_SRC emacs-lisp
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(gdb-max-frames 100)
- '(global-subword-mode t)
- '(ido-enable-flex-matching t)
- '(ido-everywhere t)
- '(ido-mode (quote both) nil (ido))
- '(tool-bar-mode t))
-
-
-(set-face-attribute 'default nil :height 120)
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-#+END_SRC
-
-** svn activation.
-#+BEGIN_SRC emacs-lisp
-(require 'psvn)
-#+END_SRC
-
-** git activation
-#+BEGIN_SRC emacs-lisp
-(require 'git)
-#+END_SRC
-
-** windowmove:  Change buffer with shift-arrows
-#+BEGIN_SRC emacs-lisp
-; change window focus with shift-arrows
-;;;; (require 'windmove)
-(windmove-default-keybindings)
-(setq windmove-wrap-around t)
-(require 'buffer-move)
-#+END_SRC
-
-** Key Binings
-#+BEGIN_SRC emacs-lisp
-(global-set-key (kbd "C-+") 'hs-toggle-hiding)
-
-(add-hook 'c-mode-common-hook   'hs-minor-mode)
-(add-hook 'emacs-lisp-mode-hook 'hs-minor-mode)
-(add-hook 'java-mode-hook       'hs-minor-mode)
-(add-hook 'espresso-mode-hook   'hs-minor-mode)
-(add-hook 'lisp-mode-hook       'hs-minor-mode)
-(add-hook 'perl-mode-hook       'hs-minor-mode)
-(add-hook 'sh-mode-hook         'hs-minor-mode)
-
-(global-set-key (kbd "<C-S-up>")     'buf-move-up)
-(global-set-key (kbd "<C-S-donw>")   'buf-move-down)
-(global-set-key (kbd "<C-S-left>")   'buf-move-left)
-(global-set-key (kbd "<C-S-right>")  'buf-move-right)
-
-;;; I prefer cmd key for meta
-(setq mac-command-modifier 'meta)
-(setq mac-right-option-modifier nil)
-
-#+END_SRC
-
-** ftp configuration with TRAMP (Transparent Remote Access, Multiple Protocols) 
-#+BEGIN_SRC emacs-lisp
-(require 'tramp)
-(setq tramp-default-method "ftp")
-#+END_SRC
-
-** Emacs multi-term
-#+BEGIN_SRC emacs-lisp
-;(require 'multi-term)
-;(setq multi-term-program "/bin/zsh")
-#+END_SRC
-
-** Emacs sudo-save
-#+BEGIN_SRC emacs-lisp
-(require 'sudo-save)
-#+END_SRC
-
-** Python Mode
    #+BEGIN_SRC emacs-lisp
-    ;;;(autoload 'python-mode "python-mode" "Python Mode." t)
-    ;;;(add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
-    ;;;(add-to-list 'interpreter-mode-alist '("python" . python-mode)) 
+     (custom-set-variables
+      ;; custom-set-variables was added by Custom.
+      ;; If you edit it by hand, you could mess it up, so be careful.
+      ;; Your init file should contain only one such instance.
+      ;; If there is more than one, they won't work right.
+      '(gdb-max-frames 100)
+      '(global-subword-mode t)
+      '(ido-enable-flex-matching t)
+      '(ido-everywhere t)
+      '(ido-mode (quote both) nil (ido))
+      '(tool-bar-mode t))
+     
+     
+     (set-face-attribute 'default nil :height 120)
+     (custom-set-faces
+      ;; custom-set-faces was added by Custom.
+      ;; If you edit it by hand, you could mess it up, so be careful.
+      ;; Your init file should contain only one such instance.
+      ;; If there is more than one, they won't work right.
+      )
    #+END_SRC
-   
 
+** Tempo mode: provides a simple way to define powerful templates, or macros
+   #+BEGIN_SRC emacs-lisp
+     (load "tempo")
+   #+END_SRC
+
+** Version control (git, svn)
+   #+BEGIN_SRC emacs-lisp
+     (require 'psvn)
+     (require 'git)
+   #+END_SRC         
+** Utilities: windowmove, keybindings, sudo save, etc.
+   #+BEGIN_SRC emacs-lisp
+     ;; change window focus with shift-arrows
+     ;;(require 'windmove)
+     (windmove-default-keybindings)
+     (setq windmove-wrap-around t)
+     (require 'buffer-move)
+     
+     ;;Key bindings
+     (global-set-key (kbd "C-+") 'hs-toggle-hiding)
+     
+     (add-hook 'c-mode-common-hook   'hs-minor-mode)
+     (add-hook 'emacs-lisp-mode-hook 'hs-minor-mode)
+     (add-hook 'java-mode-hook       'hs-minor-mode)
+     (add-hook 'espresso-mode-hook   'hs-minor-mode)
+     (add-hook 'lisp-mode-hook       'hs-minor-mode)
+     (add-hook 'perl-mode-hook       'hs-minor-mode)
+     (add-hook 'sh-mode-hook         'hs-minor-mode)
+     
+     (global-set-key (kbd "<C-S-up>")     'buf-move-up)
+     (global-set-key (kbd "<C-S-donw>")   'buf-move-down)
+     (global-set-key (kbd "<C-S-left>")   'buf-move-left)
+     (global-set-key (kbd "<C-S-right>")  'buf-move-right)
+     
+     ;;; I prefer cmd key for meta
+     (setq mac-command-modifier 'meta)
+     (setq mac-right-option-modifier nil)
+     
+     ;;Sudo save
+     (require 'sudo-save)
+     
+     ;;Multi term
+     (require 'multi-term)
+     (setq multi-term-program "/bin/zsh")
+     
+     ;;tramp
+     (require 'tramp)
+     (setq tramp-default-method "ftp")
+   #+END_SRC
 * OS specific configuaration
 ** OSX keyboard adaptation 
 #+BEGIN_SRC emacs-lisp
@@ -149,8 +137,7 @@
   (require 'exec-path-from-shell) ;; if not using the ELPA package
        (exec-path-from-shell-initialize)  
    #+END_SRC
-   
-   
+     
 * External plugins    
 ** ELPA -- package.el
 #+BEGIN_SRC emacs-lisp
