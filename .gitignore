@@ -1,4 +1,7 @@
 #Git Ignore FIle
+*.pdf
+*.tex
+*.html
 org-templates/*
 emacs-config.el
 tramp
