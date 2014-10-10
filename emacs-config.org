@@ -135,7 +135,7 @@
      (add-to-list 'load-path "/opt/local/share/emacs/site-lisp")
      (add-to-list 'load-path "/usr/share/emacs/site-lisp/elib/")
      ;;User load
-     ;;(add-to-list 'load-path "~/.emacs.d/external/jdee-2.4.1/lisp")
+     x(add-to-list 'load-path "~/.emacs.d/external/jdee-2.4.1/lisp")
      (add-to-list 'load-path "~/.emacs.d/external/")      
    #+END_SRC
    
