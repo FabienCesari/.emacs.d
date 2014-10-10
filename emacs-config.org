@@ -218,7 +218,7 @@
      
      ;;Git & Svn
      (require 'psvn)
-     (require 'git)
+     ;;(require 'git)
      
    #+END_SRC
 * OS specific configuaration

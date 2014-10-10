@@ -16,3 +16,9 @@
 [submodule "external/o-blog"]
 	path = external/o-blog
 	url = https://github.com/renard/o-blog.git
+[submodule "external/magit"]
+	path = external/magit
+	url = git://github.com/magit/magit.git
+[submodule "external/git-modes"]
+	path = external/git-modes
+	url = git://github.com/magit/git-modes.git
