@@ -3,11 +3,11 @@
 ;;; Code:
 
 
-;;;### (autoloads (cogre-export-ascii) "cogre/ascii" "ascii.el" (21548
-;;;;;;  15347 0 0))
+;;;### (autoloads (cogre-export-ascii) "ascii" "ascii.el" (21560
+;;;;;;  22977))
 ;;; Generated autoloads from ascii.el
 
-(autoload 'cogre-export-ascii "cogre/ascii" "\
+(autoload (quote cogre-export-ascii) "ascii" "\
 Export the current diagram into an ASCII buffer.
 
 \(fn)" t nil)
@@ -15,24 +15,23 @@ Export the current diagram into an ASCII buffer.
 ;;;***
 
 ;;;### (autoloads (cogre-export-dot-postscript-print cogre-export-dot-png
-;;;;;;  cogre-export-dot) "cogre/convert" "convert.el" (21548 15347
-;;;;;;  0 0))
+;;;;;;  cogre-export-dot) "convert" "convert.el" (21560 22977))
 ;;; Generated autoloads from convert.el
 
-(autoload 'cogre-export-dot "cogre/convert" "\
+(autoload (quote cogre-export-dot) "convert" "\
 Export the current COGRE graph to DOT notation.
 DOT is a part of GraphViz.
 
 \(fn)" t nil)
 
-(autoload 'cogre-export-dot-png "cogre/convert" "\
+(autoload (quote cogre-export-dot-png) "convert" "\
 Export the current COGRE graph to DOT, then convert that to PNG.
 The png file is then displayed in an Emacs buffer.
 DOT is a part of GraphVis.
 
 \(fn)" t nil)
 
-(autoload 'cogre-export-dot-postscript-print "cogre/convert" "\
+(autoload (quote cogre-export-dot-postscript-print) "convert" "\
 Print the current graph.
 This is done by exporting the current COGRE graph to DOT, then
 convert that to Postscript before printing.
@@ -42,11 +41,11 @@ DOT is a part of GraphVis.
 
 ;;;***
 
-;;;### (autoloads (cogre-dot-mode) "cogre/dot-mode" "dot-mode.el"
-;;;;;;  (21548 15347 0 0))
+;;;### (autoloads (cogre-dot-mode) "dot-mode" "dot-mode.el" (21560
+;;;;;;  22977))
 ;;; Generated autoloads from dot-mode.el
 
-(autoload 'cogre-dot-mode "cogre/dot-mode" "\
+(autoload (quote cogre-dot-mode) "dot-mode" "\
 Major mode for the dot language.
 This is a mini-mode that will first attempt to load and install
 `graphviz-dot-mode' in this buffer.  If that fails, it installs
@@ -55,15 +54,14 @@ as a parsing engine.
 
 \(fn)" t nil)
 
-(add-to-list 'auto-mode-alist '("\\.dot\\'" . cogre-dot-mode))
+(add-to-list (quote auto-mode-alist) (quote ("\\.dot\\'" . cogre-dot-mode)))
 
 ;;;***
 
-;;;### (autoloads (cogre-layout) "cogre/layout" "layout.el" (21548
-;;;;;;  15347 0 0))
+;;;### (autoloads (cogre-layout) "layout" "layout.el" (21560 22977))
 ;;; Generated autoloads from layout.el
 
-(autoload 'cogre-layout "cogre/layout" "\
+(autoload (quote cogre-layout) "layout" "\
 Layout the current graph.
 This function depends on graphviz `dot' program.
 
@@ -71,36 +69,35 @@ This function depends on graphviz `dot' program.
 
 ;;;***
 
-;;;### (autoloads (cogre-mode) "cogre/mode" "mode.el" (21548 15347
-;;;;;;  0 0))
+;;;### (autoloads (cogre-mode) "mode" "mode.el" (21560 22977))
 ;;; Generated autoloads from mode.el
 
-(autoload 'cogre-mode "cogre/mode" "\
+(autoload (quote cogre-mode) "mode" "\
 Connected Graph Editor Mode.
 \\{cogre-mode-map}
 
 \(fn)" t nil)
 
-(add-to-list 'auto-mode-alist (cons "\\.cgr\\'" 'cogre-mode))
+(add-to-list (quote auto-mode-alist) (cons "\\.cgr\\'" (quote cogre-mode)))
 
 ;;;***
 
-;;;### (autoloads (cogre-periodic) "cogre/periodic" "periodic.el"
-;;;;;;  (21548 15347 0 0))
+;;;### (autoloads (cogre-periodic) "periodic" "periodic.el" (21560
+;;;;;;  22977))
 ;;; Generated autoloads from periodic.el
 
-(autoload 'cogre-periodic "cogre/periodic" "\
+(autoload (quote cogre-periodic) "periodic" "\
 Create a periodic table of COGRE objects.
 
 \(fn)" t nil)
 
 ;;;***
 
-;;;### (autoloads (cogre-picture-insert-rectangle) "cogre/picture-hack"
-;;;;;;  "picture-hack.el" (21548 15347 0 0))
+;;;### (autoloads (cogre-picture-insert-rectangle) "picture-hack"
+;;;;;;  "picture-hack.el" (21560 22977))
 ;;; Generated autoloads from picture-hack.el
 
-(autoload 'cogre-picture-insert-rectangle "cogre/picture-hack" "\
+(autoload (quote cogre-picture-insert-rectangle) "picture-hack" "\
 Overlay RECTANGLE with upper left corner at point.
 Leaves the region surrounding the rectangle.
 
@@ -109,10 +106,10 @@ Leaves the region surrounding the rectangle.
 ;;;***
 
 ;;;### (autoloads (cogre-uml-quick-class cogre-export-code cogre-semantic-tag-to-node)
-;;;;;;  "cogre/semantic" "semantic.el" (21548 15347 0 0))
+;;;;;;  "semantic" "semantic.el" (21560 22977))
 ;;; Generated autoloads from semantic.el
 
-(autoload 'cogre-semantic-tag-to-node "cogre/semantic" "\
+(autoload (quote cogre-semantic-tag-to-node) "semantic" "\
 Convert the Semantic tag TAG into a COGRE node.
 Only handles data types nodes.
 To convert function/variables into methods or attributes in
@@ -120,14 +117,14 @@ an existing COGRE node, see @TODO - do that.
 
 \(fn TAG)" nil nil)
 
-(autoload 'cogre-export-code "cogre/semantic" "\
+(autoload (quote cogre-export-code) "semantic" "\
 Export the current graph into source-code in FILE.
 Uses `cogre-export-semantic' to convert into Semantic tags.
 Uses `cogre-srecode-setup' to setup SRecode for code generation.
 
 \(fn FILE)" t nil)
 
-(autoload 'cogre-uml-quick-class "cogre/semantic" "\
+(autoload (quote cogre-uml-quick-class) "semantic" "\
 Create a new UML diagram based on CLASS showing only immediate lineage.
 The parent to CLASS, CLASS, and all of CLASSes children will be shown.
 
@@ -136,23 +133,22 @@ The parent to CLASS, CLASS, and all of CLASSes children will be shown.
 ;;;***
 
 ;;;### (autoloads (srecode-semantic-handle-:dot srecode-semantic-handle-:cogre
-;;;;;;  cogre-srecode-setup) "cogre/srecode" "srecode.el" (21548
-;;;;;;  15347 0 0))
+;;;;;;  cogre-srecode-setup) "srecode" "srecode.el" (21560 22977))
 ;;; Generated autoloads from srecode.el
 
-(autoload 'cogre-srecode-setup "cogre/srecode" "\
+(autoload (quote cogre-srecode-setup) "srecode" "\
 Update various paths to get SRecode to identify COGRE macros.
 
 \(fn)" nil nil)
 
-(autoload 'srecode-semantic-handle-:cogre "cogre/srecode" "\
+(autoload (quote srecode-semantic-handle-:cogre) "srecode" "\
 Add macros to dictionary DICT based on COGRE data.
 
 \(fn DICT)" nil nil)
 
-(eval-after-load "srecode-map" '(cogre-srecode-setup))
+(eval-after-load "srecode-map" (quote (cogre-srecode-setup)))
 
-(autoload 'srecode-semantic-handle-:dot "cogre/srecode" "\
+(autoload (quote srecode-semantic-handle-:dot) "srecode" "\
 Add macros to dictionary DICT based on the current DOT buffer.
 
 \(fn DICT)" nil nil)
@@ -160,10 +156,10 @@ Add macros to dictionary DICT based on the current DOT buffer.
 ;;;***
 
 ;;;### (autoloads (cogre-uml-sort-for-lineage cogre-uml-enable-unicode)
-;;;;;;  "cogre/uml" "uml.el" (21548 15347 0 0))
+;;;;;;  "uml" "uml.el" (21560 22977))
 ;;; Generated autoloads from uml.el
 
-(autoload 'cogre-uml-enable-unicode "cogre/uml" "\
+(autoload (quote cogre-uml-enable-unicode) "uml" "\
 Enable use of UNICODE symbols to create COGRE graphs.
 Inheritance uses math triangle on page 25a0.
 Aggregation uses math square on edge 25a0.
@@ -175,7 +171,7 @@ cogre chart a little screwy somteims.  Your mileage may vary.
 
 \(fn)" t nil)
 
-(autoload 'cogre-uml-sort-for-lineage "cogre/uml" "\
+(autoload (quote cogre-uml-sort-for-lineage) "uml" "\
 Sort the current graph G for determining inheritance lineage.
 Return it as a list of lists.  Each entry is of the form:
   ( NODE PARENT1 PARENT2 ... PARENTN)
@@ -184,31 +180,28 @@ Return it as a list of lists.  Each entry is of the form:
 
 ;;;***
 
-;;;### (autoloads (wisent-dot-setup-parser) "cogre/wisent-dot" "wisent-dot.el"
-;;;;;;  (21548 15347 0 0))
+;;;### (autoloads (wisent-dot-setup-parser) "wisent-dot" "wisent-dot.el"
+;;;;;;  (21560 22977))
 ;;; Generated autoloads from wisent-dot.el
 
-(autoload 'wisent-dot-setup-parser "cogre/wisent-dot" "\
+(autoload (quote wisent-dot-setup-parser) "wisent-dot" "\
 Setup buffer for parse.
 
 \(fn)" nil nil)
 
-(add-hook 'graphviz-dot-mode-hook 'wisent-dot-setup-parser)
+(add-hook (quote graphviz-dot-mode-hook) (quote wisent-dot-setup-parser))
 
-(add-hook 'cogre-dot-mode-hook 'wisent-dot-setup-parser)
-
-;;;***
-
-;;;### (autoloads nil nil ("wisent-dot-wy.el") (21548 15475 289588
-;;;;;;  0))
+(add-hook (quote cogre-dot-mode-hook) (quote wisent-dot-setup-parser))
 
 ;;;***
 
-(provide 'loaddefs)
+;;;### (autoloads nil nil ("wisent-dot-wy.el") (21560 23176 559781))
+
+;;;***
+
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; loaddefs.el ends here

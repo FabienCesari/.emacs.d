@@ -11,3 +11,4 @@ auto-save-list
 *~
 ac-comphist.dat
 semanticdb/
+/external/cedet/lisp/cedet/cogre/loaddefs.el

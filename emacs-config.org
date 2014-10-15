@@ -498,36 +498,30 @@
                     "\\documentclass{article}"
                     ("\\section{%s}" . "\\section*{%s}")))
      
+     
      (require 'ox-publish)
      (setq org-publish-project-alist
            '(
+             ;;Path to org files
              ("org-notes"
-              :base-directory "~/work/org/site/"
+              :base-directory "~/work/website/org/"
               :base-extension "org"
-              :publishing-directory "~/work/public_html/"
+              
+              ;;Path to jekyll
+              :publishing-directory "~/work/website/jekyll"
               :recursive t
               :publishing-function org-html-publish-to-html
-              :headline-levels 4             ; Just the default for this project.
-              :auto-preamble t
-              :auto-sitemap t
-              :sitemap-filename "sitemap.org"
-              :sitemap-title "sitemap"        
-              :export-creator-info nil
-              :export-author-info nil
-              :auto-postamble nil
-              :table-of-contents nil
-              :section-number nil
-              :html-postamble nil
-              :style-include-default nil
+              :headline-levels 4
+              :body-only t
               )
              ("org-static"
-              :base-directory "~/work/org/site/"
+              :base-directory "~/work/website/org/"
               :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
-              :publishing-directory "~/work/public_html/"
+              :publishing-directory "~/work/website/jekyll/"
               :recursive t
               :publishing-function org-publish-attachment
-              )
-             ("org" :components ("org-notes" "org-static"))         
+              )                        
+             ("org" :components ("org-notes" "org-static")) 
              ))
    #+END_SRC
    
@@ -553,9 +547,3 @@
                   (define-key yaml-mode-map "\C-m" 'newline-and-indent)))     
    #+END_SRC
 
-** O-Blog - blogging with org mode (how exciting!")
-
-#+BEGIN_SRC emacs-lisp
-  (add-to-list 'load-path "~/.emacs.d/external/o-blog/lisp/")
-  (require 'o-blog)
-#+END_SRC
