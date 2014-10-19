@@ -329,19 +329,6 @@
      
    #+END_SRC
 
-** Emacs muse
-   #+BEGIN_SRC emacs-lisp
-     ;;Not activated since I use org-mode
-     ;;(add-to-list 'load-path "~/.emacs.d/external/muse/lisp")     
-     ;;(require 'muse-mode)     ; load authoring mode
-     ;;(require 'muse-html)     ; load publishing styles I use
-     ;;(require 'muse-latex)
-     ;;(require 'muse-texinfo)
-     ;;(require 'muse-docbook)
-     ;;(require 'muse-project)  ; publish files in projects
-     ;; Muse project configuration -- May be system dependend, so not Ideal.
-   #+END_SRC
-   
 ** Autocomplete
 #+BEGIN_SRC emacs-lisp
   (add-to-list 'load-path "~/.emacs.d/external/autocomplete/")   
@@ -365,7 +352,6 @@
      (add-to-list 'auto-mode-alist '("\\.html\\.erb\\'" . eruby-nxhtml-mumamo))
    #+END_SRC
    
-
 ** MuMaMo: Multiple Major Mode, for rhtml files
 #+BEGIN_SRC emacs-lisp     
   (require 'mumamo-fun)
@@ -484,6 +470,18 @@
    
 ** Org-mode projects
    #+BEGIN_SRC emacs-lisp     
+     ;; Set to the location of your Org files on your local system
+     (setq org-directory "~/work/org")
+     
+     ;; Set to the name of the file where new notes will be stored
+     (if (file-exists-p "~/work/org/flagged.org")
+         (setq org-mobile-inbox-for-pull "~/work/org/flagged.org")
+     )
+     
+     ;; Set to <your Dropbox root directory>/MobileOrg.
+     (setq org-mobile-directory "~/Dropbox/Applications/MobileOrg")
+     
+     
      ;;Load agneda files. 
      (if (file-exists-p "~/work/org/agenda.org")
          (setq org-agenda-files (list "~/work/org/agenda.org"))
