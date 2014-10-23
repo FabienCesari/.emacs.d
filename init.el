@@ -11,6 +11,9 @@
 (add-to-list 'load-path "~/.emacs.d/external/org-mode/contrib/lisp" t)
 (require 'cl)
 
+;;Block 
+(require 'org-exp-blocks)
+
 ;;Org Babel Setup.
 (setq org-babel-load-languages '((emacs-lisp . t )))
 (setq org-confirm-babel-evaluate nil)

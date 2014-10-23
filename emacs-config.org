@@ -557,4 +557,9 @@
                '(lambda ()
                   (define-key yaml-mode-map "\C-m" 'newline-and-indent)))     
    #+END_SRC
-
+   
+** Graphviz - dot mode
+   #+BEGIN_SRC emacs-lisp
+     (load-file "~/.emacs.d/external/graphviz-dot-mode/graphviz-dot-mode.el")  
+     (add-to-list 'org-src-lang-modes (quote ("dot" . graphviz-dot)))      
+   #+END_SRC

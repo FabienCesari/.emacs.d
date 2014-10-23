@@ -22,3 +22,6 @@
 [submodule "external/git-modes"]
 	path = external/git-modes
 	url = git://github.com/magit/git-modes.git
+[submodule "external/graphviz-dot-mode"]
+	path = external/graphviz-dot-mode
+	url = https://github.com/ppareit/graphviz-dot-mode
