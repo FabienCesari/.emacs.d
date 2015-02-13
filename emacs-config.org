@@ -8,6 +8,17 @@
       user-mail-address "fabien.cesari@gmail.com")
 #+END_SRC
 
+** Custom formating 
+
+#+BEGIN_SRC emacs_lisp
+   ;Linux mode for C
+(setq c-default-style
+      '((c-mode . "linux") ))
+ (setq tab-width 4) ; or any other preferred value
+    (defvaralias 'c-basic-offset 'tab-width)
+    (defvaralias 'cperl-indent-level 'tab-width)
+#+END_SRC
+
 ** Removing distractions 
    thanks to [[ http://bzg.fr/][Bastien Guerry]]. 
    #+BEGIN_SRC emacs-lisp
@@ -221,7 +232,7 @@
      
    #+END_SRC
 
-
+   
 * OS specific configuaration
 ** OSX key bindings
    #+BEGIN_SRC emacs-lisp
@@ -470,6 +481,7 @@
    
 ** Org-mode projects
    #+BEGIN_SRC emacs-lisp     
+     
      ;; Set to the location of your Org files on your local system
      (setq org-directory "~/work/org")
      
@@ -488,7 +500,7 @@
        )
      
      ;;LaTeX export
-     (require 'org-latex)
+     (require 'ox-latex)
      (unless (boundp 'org-export-latex-classes)
        (setq org-export-latex-classes nil))
      (add-to-list 'org-export-latex-classes

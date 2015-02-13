@@ -3,41 +3,39 @@
 ;;; Code:
 
 
-;;;### (autoloads (rpm) "rpm" "rpm.el" (21560 22977))
+;;;### (autoloads nil "rpm" "rpm.el" (21717 8015 0 0))
 ;;; Generated autoloads from rpm.el
 
-(autoload (quote rpm) "rpm" "\
+(autoload 'rpm "rpm" "\
 Red Hat Package Management in Emacs.
 
 \(fn)" t nil)
 
 ;;;***
 
-;;;### (autoloads (Info-speedbar-buttons Info-speedbar-browser) "sb-info"
-;;;;;;  "sb-info.el" (21560 22977))
+;;;### (autoloads nil "sb-info" "sb-info.el" (21717 8015 0 0))
 ;;; Generated autoloads from sb-info.el
 
-(autoload (quote Info-speedbar-browser) "sb-info" "\
+(autoload 'Info-speedbar-browser "sb-info" "\
 Initialize speedbar to display an info node browser.
 This will add a speedbar major display mode.
 
 \(fn)" t nil)
 
-(autoload (quote Info-speedbar-buttons) "sb-info" "\
+(autoload 'Info-speedbar-buttons "sb-info" "\
 Create a speedbar display to help navigation in an Info file.
 BUFFER is the buffer speedbar is requesting buttons for.
 
 \(fn BUFFER)" nil nil)
 
-(eval-after-load "info" (quote (require (quote sb-info))))
+(eval-after-load "info" '(require 'sb-info))
 
 ;;;***
 
-;;;### (autoloads (rmail-speedbar-buttons) "sb-rmail" "sb-rmail.el"
-;;;;;;  (21560 22977))
+;;;### (autoloads nil "sb-rmail" "sb-rmail.el" (21717 8015 0 0))
 ;;; Generated autoloads from sb-rmail.el
 
-(autoload (quote rmail-speedbar-buttons) "sb-rmail" "\
+(autoload 'rmail-speedbar-buttons "sb-rmail" "\
 Create buttons for BUFFER containing rmail messages.
 Click on the address under Reply to: to reply to this person.
 Under Folders: Click a name to read it, or on the <M> to move the
@@ -48,13 +46,15 @@ current message into that RMAIL folder.
 ;;;***
 
 ;;;### (autoloads nil nil ("sb-ant.el" "sb-html.el" "sb-texinfo.el")
-;;;;;;  (21560 23176 432084))
+;;;;;;  (21722 39958 186016 0))
 
 ;;;***
 
+(provide 'loaddefs)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
+;; coding: utf-8
 ;; End:
 ;;; loaddefs.el ends here

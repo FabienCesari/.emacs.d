@@ -11,16 +11,16 @@
 (add-to-list 'load-path "~/.emacs.d/external/org-mode/contrib/lisp" t)
 (require 'cl)
 
-;;Block 
-(require 'org-exp-blocks)
-
 ;;Org Babel Setup.
 (setq org-babel-load-languages '((emacs-lisp . t )))
 (setq org-confirm-babel-evaluate nil)
-
+ 
 ;;Org install and keylist
 (require 'org-install)
 (add-to-list 'auto-mode-alist '("\\.org" . org-mode))
+
+;;Block 
+(require 'org-exp-blocks)
 
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-cc" 'org-capture)
@@ -42,4 +42,12 @@
 
 ;;load neatly organized org file!
 (org-babel-load-file "~/.emacs.d/emacs-config.org")
-;; End of init.el
+;; End of init.el 
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:background "black" :foreground "grey"))))
+ '(fringe ((t (:background "black")))))
