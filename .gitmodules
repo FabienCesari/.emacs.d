@@ -25,3 +25,6 @@
 [submodule "external/graphviz-dot-mode"]
 	path = external/graphviz-dot-mode
 	url = https://github.com/ppareit/graphviz-dot-mode
+[submodule "smarttabs"]
+	path = smarttabs
+	url = https://github.com/jcsalomon/smarttabs
