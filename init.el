@@ -20,7 +20,7 @@
 (add-to-list 'auto-mode-alist '("\\.org" . org-mode))
 
 ;;Block 
-(require 'org-exp-blocks)
+;;(require 'org-exp-blocks)
 
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-cc" 'org-capture)
