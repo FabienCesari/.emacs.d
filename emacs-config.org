@@ -8,18 +8,6 @@
       user-mail-address "fabien.cesari@gmail.com")
 #+END_SRC
 
-** Custom formating 
-
-#+BEGIN_SRC emacs_lisp
-   ;Linux mode for C
-
-;;(setq c-default-style
-  ;;    '((c-mode . "linux") ))
-
- (setq tab-width 4) ; or any other preferred value
-    (defvaralias 'c-basic-offset 'tab-width)
-    (defvaralias 'cperl-indent-level 'tab-width)
-#+END_SRC
 
 ** Removing distractions 
    thanks to [[ http://bzg.fr/][Bastien Guerry]]. 
@@ -148,8 +136,10 @@
      (add-to-list 'load-path "/opt/local/share/emacs/site-lisp")
      (add-to-list 'load-path "/usr/share/emacs/site-lisp/elib/")
      ;;User load
+     (add-to-list 'load-path "~/.emacs.d/external/")
      (add-to-list 'load-path "~/.emacs.d/external/jdee-2.4.1/lisp")
-     (add-to-list 'load-path "~/.emacs.d/external/")      
+     (add-to-list 'load-path "~/.emacs.d/external/cc-mode-5.32.5")
+     (add-to-list 'load-path "~/.emacs.d/smarttabs")          
    #+END_SRC
    
 ** Emacs auto generated 
@@ -177,7 +167,7 @@
    #+END_SRC
 
 ** Utilities: windowmove, keybindings, sudo save, etc.
-   #+BEGIN_SRC emacs-lisp
+ #+BEGIN_SRC emacs-lisp
      ;; change window focus with shift-arrows
      ;;(require 'windmove)
      (windmove-default-keybindings)
@@ -234,7 +224,13 @@
      
    #+END_SRC
 
-   
+** Custom formating
+
+#+BEGIN_SRC emacs-lisp
+
+#+END_SRC
+
+
 * OS specific configuaration
 ** OSX key bindings
    #+BEGIN_SRC emacs-lisp

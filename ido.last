@@ -1,0 +1,44 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/Fabien/Dropbox/DSI/Prophet_4000/AppleP4000Sampler/" . "P4000Sampler/")
+ ("/Users/Fabien/Dropbox/DSI/Prophet_4000/" . "AppleP4000Sampler/")
+ ("/Users/Fabien/Dropbox/DSI/" . "Prophet_4000/")
+ ("/Users/Fabien/Dropbox/" . "DSI/")
+ ("/Users/Fabien/" . "Dropbox/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/Fabien/Dropbox/DSI/Prophet_4000/AppleP4000Sampler/P4000Sampler/"
+ "/Users/Fabien/.emacs.d/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "main.cpp"
+ "emacs-config.org"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/Fabien/Dropbox/DSI/Prophet_4000/AppleP4000Sampler/P4000Sampler/" (22177 34727 0 0) "WavHandler.h" "WavHandler.cpp" "Tables.h" "SampleOsc.h~" "SampleOsc.h" "SampleOsc.cpp" "SampleNormalizer.h" "SampleNormalizer.cpp" "SampleGroup.h~" "SampleGroup.h" "SampleGroup.cpp~" "SampleGroup.cpp" "main.cpp~" "main.cpp" "../" "./")
+
+ ("/Users/Fabien/Dropbox/DSI/Prophet_4000/AppleP4000Sampler/" (22177 34585 0 0) "StdPnoSamples/" "P4000Sampler.xcodeproj/" "P4000Sampler/" ".DS_Store" "../" "./")
+
+ ("/Users/Fabien/Dropbox/DSI/Prophet_4000/" (22177 25259 0 0) "StdPnoSamples/" "RTOS_Tests/" "PICMG_COMDG_2.0-RELEASED-2013-12-061.pdf" "PCOM-BA00.pdf" "P4000-Sampler/" "notes.txt" "AppleP4000Sampler/" "AppleAudioLoadTest/" "555004_CherryHill_FabE_CDI.pdf" "../" "./")
+
+ ("/Users/Fabien/Dropbox/DSI/" (22173 46557 0 0) "Tetra/" "Tempest/" "Schematics/" "QNX-Info/" "Prophet_6M/" "Prophet_6/" "Prophet_4000/" "Prophet 12/" "Prophet 08/" "Pro2/" "Poly Rack/" "Pioneer/" "PEK/" "P6-GIT/" "OB6/" "Mopho_Desktop/" "monokey/" "Mokey X4/" "MoKey/" "Modules/" "Icon
+" "Git/" "Evolver/" "DJS/" "Datasheets/" "boms parts/" ".DS_Store" ".dropbox" "../" "./")
+
+ ("/Users/Fabien/Dropbox/" (22174 65233 0 0) "Icon
+" "fabien/" "DSI_SCH/" "DSI/" "Current OS/" ".Trash-1000/" ".DS_Store" ".dropbox.cache/" ".dropbox" "../" "./")
+
+ ("/Users/Fabien/.emacs.d/" (22177 35951 0 0) "smarttabs/" "README.org" "init.el" "external/" "emacs-config.org" "emacs-config.el" "ede-projects.el" "auto-save-list/" ".gitmodules" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/Fabien/" (22173 50605 0 0) "work/" "Soulseek Downloads/" "Public/" "Pictures/" "Music/" "MPLABXProjects/" "Movies/" "microchip/" "Library/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Applications (Parallels)/" "Applications/" ".viminfo" ".Trash/" ".subversion/" ".SoulseekQt/" ".profile" ".mplabcomm/" ".matlab/" ".gitconfig" ".filezilla/" ".emacs.d/" ".DS_Store" ".dropbox/" ".dir_colors" ".cups/" ".config/" ".CFUserTextEncoding" ".bashrc" ".bash_sessions/" ".bash_profile.macports-saved_2015-11-20_at_16:24:08" ".bash_profile" ".bash_history" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
