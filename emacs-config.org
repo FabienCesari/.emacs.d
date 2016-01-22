@@ -8,7 +8,6 @@
       user-mail-address "fabien.cesari@gmail.com")
 #+END_SRC
 
-
 ** Removing distractions 
    thanks to [[ http://bzg.fr/][Bastien Guerry]]. 
    #+BEGIN_SRC emacs-lisp
@@ -227,10 +226,23 @@
 ** Custom formating
 
 #+BEGIN_SRC emacs-lisp
-
+  (load "cc-mode.el")
+  (load "smart-tabs-mode.el")
+  
+  (setq c-basic-offset 4)
+  (smart-tabs-insinuate 'c 'javascript)
+  
+  (setq c-default-style "linux"
+            c-basic-offset 4)
+  
+  (smart-tabs-add-language-support c++ c++-mode-hook
+        ((c-indent-line . c-basic-offset)
+         (c-indent-region . c-basic-offset)))
+  
+  
 #+END_SRC
-
-
+   
+   
 * OS specific configuaration
 ** OSX key bindings
    #+BEGIN_SRC emacs-lisp

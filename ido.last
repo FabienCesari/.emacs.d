@@ -17,13 +17,18 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "SampleOsc.h"
  "main.cpp"
  "emacs-config.org"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/Fabien/Dropbox/DSI/Prophet_4000/AppleP4000Sampler/P4000Sampler/" (22177 34727 0 0) "WavHandler.h" "WavHandler.cpp" "Tables.h" "SampleOsc.h~" "SampleOsc.h" "SampleOsc.cpp" "SampleNormalizer.h" "SampleNormalizer.cpp" "SampleGroup.h~" "SampleGroup.h" "SampleGroup.cpp~" "SampleGroup.cpp" "main.cpp~" "main.cpp" "../" "./")
+ ("/Users/Fabien/Dropbox/DSI/Prophet_4000/AppleP4000Sampler/P4000Sampler/" (22177 37755 0 0) "WavHandler.h" "WavHandler.cpp" "Tables.h" "SampleOsc.h~" "SampleOsc.h" "SampleOsc.cpp" "SampleNormalizer.h" "SampleNormalizer.cpp" "SampleGroup.h~" "SampleGroup.h" "SampleGroup.cpp~" "SampleGroup.cpp" "main.cpp~" "main.cpp" "../" "./")
+
+ ("/Users/Fabien/.emacs.d/" (22177 37711 0 0) "smarttabs/" "semanticdb/" "README.org" "init.el" "ido.last~" "ido.last" "external/" "emacs-config.org" "emacs-config.el" "ede-projects.el" "auto-save-list/" "ac-comphist.dat" ".gitmodules" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/Fabien/" (22177 36269 0 0) "work/" "Soulseek Downloads/" "Public/" "Pictures/" "Music/" "MPLABXProjects/" "Movies/" "microchip/" "Library/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Applications (Parallels)/" "Applications/" ".viminfo" ".Trash/" ".subversion/" ".SoulseekQt/" ".profile" ".mplabcomm/" ".matlab/" ".gitconfig" ".filezilla/" ".emacs.d/" ".DS_Store" ".dropbox/" ".dir_colors" ".cups/" ".config/" ".CFUserTextEncoding" ".bashrc" ".bash_sessions/" ".bash_profile.macports-saved_2015-11-20_at_16:24:08" ".bash_profile" ".bash_history" "../" "./")
 
  ("/Users/Fabien/Dropbox/DSI/Prophet_4000/AppleP4000Sampler/" (22177 34585 0 0) "StdPnoSamples/" "P4000Sampler.xcodeproj/" "P4000Sampler/" ".DS_Store" "../" "./")
 
@@ -34,10 +39,6 @@
 
  ("/Users/Fabien/Dropbox/" (22174 65233 0 0) "Icon
 " "fabien/" "DSI_SCH/" "DSI/" "Current OS/" ".Trash-1000/" ".DS_Store" ".dropbox.cache/" ".dropbox" "../" "./")
-
- ("/Users/Fabien/.emacs.d/" (22177 35951 0 0) "smarttabs/" "README.org" "init.el" "external/" "emacs-config.org" "emacs-config.el" "ede-projects.el" "auto-save-list/" ".gitmodules" ".gitignore" ".git/" "../" "./")
-
- ("/Users/Fabien/" (22173 50605 0 0) "work/" "Soulseek Downloads/" "Public/" "Pictures/" "Music/" "MPLABXProjects/" "Movies/" "microchip/" "Library/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Applications (Parallels)/" "Applications/" ".viminfo" ".Trash/" ".subversion/" ".SoulseekQt/" ".profile" ".mplabcomm/" ".matlab/" ".gitconfig" ".filezilla/" ".emacs.d/" ".DS_Store" ".dropbox/" ".dir_colors" ".cups/" ".config/" ".CFUserTextEncoding" ".bashrc" ".bash_sessions/" ".bash_profile.macports-saved_2015-11-20_at_16:24:08" ".bash_profile" ".bash_history" "../" "./")
 )
 
 ;; ----- ido-unc-hosts-cache -----
