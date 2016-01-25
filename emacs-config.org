@@ -167,60 +167,60 @@
 
 ** Utilities: windowmove, keybindings, sudo save, etc.
  #+BEGIN_SRC emacs-lisp
-     ;; change window focus with shift-arrows
-     ;;(require 'windmove)
-     (windmove-default-keybindings)
-     (setq windmove-wrap-around t)
-     (require 'buffer-move)
-     
-     ;;Key bindings
-     (global-set-key (kbd "C-+") 'hs-toggle-hiding)
-     
-     (add-hook 'c-mode-common-hook   'hs-minor-mode)
-     (add-hook 'emacs-lisp-mode-hook 'hs-minor-mode)
-     (add-hook 'java-mode-hook       'hs-minor-mode)
-     (add-hook 'espresso-mode-hook   'hs-minor-mode)
-     (add-hook 'lisp-mode-hook       'hs-minor-mode)
-     (add-hook 'perl-mode-hook       'hs-minor-mode)
-     (add-hook 'sh-mode-hook         'hs-minor-mode)
-     
-     (global-set-key (kbd "<C-S-up>")     'buf-move-up)
-     (global-set-key (kbd "<C-S-donw>")   'buf-move-down)
-     (global-set-key (kbd "<C-S-left>")   'buf-move-left)
-     (global-set-key (kbd "<C-S-right>")  'buf-move-right)
-     
-     ;;; I prefer cmd key for meta
-     (setq mac-command-modifier 'meta)
-     (setq mac-right-option-modifier nil)
-     
-     ;;Sudo save
-     (require 'sudo-save)
-     
-     ;;Multi term
-     (require 'multi-term)
-     (setq multi-term-program "/bin/zsh")
-     
-     ;;tramp
-     (require 'tramp)
-     (setq tramp-default-method "ftp")
-     
-     ;;tempo mode
-     (load "tempo")
-     
-     ;;Git & Svn
-     (require 'psvn)
-     ;;(add-to-list 'load-path "~/.emacs.d/external/git/")
-     ;;(require 'git)
-     
-     ;;Magit
-     (add-to-list 'load-path "~/.emacs.d/external/git-modes")
-     (add-to-list 'load-path "~/.emacs.d/external/magit")
-     (eval-after-load 'info
-       '(progn (info-initialize)
-               (add-to-list 'Info-directory-list "external/magit/")))
-     (require 'magit)
-     
-     
+   ;; change window focus with shift-arrows
+   ;;(require 'windmove)
+   (windmove-default-keybindings)
+   (setq windmove-wrap-around t)
+   (require 'buffer-move)
+   
+   ;;Key bindings
+   (global-set-key (kbd "C-+") 'hs-toggle-hiding)
+   
+   (add-hook 'c-mode-common-hook   'hs-minor-mode)
+   (add-hook 'emacs-lisp-mode-hook 'hs-minor-mode)
+   (add-hook 'java-mode-hook       'hs-minor-mode)
+   (add-hook 'espresso-mode-hook   'hs-minor-mode)
+   (add-hook 'lisp-mode-hook       'hs-minor-mode)
+   (add-hook 'perl-mode-hook       'hs-minor-mode)
+   (add-hook 'sh-mode-hook         'hs-minor-mode)
+   
+   (global-set-key (kbd "<C-S-up>")     'buf-move-up)
+   (global-set-key (kbd "<C-S-donw>")   'buf-move-down)
+   (global-set-key (kbd "<C-S-left>")   'buf-move-left)
+   (global-set-key (kbd "<C-S-right>")  'buf-move-right)
+   
+   ;;; I prefer cmd key for meta
+   ;;;(setq mac-command-modifier 'meta)
+   ;;(setq mac-right-option-modifier nil)
+   
+   ;;Sudo save
+   (require 'sudo-save)
+   
+   ;;Multi term
+   (require 'multi-term)
+   (setq multi-term-program "/bin/zsh")
+   
+   ;;tramp
+   (require 'tramp)
+   (setq tramp-default-method "ftp")
+   
+   ;;tempo mode
+   (load "tempo")
+   
+   ;;Git & Svn
+   (require 'psvn)
+   ;;(add-to-list 'load-path "~/.emacs.d/external/git/")
+   ;;(require 'git)
+   
+   ;;Magit
+   (add-to-list 'load-path "~/.emacs.d/external/git-modes")
+   (add-to-list 'load-path "~/.emacs.d/external/magit")
+   (eval-after-load 'info
+     '(progn (info-initialize)
+             (add-to-list 'Info-directory-list "external/magit/")))
+   (require 'magit)
+   
+   
    #+END_SRC
 
 ** Custom formating
@@ -246,10 +246,15 @@
 * OS specific configuaration
 ** OSX key bindings
    #+BEGIN_SRC emacs-lisp
+     (setq mac-option-key-is-meta nil)
+     (setq mac-command-key-is-meta t)
+     (setq mac-command-modifier 'meta)
+     (setq mac-option-modifier nil)
+     
      ;;(setq mac-option-modifier 'none)
      ;;(setq mac-command-modifier 'meta)
-     (when (eq system-type 'darwin)
-       (setq mac-pass-command-to-system nil) )
+     ;;(when (eq system-type 'darwin)
+     ;;  (setq mac-pass-command-to-system nil) )
    #+END_SRC
 ** exec path from shell
    #+BEGIN_SRC emacs-lisp
