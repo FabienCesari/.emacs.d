@@ -28,3 +28,6 @@
 [submodule "smarttabs"]
 	path = smarttabs
 	url = https://github.com/jcsalomon/smarttabs
+[submodule "external/string-inflection"]
+	path = external/string-inflection
+	url = https://github.com/akicho8/string-inflection

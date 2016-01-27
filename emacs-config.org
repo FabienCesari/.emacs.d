@@ -138,6 +138,7 @@
      (add-to-list 'load-path "~/.emacs.d/external/")
      (add-to-list 'load-path "~/.emacs.d/external/jdee-2.4.1/lisp")
      (add-to-list 'load-path "~/.emacs.d/external/cc-mode-5.32.5")
+     (add-to-list 'load-path "~/.emacs.d/external/string-inflection")
      (add-to-list 'load-path "~/.emacs.d/smarttabs")          
    #+END_SRC
    
@@ -240,9 +241,20 @@
          (c-indent-region . c-basic-offset)))
   
   
+  ;; Cycle between snake case, camel case, etc.
+  (load "string-inflection.el")
+  (require 'string-inflection)
+  (global-set-key (kbd "C-c i") 'string-inflection-cycle)
+  (global-set-key (kbd "C-c C") 'string-inflection-camelcase)        ;; Force to CamelCase
+  (global-set-key (kbd "C-c L") 'string-inflection-lower-camelcase)  ;; Force to lowerCamelCase
+  (global-set-key (kbd "C-c J") 'string-inflection-java-style-cycle) ;; Cycle through Java styles
+  
 #+END_SRC
    
-   
+** gud - update for lldb
+#+BEGIN_SRC emacs-lisp
+    (load "gud.el")
+#+END_SRC
 * OS specific configuaration
 ** OSX key bindings
    #+BEGIN_SRC emacs-lisp
