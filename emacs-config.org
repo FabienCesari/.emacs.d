@@ -230,16 +230,15 @@
   (load "cc-mode.el")
   (load "smart-tabs-mode.el")
   
-  (setq c-basic-offset 4)
-  (smart-tabs-insinuate 'c 'javascript)
+  ;;(setq c-basic-offset 4)
+  ;;;(smart-tabs-insinuate 'c 'javascript)
   
   (setq c-default-style "linux"
-            c-basic-offset 4)
+        c-basic-offset 4)
   
   (smart-tabs-add-language-support c++ c++-mode-hook
-        ((c-indent-line . c-basic-offset)
-         (c-indent-region . c-basic-offset)))
-  
+    ((c-indent-line . c-basic-offset)
+     (c-indent-region . c-basic-offset)))
   
   ;; Cycle between snake case, camel case, etc.
   (load "string-inflection.el")
@@ -255,6 +254,8 @@
 #+BEGIN_SRC emacs-lisp
     (load "gud.el")
 #+END_SRC
+
+
 * OS specific configuaration
 ** OSX key bindings
    #+BEGIN_SRC emacs-lisp
@@ -276,6 +277,25 @@
      
 
 * External plugins    
+** Haskell - Tidal
+   #+BEGIN_SRC emacs-lisp
+     (add-to-list 'load-path  "~/.emacs.d/external/haskell-mode")
+     (require 'haskell-mode-autoloads)
+     (add-to-list 'Info-default-directory-list  "~/.emacs.d/external/haskell-mode")
+     (add-to-list 'load-path "~/work/music/tidal")
+     (require 'haskell-mode)
+     (require 'tidal)
+     
+     (require 'package)
+     (add-to-list 'package-archives 
+         '("marmalade" .
+           "http://marmalade-repo.org/packages/"))
+     (package-initialize)
+     (setq load-path (cons "~/work/music/tidal/" load-path))
+     (require 'tidal)
+     (setq tidal-interpreter "/opt/local/bin/ghci")
+   #+END_SRC
+   
 ** ELPA -- package.el
    #+BEGIN_SRC emacs-lisp
      (when
@@ -554,11 +574,12 @@
              ("org-static"
               :base-directory "~/work/website/org/"
               :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
-              :publishing-directory "~/work/website/jekyll/"
+              :publishing-directory "~/work/website/jekyll"
               :recursive t
               :publishing-function org-publish-attachment
               )                        
              ("org" :components ("org-notes" "org-static")) 
+     
              ))
      
      (custom-set-variables

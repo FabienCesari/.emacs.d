@@ -2,124 +2,257 @@
 
 ;; ----- ido-last-directory-list -----
 (
- ("/Users/fabiencesari/.emacs.d/" . "external/")
- ("/Users/fabiencesari/Dropbox/fabien/git/prophet_4k/AppleAudioLoadTest/" . "AudioLoadTest/")
- ("/Users/fabiencesari/Dropbox/fabien/git/prophet_4k/AppleP4000Sampler/" . "P4000Sampler/")
- ("/Users/fabiencesari/Dropbox/fabien/git/prophet_4k/" . "P4000-Sampler_2/")
- ("/Users/fabiencesari/Dropbox/fabien/git/" . "prophet_4k/")
- ("/Users/fabiencesari/.emacs.d/external/" . "cc-mode-5.32.5/")
- ("/Users/fabiencesari/Dropbox/DSI/Prophet_4000/AppleP4000Sampler/" . "P4000Sampler/")
- ("/Users/fabiencesari/Dropbox/DSI/Prophet_4000/AppleAudioLoadTest/" . "AudioLoadTest/")
- ("/Users/fabiencesari/Dropbox/DSI/Prophet_4000/" . "AppleAudioLoadTest/")
- ("/Users/fabiencesari/Dropbox/DSI/" . "Prophet_4000/")
- ("/Users/fabiencesari/Dropbox/fabien/perso/max-sdk-7.1.0/" . "source/")
- ("/Users/fabiencesari/Dropbox/fabien/perso/" . "core_audio_template/")
- ("/Users/fabiencesari/Dropbox/fabien/qnx/bsp/BSP_x86-generic_br-660_be-660_SVN786025_JBN442/" . "images/")
- ("/Users/fabiencesari/Dropbox/fabien/qnx/bsp/" . "BSP_x86-generic_br-660_be-660_SVN786025_JBN442/")
- ("/Users/fabiencesari/Dropbox/fabien/qnx/" . "bsp/")
- ("/Users/fabiencesari/Dropbox/fabien/" . "perso/")
- ("/Users/fabiencesari/Dropbox/" . "fabien/")
- ("/Users/fabiencesari/" . ".emacs.d/")
+ ("/Users/Fabien/Dropbox/fabien/dsp/algorithms/" . "fft/")
+ ("/Users/Fabien/Dropbox/fabien/dsp/" . "algorithms/")
+ ("/Users/Fabien/work/development/algorithms/dsp/" . "fft/")
+ ("/Users/Fabien/work/development/algorithms/" . "dsp/")
+ ("/Users/Fabien/work/music/" . "tidal/")
+ ("/Users/Fabien/.emacs.d/external/" . "haskell-mode/")
+ ("/Users/Fabien/.emacs.d/" . "external/")
+ ("/Users/Fabien/work/development/" . "algorithms/")
+ ("/Users/Fabien/work/dsp/algorithms/" . "fft/")
+ ("/Users/Fabien/work/dsp/" . "algorithms/")
+ ("/Users/Fabien/work/jobs/2016/template/" . "Lettre/")
+ ("/Users/Fabien/work/jobs/2016/" . "template/")
+ ("/Users/Fabien/work/jobs/" . "2016/")
+ ("/Users/Fabien/work/website/jekyll/" . "_includes/")
+ ("/Users/Fabien/work/org/home/" . "org/")
+ ("/Users/Fabien/work/org/" . "home/")
+ ("/Users/Fabien/work/website/org/" . "_posts/")
+ ("/Users/Fabien/work/website/" . "org/")
+ ("/Users/" . "Fabien/")
+ ("/Users/Fabien/work/Max_7/Packages/max-sdk-7.1.0/source/audio/" . "magnizdat~/")
+ ("/Users/Fabien/work/Max_7/Packages/max-sdk-7.1.0/source/" . "audio/")
+ ("/Users/Fabien/work/Max_7/Packages/max-sdk-7.1.0/" . "source/")
+ ("/Users/Fabien/work/Max_7/Packages/" . "max-sdk-7.1.0/")
+ ("/Users/Fabien/work/Max_7/" . "Packages/")
+ ("/Users/Fabien/Dropbox/fabien/perso/max_external/" . "example/")
+ ("/Applications/Max.app/Contents/Resources/C74/packages/max-sdk-7.1.0/source/audio/" . "dspstress~/")
+ ("/Applications/Max.app/Contents/Resources/C74/packages/max-sdk-7.1.0/source/" . "audio/")
+ ("/Applications/Max.app/Contents/Resources/C74/packages/max-sdk-7.1.0/" . "source/")
+ ("/Applications/Max.app/Contents/Resources/C74/packages/" . "max-sdk-7.1.0/")
+ ("/Applications/Max.app/Contents/Resources/C74/" . "packages/")
+ ("/Applications/Max.app/Contents/Resources/" . "C74/")
+ ("/Applications/Max.app/Contents/" . "Resources/")
+ ("/Applications/Max.app/" . "Contents/")
+ ("/Applications/" . "Max.app/")
+ ("/" . "Applications/")
+ ("/Users/Fabien/Dropbox/fabien/perso/" . "max_external/")
+ ("/Users/Fabien/work/" . "jobs/")
+ ("/Users/Fabien/Dropbox/fabien/git/prophet_4k/AppleP4000Sampler/" . "P4000Sampler/")
+ ("/Users/Fabien/Dropbox/fabien/git/prophet_4k/" . "AppleP4000Sampler/")
+ ("/Users/Fabien/Dropbox/fabien/git/" . "prophet_4k/")
+ ("/Users/Fabien/Dropbox/fabien/" . "dsp/")
+ ("/Users/Fabien/Dropbox/DSI/Prophet_4000/AppleP4000Sampler/" . "P4000Sampler/")
+ ("/Users/Fabien/Dropbox/DSI/Prophet_4000/" . "AppleP4000Sampler/")
+ ("/Users/Fabien/Dropbox/DSI/" . "Prophet_4000/")
+ ("/Users/Fabien/Dropbox/" . "fabien/")
+ ("/Users/Fabien/" . "work/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
- "/Users/fabiencesari/.emacs.d/"
- "/Users/fabiencesari/.emacs.d/external/"
- "/Users/fabiencesari/Dropbox/fabien/perso/core_audio_template/"
- "/Users/fabiencesari/Dropbox/fabien/git/prophet_4k/P4000-Sampler_2/"
- "/Users/fabiencesari/Dropbox/fabien/git/prophet_4k/P4000-Sampler/"
- "/Users/fabiencesari/Dropbox/fabien/git/prophet_4k/P4000-Sampler 2/"
- "/Users/fabiencesari/Dropbox/fabien/git/prophet_4k/AppleP4000Sampler/P4000Sampler/"
- "/Users/fabiencesari/Dropbox/fabien/git/prophet_4k/AppleAudioLoadTest/AudioLoadTest/"
- "/Users/fabiencesari/Dropbox/DSI/Prophet_4000/AppleAudioLoadTest/AudioLoadTest/"
- "/Users/fabiencesari/Dropbox/DSI/Prophet_4000/AppleP4000Sampler/P4000Sampler/"
- "/Users/fabiencesari/.emacs.d/external/cc-mode-5.32.5/"
- "/Users/fabiencesari/Dropbox/fabien/perso/"
- "/Users/fabiencesari/Dropbox/fabien/qnx/bsp/BSP_x86-generic_br-660_be-660_SVN786025_JBN442/images/"
+ "/Users/Fabien/work/jobs/2016/template/Lettre/"
+ "/Applications/microchip/mplabx/v3.26/mplab_ide.app/Contents/Resources/mplab_ide/etc/"
+ "/Users/Fabien/Dropbox/fabien/dsp/algorithms/fft/"
+ "/Users/Fabien/work/development/algorithms/dsp/fft/"
+ "/Users/Fabien/work/dsp/algorithms/fft/"
+ "/Users/Fabien/work/music/tidal/"
+ "/Users/Fabien/work/music/Dirt/"
+ "/Users/Fabien/.emacs.d/"
+ "/Users/Fabien/.emacs.d/external/haskell-mode/"
+ "/Users/Fabien/work/development/algorithms/"
+ "/Users/Fabien/work/dsp/algorithms/"
+ "/Users/Fabien/work/jobs/2016/template/CV/"
+ "/Users/Fabien/work/website/org/_posts/"
+ "/Users/Fabien/work/website/org/"
+ "/Users/Fabien/work/website/jekyll/_includes/"
+ "/Users/Fabien/work/website/jekyll/"
+ "/Users/Fabien/work/website/jekyll/_layouts/"
+ "/Users/Fabien/work/website/jekyll/_site/"
+ "/Users/Fabien/work/website/jekyll/css/"
+ "/Users/Fabien/work/website/jekyll/js/"
+ "/Users/Fabien/work/website/org/js/"
+ "/Users/Fabien/work/website/"
+ "/Users/Fabien/work/org/home/org/"
+ "/Users/Fabien/work/Max_7/Packages/max-sdk-7.1.0/source/audio/magnizdat~/"
+ "/Users/Fabien/work/Max_7/Packages/max-sdk-7.1.0/source/"
+ "/Users/Fabien/work/Max_7/Packages/max-sdk-7.1.0/source/audio/test~/"
+ "/Users/Fabien/work/Max_7/Packages/max-sdk-7.1.0/source/audio/lores~/"
+ "/Users/Fabien/work/Max_7/Packages/magnizdat~/"
+ "/Users/Fabien/Dropbox/fabien/perso/max_external/example/"
+ "/Users/Fabien/Dropbox/fabien/perso/core_audio_template/"
+ "/Users/Fabien/Dropbox/fabien/perso/max_external/template/"
+ "/Applications/Max.app/Contents/Resources/C74/packages/max-sdk-7.1.0/source/"
+ "/Users/Fabien/Dropbox/fabien/git/prophet_4k/AppleP4000Sampler/P4000Sampler/"
+ "/Users/Fabien/Dropbox/DSI/Prophet_4000/AppleP4000Sampler/P4000Sampler/"
 )
 
 ;; ----- ido-work-file-list -----
 (
+ "FabienCesariLetter.tex"
+ "mplab_ide.conf"
+ "sig_proc.c"
+ "sig_proc.h"
+ "fft_tests.py"
+ "helloworld.tidal"
+ "Makefile"
  "emacs-config.org"
- "gud.el"
- "main.cpp"
- "SampleGroup.cpp"
- "WavHandler.cpp"
- "SampleOsc.cpp"
- "P4000-Sampler.cc"
- "SampleNormalizer.cpp"
- "SampleGroup.h"
- "SampleOsc.h"
+ "tidal.el"
+ "fft_test.m"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/fabiencesari/.emacs.d/external/" (22185 3532 0 0) "yaml-mode.el" "xml-parse.el" "www/" "tempo.el" "sudo-save.el" "string-inflection/" "ruby-mode/" "rinari/" "rhtml/" "pymacs.elc" "pymacs.el" "psvn.el" "processing-mode.el" "php-mode/" "package.el" "org-mode/" "org-exp-blocks.el~" "org-exp-blocks.el" "o-blog/" "nxhtml/" "muse/" "multi-term.el" "matlab-emacs/" "magit/" "jdee-2.4.1/" "ido-ubiquitous.el" "ide/" "gud.el" "graphviz-dot-mode/" "git-modes/" "git/" "exec-path-from-shell.el" "emacs-rails/" "doxymacs.el" "cedet/" "cc-mode-5.32.5/" "buffer-move.el" "autocomplete/" "../" "./")
+ ("/Users/Fabien/work/jobs/2016/template/Lettre/" (22287 2484 0 0) "FabienCesariLetter.tex~" "FabienCesariLetter.tex" "FabienCesariLetter.synctex.gz" "FabienCesariLetter.pdf" "FabienCesariLetter.log" "FabienCesariLetter.aux" ".DS_Store" "../" "./")
 
- ("/Users/fabiencesari/Dropbox/fabien/perso/core_audio_template/" (22185 2941 0 0) "objs/" "Makefile~" "Makefile" "main.cpp~" "main.cpp" "exec" "../" "./")
+ ("/Users/Fabien/" (22264 53461 0 0) "work/" "Soulseek Downloads/" "Public/" "Pictures/" "Music/" "MPLABXProjects/" "Movies/" "microchip/" "Library/" "ipe.properties" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Applications (Parallels)/" "Applications/" ".viminfo" ".Trash/" ".subversion/" ".ssh/" ".SoulseekQt/" ".profile" ".org-timestamps/" ".oracle_jre_usage/" ".mplabcomm/" ".matplotlib/" ".matlab/" ".jackdrc" ".ipython/" ".gitconfig" ".ghc/" ".gem/" ".filezilla/" ".emacs.d/" ".DS_Store" ".dropbox/" ".dir_colors" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".cabal/" ".bashrc" ".bash_sessions/" ".bash_profile.macports-saved_2015-11-20_at_16:24:08" ".bash_profile" ".bash_history" "../" "./")
 
- ("/Users/fabiencesari/.emacs.d/" (22184 6898 0 0) "smarttabs/" "semanticdb/" "README.org" "init.el" "ido.last~" "ido.last" "external/" "emacs-config.org" "emacs-config.el" "emacs-config-backup.org~" "ede-projects.el" "auto-save-list/" "ac-comphist.dat" ".gitmodules" ".gitignore" ".git/" "../" "./")
+ ("/Applications/microchip/mplabx/v3.26/mplab_ide.app/Contents/Resources/mplab_ide/etc/" (22263 16243 0 0) "xclm.conf" "mplab_ide.versions" "mplab_ide.import" "mplab_ide.conf" "mplab_ide.clusters" "Desktop_Taskbar_XIDE_Icon.ico" "../" "./")
 
- ("/Users/fabiencesari/" (22184 6999 0 0) "usb.img" "Public/" "Pictures/" "Music/" "MPLABXProjects/" "Movies/" "microchip/" "Library/" "ipe.properties" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Applications (Parallels)/" "Applications/" ".viminfo" ".Trash/" ".subversion/" ".oracle_jre_usage/" ".mplabcomm/" ".mhc/" ".macports/" ".lldb/" ".gitconfig" ".emacs.d/" ".DS_Store" ".dropbox/" ".config/" ".CFUserTextEncoding" ".bashrc" ".bash_sessions/" ".bash_profile.macports-saved_2016-01-26_at_14:14:48" ".bash_profile.macports-saved_2015-12-14_at_16:35:12" ".bash_profile" ".bash_history" "../" "./")
+ ("/Users/Fabien/Dropbox/fabien/dsp/algorithms/fft/" (22256 49041 0 0) "sig_proc.h~" "sig_proc.h" "sig_proc.c~" "sig_proc.c" "objs/" "Makefile~" "Makefile" "main.c~" "main.c" "libsig_proc.so" "fft_tests.py~" "fft_tests.py" "fft_test.m" "algo" "../" "./")
 
- ("/Users/fabiencesari/Dropbox/fabien/git/prophet_4k/P4000-Sampler_2/" (22184 4242 0 0) "x86/" "WavHandler.h" "WavHandler.cpp" "Tables.h" "SampleOsc.h" "SampleOsc.cpp" "SampleNormalizer.h" "SampleNormalizer.cpp" "SampleGroup.h" "SampleGroup.cpp" "P4000-Sampler.cc" "Makefile" "common.mk" ".qnx_internal.mk" ".project" ".cproject" "../" "./")
+ ("/Users/Fabien/Dropbox/fabien/dsp/algorithms/" (22249 46279 0 0) "fft/" "../" "./")
 
- ("/Users/fabiencesari/Dropbox/fabien/git/prophet_4k/" (22184 4250 0 0) "StdPnoSamples/" "README.md" "P4000-Sampler_2/" "P4000-Sampler.zip" "P4000-Sampler/" "documentation/" "AppleP4000Sampler/" "AppleAudioLoadTest/" ".gitignore~" ".gitignore" ".git/" ".DS_Store" "../" "./")
+ ("/Users/Fabien/Dropbox/fabien/dsp/" (22238 22876 0 0) "doc/" "algorithms/" "../" "./")
 
- ("/Users/fabiencesari/Dropbox/fabien/git/prophet_4k/P4000-Sampler/" (22177 42712 0 0) "x86/" "WavHandler.h" "WavHandler.cpp" "Tables.h" "SampleOsc.h" "SampleOsc.cpp" "SampleNormalizer.h" "SampleNormalizer.cpp" "SampleGroup.h" "SampleGroup.cpp" "P4000-Sampler.cc" "Makefile" "common.mk" ".qnx_internal.mk" ".project" ".cproject" "../" "./")
+ ("/Users/Fabien/.emacs.d/external/haskell-mode/" (22245 52914 0 0) "w3m-haddock.el" "tidal.el" "tests/" "README.md" "NEWS" "Makefile" "logo.svg" "inf-haskell.el" "images/" "highlight-uses-mode.el" "haskell.el" "haskell-utils.el" "haskell-unicode-input-method.el" "haskell-string.el" "haskell-sort-imports.el" "haskell-session.el" "haskell-sandbox.el" "haskell-repl.el" "haskell-process.el" "haskell-presentation-mode.el" "haskell-navigate-imports.el" "haskell-move-nested.el" "haskell-modules.el" "haskell-mode.info" "haskell-mode.el" "haskell-mode-pkg.el" "haskell-mode-autoloads.el" "haskell-menu.el" "haskell-load.el" "haskell-lexeme.el" "haskell-interactive-mode.el" "haskell-indentation.el" "haskell-indent.el" "haskell-hoogle.el" "haskell-font-lock.el" "haskell-doc.el" "haskell-decl-scan.el" "haskell-debug.el" "haskell-customize.el" "haskell-completions.el" "haskell-complete-module.el" "haskell-compile.el" "haskell-compat.el" "haskell-commands.el" "haskell-collapse.el" "haskell-checkers.el" "haskell-cabal.el" "haskell-align-imports.el" "ghci-script-mode.el" "ghc-core.el" "doc/" "dir" "COPYING" "CONTRIBUTING.md" "build-24.5.1/" ".travis.yml" ".gitignore" ".git/" "../" "./")
 
- ("/Users/fabiencesari/Dropbox/fabien/git/prophet_4k/P4000-Sampler 2/" (22184 3955 0 0) "x86/" "WavHandler.h" "WavHandler.cpp" "Tables.h" "SampleOsc.h" "SampleOsc.cpp" "SampleNormalizer.h" "SampleNormalizer.cpp" "SampleGroup.h" "SampleGroup.cpp" "P4000-Sampler.cpp" "P4000-Sampler.cc~" "Makefile" "common.mk" ".qnx_internal.mk" ".project" ".cproject" "../" "./")
+ ("/Users/Fabien/.emacs.d/" (22251 35806 0 0) "smarttabs/" "semanticdb/" "README.org" "init.el" "ido.last~" "ido.last" "external/" "emacs-config.org" "emacs-config.el" "ede-projects.el" "auto-save-list/" "ac-comphist.dat" ".gitmodules" ".gitignore" ".git/" "../" "./")
 
- ("/Users/fabiencesari/Dropbox/fabien/perso/" (22183 54858 0 0) "core_audio_template/" "../" "./")
+ ("/Users/Fabien/work/music/Dirt/" (22245 55051 0 0) "zmqserv.c" "windows/" "thpool.o" "thpool.h" "thpool.c" "server.o" "server.h" "server.c" "segment.h" "segment.c" "samples/" "README.md" "pitch.h" "pitch.c" "Makefile" "jobqueue.o" "jobqueue.h" "jobqueue.c" "jack.o" "jack.h" "jack.c" "jack-1.9.10.tar.bz2" "file.o" "file.h" "file.c" "dirt.o" "dirt.c" "dirt" "COPYING" "config.h" "common.o" "common.h" "common.c" "AUTHORS" "audio.o" "audio.h" "audio.c" ".gitmodules" ".gitignore" ".git/" ".DS_Store" "../" "./")
 
- ("/Users/fabiencesari/Dropbox/fabien/" (22183 54846 0 0) "web/" "qnx/" "Pro2/" "perso/" "p_12/" "P6/" "OB6/" "Max_7/" "git/" "davesmithinstruments.zip" ".DS_Store" "../" "./")
+ ("/Users/Fabien/work/music/tidal/" (22246 7950 0 0) "helloworld.tidal~" "helloworld.tidal" "../" "./")
 
- ("/Users/fabiencesari/Dropbox/" (22183 48894 0 0) "Icon
-" "fabien/" "DSI_SCH/" "DSI/" "Current OS/" ".Trash-1000/" ".DS_Store" ".dropbox.cache/" ".dropbox" "../" "./")
+ ("/Users/Fabien/Dropbox/fabien/perso/" (22242 18553 0 0) "starter-kit-appengine/" "python_test.py" "max_external/" "core_audio_template/" "../" "./")
 
- ("/Users/fabiencesari/Dropbox/fabien/git/prophet_4k/AppleP4000Sampler/P4000Sampler/" (22182 29752 0 0) "WavHandler.hpp" "WavHandler.cpp" "Tables.hpp" "SampleOsc.hpp" "SampleOsc.cpp~" "SampleOsc.cpp" "SampleNormalizer.hpp" "SampleNormalizer.cpp" "SampleGroup.hpp" "SampleGroup.cpp~" "SampleGroup.cpp" "main.cpp~" "main.cpp" "#SampleOsc.cpp#" "#SampleGroup.cpp#" "../" "./")
+ ("/Users/Fabien/Dropbox/fabien/" (22249 34806 0 0) "web/" "qnx/" "Pro2/" "perso/" "p_12/" "P6/" "OB6/" "Max_7/" "git/" "dsp/" "DJS/" "davesmithinstruments.zip" "../" "./")
 
- ("/Users/fabiencesari/Dropbox/fabien/git/prophet_4k/AppleP4000Sampler/" (22182 29817 0 0) "StdPnoSamples/" "P4000Sampler.xcodeproj/" "P4000Sampler/" ".DS_Store" "../" "./")
+ ("/Users/Fabien/Dropbox/" (22258 1882 0 0) "v1.12.rar" "v1.12/" "usb.img.zip" "usb.img" "Icon
+" "fabien/" "DSI_SCH/" "DSI/" "DRVR_deva-ctrl-intel_hda_br-660_be-660_intel_hda-src_SVN796915_JBN14-exp.zip" "Current OS/" "btl_32MX360F512L_uart.ld" ".Trash-1000/" ".DS_Store" ".dropbox.cache/" ".dropbox" "../" "./")
 
- ("/Users/fabiencesari/Dropbox/fabien/git/prophet_4k/AppleAudioLoadTest/AudioLoadTest/" (22182 46037 0 0) "SampleOscillator.h~" "SampleOscillator.h" "SampleOscillator.cpp~" "SampleOscillator.cpp" "SampleOscilator.h~" "SampleOscilator.h" "SampleNormalizer.h" "SampleNormalizer.cpp" "main.cpp~" "main.cpp" ".#main.cpp" "#main.cpp#" "../" "./")
+ ("/Users/Fabien/work/development/algorithms/dsp/fft/" (22251 35798 0 0) "sig_proc.h~" "sig_proc.h" "sig_proc.c~" "sig_proc.c" "objs/" "Makefile~" "Makefile" "main.c~" "main.c" "libsig_proc.so" "fft_tests.py~" "fft_tests.py" "fft_test.m" "algo" "../" "./")
 
- ("/Users/fabiencesari/Dropbox/fabien/git/prophet_4k/AppleAudioLoadTest/" (22177 42713 0 0) "AudioLoadTest.xcodeproj/" "AudioLoadTest/" "../" "./")
+ ("/Users/Fabien/work/development/algorithms/dsp/" (22251 33299 0 0) "fft/" "doc/" ".DS_Store" "../" "./")
 
- ("/Users/fabiencesari/Dropbox/fabien/git/" (22182 29814 0 0) "wifire_blink_leds/" "uart_bootloader/" "prophet_6/" "prophet_4k/" "prophet_12/" "pro_2/" "OB6_dsp.ldr" "ob6/" "microchip/" "feedback_module/" "djs/" ".DS_Store" "../" "./")
+ ("/Users/Fabien/work/development/algorithms/" (22251 33278 0 0) "sort_algorithms/" "dsp/" ".DS_Store" "../" "./")
 
- ("/Users/fabiencesari/Dropbox/fabien/Max_7/" (22173 37119 0 0) "first_object.c" ".DS_Store" "../" "./")
+ ("/Users/Fabien/work/" (22249 34806 0 0) "website/" "org/" "music/" "Max_7/" "jobs/" "field_recordings/" "electronic/" "development/" "coursea/" ".DS_Store" "../" "./")
 
- ("/Users/fabiencesari/Dropbox/DSI/Prophet_4000/AppleP4000Sampler/P4000Sampler/" (22176 14272 0 0) "WavHandler.h" "WavHandler.cpp" "Tables.h" "SampleOsc.h~" "SampleOsc.h" "SampleOsc.cpp" "SampleNormalizer.h" "SampleNormalizer.cpp" "SampleGroup.h~" "SampleGroup.h" "SampleGroup.cpp~" "SampleGroup.cpp" "main.cpp~" "main.cpp" ".#main.cpp" "../" "./")
+ ("/Users/Fabien/work/dsp/algorithms/fft/" (22247 34537 0 0) "sig_proc.h~" "sig_proc.h" "sig_proc.c~" "sig_proc.c" "objs/" "Makefile~" "Makefile" "main.c~" "main.c" "libsig_proc.so" "fft_tests.py~" "fft_tests.py" "fft_test.m" "algo" ".#sig_proc.c" "../" "./")
 
- ("/Users/fabiencesari/.emacs.d/external/cc-mode-5.32.5/" (22176 12231 0 0) "README" "NEWS" "MANIFEST" "COPYING" "ChangeLog" "cc-vars.el" "cc-subword.el" "cc-styles.el" "cc-mode.texi~" "cc-mode.texi" "cc-mode.info" "cc-mode.el" "cc-menus.el" "cc-lobotomy.el" "cc-langs.el" "cc-guess.el" "cc-fonts.el" "cc-fix.el" "cc-engine.el" "cc-defs.el" "cc-compat.el" "cc-cmds.el" "cc-bytecomp.el" "cc-awk.el" "cc-align.el" "ANNOUNCEMENT" ".#cc-mode.texi" "../" "./")
+ ("/Users/Fabien/work/music/" (22245 52594 0 0) "tidal/" "PureData/" "mixes/" "M4L/" "Dirt/" "Ableton/" ".DS_Store" "../" "./")
 
- ("/Users/fabiencesari/Desktop/" (22174 32685 0 0) "Win32DiskImager-0/" "Thumbs.db" "sloginfo.txt" "pci_v.txt" "pci.txt" "intel_CRB.pdf" ".localized" ".DS_Store" "$RECYCLE.BIN/" "../" "./")
+ ("/Users/Fabien/.emacs.d/external/" (22245 52011 0 0) "yaml-mode.el" "xml-parse.el" "www/" "tempo.el" "sudo-save.el" "string-inflection/" "ruby-mode/" "rinari/" "rhtml/" "pymacs.elc" "pymacs.el" "psvn.el" "processing-mode.el" "php-mode/" "package.el" "org-mode/" "org-exp-blocks.el" "o-blog/" "nxhtml/" "muse/" "multi-term.el" "matlab-emacs/" "magit/" "jdee-2.4.1/" "ido-ubiquitous.el" "ide/" "haskell-mode/" "gud.el" "graphviz-dot-mode/" "git-modes/" "git/" "exec-path-from-shell.el" "emacs-rails/" "doxymacs.el" "cedet/" "cc-mode-5.32.5/" "buffer-move.el" "autocomplete/" "../" "./")
 
- ("/Users/fabiencesari/Dropbox/DSI/Prophet_4000/AppleP4000Sampler/" (22176 3098 0 0) "StdPnoSamples/" "P4000Sampler.xcodeproj/" "P4000Sampler/" ".DS_Store" "../" "./")
+ ("/Users/Fabien/work/website/jekyll/_site/" (22235 45868 0 0) "js/" "index.html" "img/" "how-this-website-works.html" "docs/" "css/" "about.html" "_site/" ".git/" "../" "./")
 
- ("/Users/fabiencesari/Dropbox/DSI/Prophet_4000/AppleAudioLoadTest/AudioLoadTest/" (22176 6818 0 0) "SampleNormalizer.h" "SampleNormalizer.cpp" "main.cpp" "../" "./")
+ ("/Users/Fabien/work/website/jekyll/" (22235 38790 0 0) "js/" "index.html~" "index.html" "img/" "docs/" "css/" "about.html~" "about.html" "_site/" "_posts/" "_layouts/" "_includes/" "_config_dev.yml~" "_config_dev.yml" "_config.yml~" "_config.yml" ".gitignore~" ".gitignore" ".git/" ".DS_Store" "../" "./")
 
- ("/Users/fabiencesari/Dropbox/DSI/Prophet_4000/AppleAudioLoadTest/" (22175 57214 0 0) "AudioLoadTest.xcodeproj/" "AudioLoadTest/" ".DS_Store" "../" "./")
+ ("/Users/Fabien/work/website/org/_posts/" (22236 55030 0 0) "data/" "2016-03-06-replacing-matlab-with-python.org~" "2016-03-06-replacing-matlab-with-python.org" "2016-02-28-how-this-website-works.org~" "2016-02-28-how-this-website-works.org" ".DS_Store" "../" "./")
 
- ("/Users/fabiencesari/Dropbox/DSI/Prophet_4000/" (22175 57058 0 0) "StdPnoSamples/" "RTOS_Tests/" "PICMG_COMDG_2.0-RELEASED-2013-12-061.pdf" "PCOM-BA00.pdf" "notes.txt" "AppleP4000Sampler/" "AppleAudioLoadTest/" "555004_CherryHill_FabE_CDI.pdf" "../" "./")
+ ("/Users/Fabien/work/jobs/2016/template/CV/" (22242 24018 0 0) "tweaklist.sty" "PublicFabienCesari_CV.pdf" "pictures/" "moderncvstyleoldstyle.sty" "moderncvstyleempty.sty" "moderncvstyleclassic.sty" "moderncvstylecasual.sty" "moderncvstylebanking.sty" "moderncvcompatibility.sty" "moderncvcolorred.sty" "moderncvcolorpurple.sty" "moderncvcolororange.sty" "moderncvcolorgrey.sty" "moderncvcolorgreen.sty" "moderncvcolorblue.sty" "moderncvcolorblack.sty" "moderncv.cls" "FabienCesari_CV.tex~" "FabienCesari_CV.tex" "FabienCesari_CV.synctex.gz" "FabienCesari_CV.pdf" "FabienCesari_CV.out" "FabienCesari_CV.log" "FabienCesari_CV.aux" "cv_7.out" "cv_7.log" "cv_7.aux" "_FabienCesari_CV.tex~" "_FabienCesari_CV.tex" "_FabienCesari_CV.synctex.gz" "_FabienCesari_CV.out" "_FabienCesari_CV.log" "_FabienCesari_CV.aux" ".DS_Store" "../" "./")
 
- ("/Users/fabiencesari/Dropbox/DSI/" (22173 39556 0 0) "Tetra/" "Tempest/" "Schematics/" "QNX-Info/" "Prophet_6M/" "Prophet_6/" "Prophet_4000/" "Prophet 12/" "Prophet 08/" "Pro2/" "Poly Rack/" "Pioneer/" "PEK/" "P6-GIT/" "OB6/" "Mopho_Desktop/" "monokey/" "Mokey X4/" "MoKey/" "Modules/" "Icon
-" "Git/" "Evolver/" "DJS/" "Datasheets/" "boms parts/" ".dropbox" "../" "./")
+ ("/Users/Fabien/work/development/signal_processing/" (21559 20744 0 0) "Digital Media Processing - DSP Algorithms Using C.pdf" "Dafx/" "../" "./")
 
- ("/Users/fabiencesari/Dropbox/fabien/perso/max-sdk-7.1.0/source/" (22128 12958 0 0) "ui/" "patcher/" "misc/" "maxmspsdk.xcconfig" "matrix/" "Info.plist" "gl/" "dictionary/" "c74support/" "build.rb" "basics/" "audio/" "advanced/" "../" "./")
+ ("/Users/Fabien/work/development/" (21573 43745 0 0) "table_from_csv.sh~" "signal_processing/" "sequencer/" "pd_externals/" "matlab/" "kaggle/" "data_structures/" "algorithms/" "../" "./")
 
- ("/Users/fabiencesari/Dropbox/fabien/perso/max-sdk-7.1.0/" (22128 12958 0 0) "source/" "README.md" "package-info.json" "MaxAPI.pdf" "MaxAPI.html" "LICENSE.md" "icon.png" "html/" "help/" ".gitignore" "../" "./")
+ ("/Users/Fabien/work/dsp/algorithms/" (22244 41379 0 0) "fft_tests.py" "fft/" "../" "./")
 
- ("/Users/fabiencesari/Dropbox/fabien/qnx/bsp/BSP_x86-generic_br-660_be-660_SVN786025_JBN442/images/" (22136 43536 0 0) "x86-generic_BCKP.build" "x86-generic.build" "x86-generic-2.build" "x86-generic-1.build" "root.build~" "root.build" "Makefile" "ifs-x86-generic.ifs" "ifs-x86-generic.bin" "diskimage" "baytrail-usb_NO_SCREEN.ifs" ".#x86-generic.build" "#x86-generic.build#" "../" "./")
+ ("/Users/Fabien/work/dsp/" (22238 22876 0 0) "doc/" "algorithms/" "../" "./")
 
- ("/Users/fabiencesari/Dropbox/fabien/qnx/bsp/BSP_x86-generic_br-660_be-660_SVN786025_JBN442/" (22132 20650 0 0) "src/" "source.xml" "readme.txt" "prebuilt/" "patches/" "manifest" "Makefile" "install/" "images/" ".DS_Store" "../" "./")
+ ("/Users/Fabien/work/website/org/" (22235 38774 0 0) "README.md" "js/" "index.org" "img/" "docs/" "css/" "about.org" "_posts/" ".gitignore" ".git/" "../" "./")
 
- ("/Users/fabiencesari/Dropbox/fabien/qnx/bsp/" (22132 20625 0 0) "BSP_x86-generic_br-660_be-660_SVN786025_JBN442/" "../" "./")
+ ("/Users/Fabien/work/website/jekyll/_includes/" (21578 33613 0 0) "sidebar.html~" "sidebar.html" "header.html~" "header.html" "footer.html~" "footer.html" ".DS_Store" "../" "./")
 
- ("/Users/fabiencesari/Dropbox/fabien/qnx/" (22136 25826 0 0) "workspace/" "usb-image-backup.dd" "bsp/" "../" "./")
+ ("/Users/Fabien/Dropbox/fabien/perso/max_external/template/" (22197 22636 0 0) "template.c" "Makefile~" "Makefile" "../" "./")
 
- ("/Users/" (22127 6263 0 0) "Shared/" "Guest/" "fabiencesari/" "Fabien/" ".localized" "../" "./")
+ ("/Users/Fabien/Dropbox/fabien/perso/max_external/example/" (22198 30306 0 0) "src/" "README.md" "Makefile" "lib/" ".git/" "../" "./")
+
+ ("/Users/Fabien/work/website/org/js/" (22227 44011 0 0) "processing-1.4.1.min.js" "org-info.js" "jquery-1.11.1.min.js" "bootstrap.min.js" "bootstrap.js" "background.js" "../" "./")
+
+ ("/Users/Fabien/work/website/jekyll/css/" (22227 36165 0 0) "stylesheet.css" "iphone.css" "bootstrap.min.css" "bootstrap.css~" "bootstrap.css" "bootstrap-responsive.css" "../" "./")
+
+ ("/Users/Fabien/work/website/jekyll/js/" (22227 36986 0 0) "processing-1.4.1.min.js" "org-info.js" "jquery-1.11.1.min.js" "bootstrap.min.js" "bootstrap.js" "background.js" "../" "./")
+
+ ("/Users/Fabien/work/jobs/2016/template/" (22227 35003 0 0) "Lettre/" "CV/" "../" "./")
+
+ ("/Users/Fabien/work/jobs/2016/" (22227 34995 0 0) "template/" ".DS_Store" "../" "./")
+
+ ("/Users/Fabien/work/jobs/" (22227 34981 0 0) "interview_preparation/" "2016/" "2014/" "2013/" "2012/" "2011/" ".DS_Store" "../" "./")
+
+ ("/Users/Fabien/work/website/" (22227 36707 0 0) "org/" "old_posts/" "memo.org~" "memo.org" "jekyll/" "git-ftp/" ".DS_Store" "../" "./")
+
+ ("/Users/Fabien/work/website/jekyll/_layouts/" (21566 48716 0 0) "default.html~" "default.html" ".DS_Store" "../" "./")
+
+ ("/Users/Fabien/work/org/home/org/" (22227 35562 0 0) "remember.org" "index.org~" "index.org" "img/" "css/" "../" "./")
+
+ ("/Users/Fabien/work/org/home/" (22227 35395 0 0) "public_html/" "org/" "../" "./")
+
+ ("/Users/Fabien/work/org/" (22227 35375 0 0) "org_config.org~" "org_config.org" "ical2org" "ical.org~" "ical.org" "home/" "flagged.org~" "flagged.org" "everything.org~" "everything.org" "cal_update.sh" "basic.ics" "agenda.org~" "agenda.org" "agenda.ics" "../" "./")
+
+ ("/Users/Fabien/work/Max_7/Packages/max-sdk-7.1.0/source/audio/magnizdat~/" (22198 48204 0 0) "README.org" "magnizdat~.xcodeproj/" "magnizdat~.c" "build_one.rb~" "build_one.rb" "build/" ".gitignore~" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/Fabien/work/Max_7/Packages/max-sdk-7.1.0/source/audio/" (22198 46600 0 0) "times~/" "split~/" "simpwave~/" "simplemsp~/" "plussz~/" "pictmeter~/" "magnizdat~/" "lores~/" "index~/" "fftinfo~/" "dspstress~/" ".DS_Store" "../" "./")
+
+ ("/Users/Fabien/work/Max_7/Packages/max-sdk-7.1.0/source/" (22198 46057 0 0) "ui/" "patcher/" "misc/" "maxmspsdk.xcconfig" "matrix/" "Info.plist" "gl/" "dictionary/" "c74support/" "build.rb" "basics/" "audio/" "advanced/" "../" "./")
+
+ ("/Users/Fabien/work/Max_7/Packages/max-sdk-7.1.0/source/audio/test~/" (22198 44104 0 0) "test_mag~.xcodeproj/" "test_mag~.c" "index~.vcxproj" "build/" ".DS_Store" "../" "./")
+
+ ("/Users/Fabien/work/Max_7/Packages/max-sdk-7.1.0/source/audio/lores~/" (22198 32258 0 0) "lores~.xcodeproj/" "lores~.vcxproj" "lores~.c" "build/" ".DS_Store" "../" "./")
+
+ ("/Users/Fabien/work/Max_7/Packages/max-sdk-7.1.0/" (22198 30978 0 0) "support/" "source/" "README.md" "package-info.json" "MaxAPI.pdf" "MaxAPI.html" "LICENSE.md" "icon.png" "html/" "help/" "externals/" ".gitignore" ".DS_Store" "../" "./")
+
+ ("/Users/Fabien/work/Max_7/Packages/" (22198 32332 0 0) "max-sdk-7.1.0/" ".DS_Store" "../" "./")
+
+ ("/Users/Fabien/work/Max_7/Packages/magnizdat~/" (22198 31423 0 0) "magnizdat~.xcodeproj/" "magnizdat~.c" "lores~.vcxproj" "build/" ".DS_Store" "../" "./")
+
+ ("/Users/Fabien/work/Max_7/" (22125 65044 0 0) "Untitled.maxpat" "test_patch.maxpat" "Snippets/" "pure_data/" "Projects/" "Packages/" "magnizdat/" "lpp_potential_residency/" "Library/" "graingen_curve2_001lite.maxpat" "Collections/" "boats_engines/" "autechere.maxpat" ".DS_Store" "../" "./")
+
+ ("/Users/Fabien/Dropbox/fabien/perso/max_external/" (22198 24066 0 0) "template/" "example/" "../" "./")
+
+ ("/Applications/Max.app/Contents/Resources/C74/packages/max-sdk-7.1.0/source/audio/dspstress~/" (22196 3337 0 0) "dspstress~.xcodeproj/" "dspstress~.vcxproj" "dspstress~.c" "build/" "../" "./")
+
+ ("/Applications/Max.app/Contents/Resources/C74/packages/max-sdk-7.1.0/source/audio/" (22128 12958 0 0) "times~/" "split~/" "simpwave~/" "simplemsp~/" "plussz~/" "pictmeter~/" "lores~/" "index~/" "fftinfo~/" "dspstress~/" "../" "./")
+
+ ("/Applications/Max.app/Contents/Resources/C74/packages/max-sdk-7.1.0/source/" (22128 12958 0 0) "ui/" "patcher/" "misc/" "maxmspsdk.xcconfig" "matrix/" "Info.plist" "gl/" "dictionary/" "c74support/" "build.rb" "basics/" "audio/" "advanced/" "../" "./")
+
+ ("/Applications/Max.app/Contents/Resources/C74/packages/max-sdk-7.1.0/" (22196 3328 0 0) "support/" "source/" "README.md" "package-info.json" "MaxAPI.pdf" "MaxAPI.html" "LICENSE.md" "icon.png" "html/" "help/" "externals/" ".gitignore" ".DS_Store" "../" "./")
+
+ ("/Applications/Max.app/Contents/Resources/C74/packages/" (22196 3129 0 0) "vizzie/" "mira/" "MaxIntroLessons/" "MaxDefaultContent/" "max-sdk-7.1.0/" "max-mxj/" "Max for Live/" "Jitter/" "Gen/" "Beap/" "../" "./")
+
+ ("/Applications/Max.app/Contents/Resources/C74/" (22026 61436 0 0) "tours/" "templates/" "support/" "styles/" "snippets/" "patchers/" "palettes/" "packages/" "object-prototypes/" "object-icons/" "media/" "max-startup/" "jsui/" "jsextensions/" "interfaces/" "init/" "help/" "extras/" "externals/" "extensions/" "docs/" "default-settings" "clippings/" "../" "./")
+
+ ("/Applications/Max.app/Contents/Resources/" (22026 61450 0 0) "VST.icns" "Text.icns" "sparkle_dsa_pub.pem" "Snippet.icns" "ProjPackage.icns" "Project.icns" "Patcher.icns" "Max.rsrc" "Max.icns" "Lato-ThinItalic.ttf" "Lato-Thin.ttf" "Lato-SemiboldItalic.ttf" "Lato-Semibold.ttf" "Lato-Regular.ttf" "Lato-MediumItalic.ttf" "Lato-Medium.ttf" "Lato-LightItalic.ttf" "Lato-Light.ttf" "Lato-Italic.ttf" "Lato-HeavyItalic.ttf" "Lato-Heavy.ttf" "Lato-HairlineItalic.ttf" "Lato-Hairline.ttf" "Lato-BoldItalic.ttf" "Lato-Bold.ttf" "Lato-BlackItalic.ttf" "Lato-Black.ttf" "Jit.icns" "Extern.icns" "Examples/" "Collective5.icns" "Collective.icns" "C74/" "Binary.icns" "AIFF.icns" "../" "./")
+
+ ("/Applications/Max.app/Contents/" (22026 61536 0 0) "Resources/" "PkgInfo" "MacOS/" "Info.plist" "Frameworks/" "_CodeSignature/" "../" "./")
+
+ ("/Applications/Max.app/" (22026 59147 0 0) "Contents/" "../" "./")
+
+ ("/Applications/" (22194 61306 0 0) "Xcode.app/" "VLC.app/" "Utilities/" "Universal Control.app/" "Transmission.app/" "Time Machine.app/" "TextEdit.app/" "TetraLE.app/" "System Preferences.app/" "SysEx Librarian.app/" "Stickies.app/" "Sonos.app/" "Skype.app/" "Safari.app/" "Roland/" "Reminders.app/" "QuickTime Player.app/" "Preview.app/" "Photos.app/" "Photo Booth.app/" "Pd-extended.app/" "Parallels Desktop.app/" "OSCulator ƒ/" "Notes.app/" "Mission Control.app/" "microchip/" "Messages.app/" "Max.app/" "MATLAB_R2014a 3.13.13 PM.app/" "Maps.app/" "Mail.app/" "MacPorts/" "Launchpad.app/" "iTunes.app/" "Image Capture.app/" "iBooks.app/" "Google Photos Backup.app/" "Game Center.app/" "Font Book.app/" "Fireplace.app/" "Firefox.app/" "FileZilla.app/" "FaceTime.app/" "Emacs.app/" "DVD Player.app/" "Dropbox.app/" "Dictionary.app/" "Dashboard.app/" "Contacts.app/" "Civilization V Campaign Edition.app/" "Chess.app/" "Calendar.app/" "Calculator.app/" "BlueStacks.app/" "Automator.app/" "App Store.app/" "Ableton Live 9 Intro.app/" ".localized" ".DS_Store" "../" "./")
+
+ ("/Users/" (22036 26340 0 0) "Shared/" "Guest/" "Fabien/" ".localized" "../" "./")
+
+ ("/Users/Fabien/Dropbox/fabien/git/prophet_4k/AppleP4000Sampler/P4000Sampler/" (22188 13637 0 0) "WavHandler.hpp" "WavHandler.cpp" "Tables.hpp" "SampleOsc.hpp" "SampleOsc.cpp~" "SampleOsc.cpp" "SampleNormalizer.hpp" "SampleNormalizer.cpp" "SampleGroup.hpp" "SampleGroup.cpp~" "SampleGroup.cpp" "main.cpp~" "main.cpp" ".DS_Store" "../" "./")
+
+ ("/Users/Fabien/Dropbox/fabien/perso/core_audio_template/" (22189 16325 0 0) "StdPnoSamples/" "sample_oscillator.hpp~" "sample_oscillator.hpp" "sample_oscillator.cpp~" "sample_oscillator.cpp" "sample_groupe.hpp~" "sample_group.hpp~" "sample_group.hpp" "sample_group.cpp~" "sample_group.cpp" "objs/" "Makefile~" "Makefile" "main.cpp~" "main.cpp" "exec" "#sample_oscillator.hpp#" "../" "./")
+
+ ("/Users/Fabien/Dropbox/fabien/git/prophet_4k/" (22184 26175 0 0) "StdPnoSamples/" "README.md" "P4000-Sampler_2/" "P4000-Sampler.zip" "P4000-Sampler/" "documentation/" "AppleP4000Sampler/" "AppleAudioLoadTest/" ".gitignore~" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/Fabien/Dropbox/fabien/git/" (22182 60902 0 0) "wifire_blink_leds/" "uart_bootloader/" "prophet_6/" "prophet_4k/" "prophet_12/" "pro_2/" "OB6_dsp.ldr" "ob6/" "microchip/" "feedback_module/" "djs/" "../" "./")
+
+ ("/Users/Fabien/Dropbox/DSI/Prophet_4000/AppleP4000Sampler/P4000Sampler/" (22187 5463 0 0) "WavHandler.h" "WavHandler.cpp" "Tables.h" "sandbox.cpp~" "sandbox.cpp" "SampleOsc.h" "SampleOsc.cpp" "SampleNormalizer.h" "SampleNormalizer.cpp" "SampleGroup.h" "SampleGroup.cpp" "main.cpp" ".DS_Store" "../" "./")
+
+ ("/Users/Fabien/Dropbox/fabien/git/prophet_4k/AppleP4000Sampler/" (22177 34585 0 0) "StdPnoSamples/" "P4000Sampler.xcodeproj/" "P4000Sampler/" ".DS_Store" "../" "./")
+
+ ("/Users/Fabien/Dropbox/fabien/git/4k/" (22132 55423 0 0) "../" "./")
+
+ ("/Users/Fabien/Dropbox/DSI/Prophet_4000/AppleP4000Sampler/" (22177 34585 0 0) "StdPnoSamples/" "P4000Sampler.xcodeproj/" "P4000Sampler/" ".DS_Store" "../" "./")
+
+ ("/Users/Fabien/Dropbox/DSI/Prophet_4000/" (22177 25259 0 0) "StdPnoSamples/" "RTOS_Tests/" "PICMG_COMDG_2.0-RELEASED-2013-12-061.pdf" "PCOM-BA00.pdf" "P4000-Sampler/" "notes.txt" "AppleP4000Sampler/" "AppleAudioLoadTest/" "555004_CherryHill_FabE_CDI.pdf" "../" "./")
+
+ ("/Users/Fabien/Dropbox/DSI/" (22173 46557 0 0) "Tetra/" "Tempest/" "Schematics/" "QNX-Info/" "Prophet_6M/" "Prophet_6/" "Prophet_4000/" "Prophet 12/" "Prophet 08/" "Pro2/" "Poly Rack/" "Pioneer/" "PEK/" "P6-GIT/" "OB6/" "Mopho_Desktop/" "monokey/" "Mokey X4/" "MoKey/" "Modules/" "Icon
+" "Git/" "Evolver/" "DJS/" "Datasheets/" "boms parts/" ".DS_Store" ".dropbox" "../" "./")
 )
 
 ;; ----- ido-unc-hosts-cache -----
