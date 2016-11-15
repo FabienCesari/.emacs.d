@@ -139,7 +139,10 @@
      (add-to-list 'load-path "~/.emacs.d/external/jdee-2.4.1/lisp")
      (add-to-list 'load-path "~/.emacs.d/external/cc-mode-5.32.5")
      (add-to-list 'load-path "~/.emacs.d/external/string-inflection")
-     (add-to-list 'load-path "~/.emacs.d/smarttabs")          
+     (add-to-list 'load-path "~/.emacs.d/smarttabs")
+     ;; add exec path
+     (setenv "PATH" (concat (getenv "PATH") ":~/work/magnizdat/stm32_toolchain/gcc/gcc-arm-none-eabi-5_4-2016q3/bin/"))
+     (setq exec-path (append exec-path '("~/work/magnizdat/stm32_toolchain/gcc/gcc-arm-none-eabi-5_4-2016q3/bin/")))
    #+END_SRC
    
 ** Emacs auto generated 

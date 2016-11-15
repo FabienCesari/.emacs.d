@@ -2,6 +2,15 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/Users/Fabien/work/magnizdat/" . "project/")
+ ("/Users/Fabien/work/coursea/audio_signal_proc/sms-tools/workspace/" . "A1/")
+ ("/Users/Fabien/work/coursea/audio_signal_proc/sms-tools/" . "workspace/")
+ ("/Users/Fabien/work/coursea/audio_signal_proc/" . "sms-tools/")
+ ("/Users/Fabien/work/coursea/" . "audio_signal_proc/")
+ ("/Users/Fabien/work/development/twitter_bot/" . "markovbot/")
+ ("/Users/Fabien/work/development/stm32_toolchain/openocd/tcl/" . "board/")
+ ("/Users/Fabien/work/development/stm32_toolchain/openocd/" . "tcl/")
+ ("/Users/Fabien/work/development/stm32_toolchain/" . "openocd/")
  ("/Users/Fabien/Dropbox/fabien/dsp/algorithms/" . "fft/")
  ("/Users/Fabien/Dropbox/fabien/dsp/" . "algorithms/")
  ("/Users/Fabien/work/development/algorithms/dsp/" . "fft/")
@@ -38,7 +47,7 @@
  ("/Applications/" . "Max.app/")
  ("/" . "Applications/")
  ("/Users/Fabien/Dropbox/fabien/perso/" . "max_external/")
- ("/Users/Fabien/work/" . "jobs/")
+ ("/Users/Fabien/work/" . "magnizdat/")
  ("/Users/Fabien/Dropbox/fabien/git/prophet_4k/AppleP4000Sampler/" . "P4000Sampler/")
  ("/Users/Fabien/Dropbox/fabien/git/prophet_4k/" . "AppleP4000Sampler/")
  ("/Users/Fabien/Dropbox/fabien/git/" . "prophet_4k/")
@@ -47,24 +56,34 @@
  ("/Users/Fabien/Dropbox/DSI/Prophet_4000/" . "AppleP4000Sampler/")
  ("/Users/Fabien/Dropbox/DSI/" . "Prophet_4000/")
  ("/Users/Fabien/Dropbox/" . "fabien/")
- ("/Users/Fabien/" . "work/")
+ ("/Users/Fabien/" . ".emacs.d/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/Fabien/.emacs.d/"
+ "/Users/Fabien/"
+ "/Users/Fabien/work/magnizdat/project/"
+ "/Users/Fabien/work/magnizdat/stm32_example/"
+ "/Users/Fabien/work/development/algorithms/dsp/fft/"
+ "/Users/Fabien/work/website/org/_posts/"
+ "/Users/Fabien/work/magnizdat/"
+ "/Users/Fabien/work/coursea/audio_signal_proc/sms-tools/workspace/A1/"
+ "/Users/Fabien/work/development/twitter_bot/markovbot/"
+ "/Users/Fabien/work/development/twitter_bot/"
+ "/Users/Fabien/work/development/stm32_toolchain/openocd/"
+ "/Users/Fabien/work/development/stm32_toolchain/openocd/tcl/board/"
+ "/Users/Fabien/work/development/synths_project/"
  "/Users/Fabien/work/jobs/2016/template/Lettre/"
  "/Applications/microchip/mplabx/v3.26/mplab_ide.app/Contents/Resources/mplab_ide/etc/"
  "/Users/Fabien/Dropbox/fabien/dsp/algorithms/fft/"
- "/Users/Fabien/work/development/algorithms/dsp/fft/"
  "/Users/Fabien/work/dsp/algorithms/fft/"
  "/Users/Fabien/work/music/tidal/"
  "/Users/Fabien/work/music/Dirt/"
- "/Users/Fabien/.emacs.d/"
  "/Users/Fabien/.emacs.d/external/haskell-mode/"
  "/Users/Fabien/work/development/algorithms/"
  "/Users/Fabien/work/dsp/algorithms/"
  "/Users/Fabien/work/jobs/2016/template/CV/"
- "/Users/Fabien/work/website/org/_posts/"
  "/Users/Fabien/work/website/org/"
  "/Users/Fabien/work/website/jekyll/_includes/"
  "/Users/Fabien/work/website/jekyll/"
@@ -90,23 +109,65 @@
 
 ;; ----- ido-work-file-list -----
 (
- "FabienCesariLetter.tex"
- "mplab_ide.conf"
- "sig_proc.c"
- "sig_proc.h"
- "fft_tests.py"
- "helloworld.tidal"
- "Makefile"
  "emacs-config.org"
- "tidal.el"
- "fft_test.m"
+ ".profile"
+ "Makefile"
+ "main.c"
+ "system.c"
+ "2016-02-28-how-this-website-works.org"
+ "stm32f7_notes.org"
+ "A1Part3.py"
+ "A1Part2.py"
+ "example.py"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/Fabien/work/jobs/2016/template/Lettre/" (22287 2484 0 0) "FabienCesariLetter.tex~" "FabienCesariLetter.tex" "FabienCesariLetter.synctex.gz" "FabienCesariLetter.pdf" "FabienCesariLetter.log" "FabienCesariLetter.aux" ".DS_Store" "../" "./")
+ ("/Users/Fabien/.emacs.d/" (22571 10003 0 0) "smarttabs/" "semanticdb/" "README.org" "init.el" "ido.last~" "ido.last" "external/" "emacs-config.org" "emacs-config.el" "ede-projects.el" "auto-save-list/" "ac-comphist.dat" ".gitmodules" ".gitignore" ".git/" "%backup%~" "../" "./")
 
- ("/Users/Fabien/" (22264 53461 0 0) "work/" "Soulseek Downloads/" "Public/" "Pictures/" "Music/" "MPLABXProjects/" "Movies/" "microchip/" "Library/" "ipe.properties" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Applications (Parallels)/" "Applications/" ".viminfo" ".Trash/" ".subversion/" ".ssh/" ".SoulseekQt/" ".profile" ".org-timestamps/" ".oracle_jre_usage/" ".mplabcomm/" ".matplotlib/" ".matlab/" ".jackdrc" ".ipython/" ".gitconfig" ".ghc/" ".gem/" ".filezilla/" ".emacs.d/" ".DS_Store" ".dropbox/" ".dir_colors" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".cabal/" ".bashrc" ".bash_sessions/" ".bash_profile.macports-saved_2015-11-20_at_16:24:08" ".bash_profile" ".bash_history" "../" "./")
+ ("/Users/Fabien/work/magnizdat/project/" (22571 12105 0 0) "st_libs/" "src/" "objs/" "Makefile~" "Makefile" ".DS_Store" "#main.c#" "../" "./")
+
+ ("/Users/Fabien/work/magnizdat/stm32_example/" (22569 60698 0 0) "system_stm32f30x.c" "stm32f30x_it.h" "stm32f30x_it.c" "stm32f30x_conf.h" "stm32_flash.ld" "stm32/" "startup_stm32f30x.s" "README.md" "Makefile" "main.h" "main.c" "LICENSE" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/Fabien/work/magnizdat/" (22569 60696 0 0) "stm32f7_notes.org~" "stm32f7_notes.org" "stm32_toolchain/" "stm32_example/" "stm32_cube_f7/" "project/" "euro_live_sampler/" "eclipse_workspace/" ".metadata/" ".DS_Store" "../" "./")
+
+ ("/Users/Fabien/" (22569 56641 0 0) "work/" "STM32Cube/" "Soulseek Downloads/" "Public/" "Pictures/" "Music/" "MPLABXProjects/" "Movies/" "microchip/" "Library/" "ipe.properties" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Creative Cloud Files/" "Applications (Parallels)/" "Applications/" ".Xauthority" ".viminfo" ".Trash/" ".subversion/" ".stm32cubeup/" ".stm32cubemx/" ".ssh/" ".SoulseekQt/" ".rnd" ".profile~" ".profile" ".p2/" ".org-timestamps/" ".oracle_jre_usage/" ".openocd_history" ".mplabcomm/" ".matplotlib/" ".matlab/" ".jackdrc" ".ipython/" ".gitconfig" ".ghc/" ".gem/" ".filezilla/" ".emacs.d/" ".eclipse/" ".eaglerc" ".DS_Store" ".dropbox/" ".dir_colors" ".dia-etc/" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".cabal/" ".bashrc" ".bash_sessions/" ".bash_profile~" ".bash_profile.macports-saved_2015-11-20_at_16:24:08" ".bash_profile" ".bash_history" ".ac6/" "../" "./")
+
+ ("/Users/Fabien/work/development/algorithms/dsp/fft/" (22364 34950 0 0) "sig_proc.h~" "sig_proc.h" "sig_proc.c~" "sig_proc.c" "objs/" "Makefile~" "Makefile" "main.c~" "main.c" "libsig_proc.so" "fft_tests.py~" "fft_tests.py" "fft_test.m" "algo" "../" "./")
+
+ ("/Users/Fabien/work/development/algorithms/dsp/" (22258 4500 0 0) "online_fft/" "fft/" "doc/" ".DS_Store" "../" "./")
+
+ ("/Users/Fabien/work/development/algorithms/" (22258 4480 0 0) "sort_algorithms/" "dsp/" ".DS_Store" "../" "./")
+
+ ("/Users/Fabien/work/development/" (22561 58635 0 0) "twitter_bot/" "table_from_csv.sh~" "synths_project/" "stm32_toolchain/" "signal_processing/" "sequencer/" "pd_externals/" "matlab/" "live_sampler/" "kaggle/" "data_structures/" "algorithms/" ".DS_Store" "../" "./")
+
+ ("/Users/Fabien/work/" (22561 60047 0 0) "website/" "uscis/" "org/" "music/" "Max_7/" "magnizdat/" "jobs/" "electronic/" "development/" "coursea/" ".DS_Store" "../" "./")
+
+ ("/Users/Fabien/work/coursea/audio_signal_proc/sms-tools/workspace/A1/" (22514 61781 0 0) "testInputA1.pkl" "submitA1.py" "Programming assignment - Guidelines.pdf" "A1Part4.py" "A1Part3.py~" "A1Part3.pyc" "A1Part3.py" "A1Part2.py~" "A1Part2.pyc" "A1Part2.py" "A1Part1.py~" "A1Part1.pyc" "A1Part1.py" "A1-Python_and_sounds.pdf" "../" "./")
+
+ ("/Users/Fabien/work/coursea/audio_signal_proc/sms-tools/workspace/" (22513 62348 0 0) "README.txt" "ambience.wav" "A1/" ".DS_Store" "../" "./")
+
+ ("/Users/Fabien/work/coursea/audio_signal_proc/sms-tools/" (22514 61532 0 0) "workspace/" "sounds/" "software/" "README.md" "LICENSE" "lectures/" "AUTHORS" "assignments/" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/Fabien/work/coursea/audio_signal_proc/" (22513 61044 0 0) "sms-tools/" "cython/" "../" "./")
+
+ ("/Users/Fabien/work/coursea/" (22513 60222 0 0) "machine_learning/" "audio_signal_proc/" ".DS_Store" "../" "./")
+
+ ("/Users/Fabien/work/development/twitter_bot/markovbot/" (22512 19715 0 0) "README.md" "markovbot/" "Freud_Dream_Psychology.txt" "example.py" "COPYING.txt" ".git/" "../" "./")
+
+ ("/Users/Fabien/work/development/twitter_bot/" (22512 22258 0 0) "war_and_peace.txt~" "war_and_peace.txt" "sixohsix/" "mr_brobot.py~" "mr_brobot.py" "markovbot.pyc" "markovbot.py" "markovbot/" "conspiracy_of_atiline_and the_jurgurthine_war.txt" "__init__.py" "2600-0.txt" "../" "./")
+
+ ("/Users/Fabien/work/development/stm32_toolchain/openocd/" (22498 2577 0 0) "uncrustify.cfg" "tools/" "TODO" "testing/" "tcl/" "src/" "README.Windows" "README.OSX" "README" "NEWTAPS" "NEWS-0.9.0" "NEWS-0.8.0" "NEWS-0.7.0" "NEWS-0.6.0" "NEWS-0.5.0" "NEWS-0.4.0" "NEWS-0.3.0" "NEWS-0.2.0" "NEWS" "Makefile.am" "jimtcl/" "HACKING" "guess-rev.sh" "Doxyfile.in" "doc/" "COPYING" "contrib/" "configure.ac" "config_subdir.m4" "common.mk" "ChangeLog" "BUGS" "bootstrap" "AUTHORS.ChangeLog" "AUTHORS" ".gitmodules" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/Fabien/work/development/stm32_toolchain/openocd/tcl/" (22498 2577 0 0) "tools/" "test/" "target/" "mmr_helpers.tcl" "memory.tcl" "mem_helper.tcl" "interface/" "fpga/" "cpu/" "cpld/" "chip/" "board/" "bitsbytes.tcl" "../" "./")
+
+ ("/Users/Fabien/work/development/stm32_toolchain/openocd/tcl/board/" (22498 2577 0 0) "zy1000.cfg" "xmos_xk-xac-xa8_arm.cfg" "xmc4800-relax.cfg" "xmc4700-relax.cfg" "xmc4500-relax.cfg" "xmc4500-application-kit-sdram.cfg" "xmc4500-application-kit-general.cfg" "xmc4200-application-kit-actuator.cfg" "xmc1100-boot-kit.cfg" "xmc-2go.cfg" "x300t.cfg" "voltcraft_dso-3062c.cfg" "voipac.cfg" "verdex.cfg" "uptech_2410.cfg" "unknown_at91sam9260.cfg" "tx27_stk5.cfg" "tx25_stk5.cfg" "twr-k60n512.cfg" "twr-k60f120m.cfg" "tp-link_tl-mr3020.cfg" "topasa900.cfg" "topas910.cfg" "ti_tmdx570ls31usb.cfg" "ti_tmdx570ls20susb.cfg" "ti_pandaboard_es.cfg" "ti_pandaboard.cfg" "ti_blaze.cfg" "ti_beaglebone.cfg" "ti_beagleboard_xm.cfg" "ti_beagleboard.cfg" "ti_am43xx_evm.cfg" "ti_am437x_idk.cfg" "ti_am335xevm.cfg" "ti-cc3200-launchxl.cfg" "telo.cfg" "str910-eval.cfg" "stm32vldiscovery.cfg" "stm32ldiscovery.cfg" "stm32l4discovery.cfg" "stm32l0discovery.cfg" "stm32f7discovery.cfg" "stm32f4discovery.cfg" "stm32f469discovery.cfg" "stm32f429discovery.cfg" "stm32f429disc1.cfg" "stm32f3discovery.cfg" "stm32f334discovery.cfg" "stm32f0discovery.cfg" "stm327x6g_eval.cfg" "stm32439i_eval_stlink.cfg" "stm32439i_eval.cfg" "stm32429i_eval_stlink.cfg" "stm32429i_eval.cfg" "stm3241g_eval_stlink.cfg" "stm3241g_eval.cfg" "stm3220g_eval_stlink.cfg" "stm3220g_eval.cfg" "stm3210e_eval.cfg" "stm3210c_eval.cfg" "stm3210b_eval.cfg" "stm32100b_eval.cfg" "stm320518_eval_stlink.cfg" "stm320518_eval.cfg" "steval_pcc010.cfg" "st_nucleo_l476rg.cfg" "st_nucleo_l1.cfg" "st_nucleo_f4.cfg" "st_nucleo_f3.cfg" "st_nucleo_f103rb.cfg" "st_nucleo_f0.cfg" "spear320cpu_mod.cfg" "spear320cpu.cfg" "spear310evb20_mod.cfg" "spear310evb20.cfg" "spear300evb_mod.cfg" "spear300evb.cfg" "spansion_sk-fm4-u120-9b560.cfg" "spansion_sk-fm4-176l-s6e2cc.cfg" "smdk6410.cfg" "sheevaplug.cfg" "rsc-w910.cfg" "renesas_dk-s7g2.cfg" "redbee.cfg" "quark_x10xx_board.cfg" "quark_d2000_refboard.cfg" "pxa255_sst.cfg" "propox_mmnet1001.cfg" "pipistrello.cfg" "pic-p32mx.cfg" "phytec_lpc3250.cfg" "phone_se_j100i.cfg" "osk5912.cfg" "or1k_generic.cfg" "openrd.cfg" "open-bldc.cfg" "omap2420_h4.cfg" "olimex_stm32_p107.cfg" "olimex_stm32_h107.cfg" "olimex_stm32_h103.cfg" "olimex_sam9_l9260.cfg" "olimex_sam7_la2.cfg" "olimex_sam7_ex256.cfg" "olimex_lpc_h2148.cfg" "olimex_LPC2378STK.cfg" "nxp_lpc-link2.cfg" "numato_opsis.cfg" "nordic_nrf51822_mkit.cfg" "netgear-wg102.cfg" "netgear-dg834v3.cfg" "nds32_xc5.cfg" "minispartan6.cfg" "mini6410.cfg" "mini2440.cfg" "microchip_explorer16.cfg" "mcb1700.cfg" "mbed-lpc1768.cfg" "mbed-lpc11u24.cfg" "marsohod3.cfg" "marsohod2.cfg" "marsohod.cfg" "lubbock.cfg" "lpc4350_spifi_generic.cfg" "lpc1850_spifi_generic.cfg" "logicpd_imx27.cfg" "lisa-l.cfg" "linksys_nslu2.cfg" "linksys-wrt54gl.cfg" "la_fonera-fon2200.cfg" "kwikstik.cfg" "keil_mcb2140.cfg" "keil_mcb1700.cfg" "kc705.cfg" "insignal_arndale.cfg" "imx53loco.cfg" "imx53-m53evk.cfg" "imx35pdk.cfg" "imx31pdk.cfg" "imx28evk.cfg" "imx27lnst.cfg" "imx27ads.cfg" "icnova_sam9g45_sodimm.cfg" "icnova_imx53_sodimm.cfg" "iar_str912_sk.cfg" "iar_lpc1768.cfg" "hitex_str9-comstick.cfg" "hitex_stm32-performancestick.cfg" "hitex_lpc2929.cfg" "hitex_lpc1768stick.cfg" "hilscher_nxsb100.cfg" "hilscher_nxhx500.cfg" "hilscher_nxhx50.cfg" "hilscher_nxhx10.cfg" "hilscher_nxeb500hmi.cfg" "hilscher_nxdb500sys.cfg" "hammer.cfg" "gumstix-aerocore.cfg" "glyn_tonga2.cfg" "fsl_imx6q_sabresd.cfg" "frdm-kl46z.cfg" "frdm-kl25z.cfg" "ethernut3.cfg" "emcraft_vf6-som.cfg" "emcraft_twr-vf6-som-bsb.cfg" "embedded-artists_lpc2478-32.cfg" "ek-tm4c1294xl.cfg" "ek-tm4c123gxl.cfg" "ek-lm4f232.cfg" "ek-lm4f120xl.cfg" "ek-lm3s9d92.cfg" "ek-lm3s9b9x.cfg" "ek-lm3s8962.cfg" "ek-lm3s811.cfg" "ek-lm3s811-revb.cfg" "ek-lm3s6965.cfg" "ek-lm3s3748.cfg" "ek-lm3s1968.cfg" "eir.cfg" "efm32.cfg" "efikamx.cfg" "dp_busblaster_v3.cfg" "dm6446evm.cfg" "dm365evm.cfg" "dm355evm.cfg" "dk-tm4c129.cfg" "diolan_lpc4357-db1.cfg" "diolan_lpc4350-db1.cfg" "digilent_zedboard.cfg" "digilent_atlys.cfg" "digilent_analog_discovery.cfg" "digi_connectcore_wi-9c.cfg" "da850evm.cfg" "csb732.cfg" "csb337.cfg" "crossbow_tech_imote2.cfg" "colibri.cfg" "bt-homehubv1.cfg" "bcm28155_ap.cfg" "balloon3-cpu.cfg" "atmel_samv71_xplained_ultra.cfg" "atmel_samr21_xplained_pro.cfg" "atmel_saml21_xplained_pro.cfg" "atmel_samg53_xplained_pro.cfg" "atmel_same70_xplained.cfg" "atmel_samd21_xplained_pro.cfg" "atmel_samd20_xplained_pro.cfg" "atmel_samc21_xplained_pro.cfg" "atmel_samc20_xplained_pro.cfg" "atmel_sam4s_xplained_pro.cfg" "atmel_sam4s_ek.cfg" "atmel_sam4l8_xplained_pro.cfg" "atmel_sam4e_ek.cfg" "atmel_sam3x_ek.cfg" "atmel_sam3u_ek.cfg" "atmel_sam3s_ek.cfg" "atmel_sam3n_ek.cfg" "atmel_at91sam9rl-ek.cfg" "atmel_at91sam9260-ek.cfg" "atmel_at91sam7s-ek.cfg" "at91sam9g20-ek.cfg" "at91sam9263-ek.cfg" "at91sam9261-ek.cfg" "at91rm9200-ek.cfg" "at91rm9200-dk.cfg" "at91eb40a.cfg" "at91cap7a-stk-sdram.cfg" "asus-rt-n66u.cfg" "asus-rt-n16.cfg" "arm_evaluator7t.cfg" "am3517evm.cfg" "altera_sockit.cfg" "alphascale_asm9260_ek.cfg" "adapteva_parallella1.cfg" "actux3.cfg" "../" "./")
+
+ ("/Users/Fabien/work/development/stm32_toolchain/" (22497 62695 0 0) "STM32CubeMX/" "STM32Cube_F7/" "stm32_book_examples/" "stlink/" "Packages/" "openocd/" "Nucleo_f7/" "gcc-arm-none-eabi-5_4-2016q2-20160622-src.tar.bz2" "gcc-arm-none-eabi-5_4-2016q2/" "gcc-arm-none-eabi-5_4/" "eclipse_workspace/" "Eclipse.app/" "cubeMX_importer/" ".DS_Store" "../" "./")
+
+ ("/Users/Fabien/work/development/synths_project/" (22414 15078 0 0) "modules.org" "../" "./")
+
+ ("/Users/Fabien/work/jobs/2016/template/Lettre/" (22287 2484 0 0) "FabienCesariLetter.tex~" "FabienCesariLetter.tex" "FabienCesariLetter.synctex.gz" "FabienCesariLetter.pdf" "FabienCesariLetter.log" "FabienCesariLetter.aux" ".DS_Store" "../" "./")
 
  ("/Applications/microchip/mplabx/v3.26/mplab_ide.app/Contents/Resources/mplab_ide/etc/" (22263 16243 0 0) "xclm.conf" "mplab_ide.versions" "mplab_ide.import" "mplab_ide.conf" "mplab_ide.clusters" "Desktop_Taskbar_XIDE_Icon.ico" "../" "./")
 
@@ -118,8 +179,6 @@
 
  ("/Users/Fabien/.emacs.d/external/haskell-mode/" (22245 52914 0 0) "w3m-haddock.el" "tidal.el" "tests/" "README.md" "NEWS" "Makefile" "logo.svg" "inf-haskell.el" "images/" "highlight-uses-mode.el" "haskell.el" "haskell-utils.el" "haskell-unicode-input-method.el" "haskell-string.el" "haskell-sort-imports.el" "haskell-session.el" "haskell-sandbox.el" "haskell-repl.el" "haskell-process.el" "haskell-presentation-mode.el" "haskell-navigate-imports.el" "haskell-move-nested.el" "haskell-modules.el" "haskell-mode.info" "haskell-mode.el" "haskell-mode-pkg.el" "haskell-mode-autoloads.el" "haskell-menu.el" "haskell-load.el" "haskell-lexeme.el" "haskell-interactive-mode.el" "haskell-indentation.el" "haskell-indent.el" "haskell-hoogle.el" "haskell-font-lock.el" "haskell-doc.el" "haskell-decl-scan.el" "haskell-debug.el" "haskell-customize.el" "haskell-completions.el" "haskell-complete-module.el" "haskell-compile.el" "haskell-compat.el" "haskell-commands.el" "haskell-collapse.el" "haskell-checkers.el" "haskell-cabal.el" "haskell-align-imports.el" "ghci-script-mode.el" "ghc-core.el" "doc/" "dir" "COPYING" "CONTRIBUTING.md" "build-24.5.1/" ".travis.yml" ".gitignore" ".git/" "../" "./")
 
- ("/Users/Fabien/.emacs.d/" (22251 35806 0 0) "smarttabs/" "semanticdb/" "README.org" "init.el" "ido.last~" "ido.last" "external/" "emacs-config.org" "emacs-config.el" "ede-projects.el" "auto-save-list/" "ac-comphist.dat" ".gitmodules" ".gitignore" ".git/" "../" "./")
-
  ("/Users/Fabien/work/music/Dirt/" (22245 55051 0 0) "zmqserv.c" "windows/" "thpool.o" "thpool.h" "thpool.c" "server.o" "server.h" "server.c" "segment.h" "segment.c" "samples/" "README.md" "pitch.h" "pitch.c" "Makefile" "jobqueue.o" "jobqueue.h" "jobqueue.c" "jack.o" "jack.h" "jack.c" "jack-1.9.10.tar.bz2" "file.o" "file.h" "file.c" "dirt.o" "dirt.c" "dirt" "COPYING" "config.h" "common.o" "common.h" "common.c" "AUTHORS" "audio.o" "audio.h" "audio.c" ".gitmodules" ".gitignore" ".git/" ".DS_Store" "../" "./")
 
  ("/Users/Fabien/work/music/tidal/" (22246 7950 0 0) "helloworld.tidal~" "helloworld.tidal" "../" "./")
@@ -130,14 +189,6 @@
 
  ("/Users/Fabien/Dropbox/" (22258 1882 0 0) "v1.12.rar" "v1.12/" "usb.img.zip" "usb.img" "Icon
 " "fabien/" "DSI_SCH/" "DSI/" "DRVR_deva-ctrl-intel_hda_br-660_be-660_intel_hda-src_SVN796915_JBN14-exp.zip" "Current OS/" "btl_32MX360F512L_uart.ld" ".Trash-1000/" ".DS_Store" ".dropbox.cache/" ".dropbox" "../" "./")
-
- ("/Users/Fabien/work/development/algorithms/dsp/fft/" (22251 35798 0 0) "sig_proc.h~" "sig_proc.h" "sig_proc.c~" "sig_proc.c" "objs/" "Makefile~" "Makefile" "main.c~" "main.c" "libsig_proc.so" "fft_tests.py~" "fft_tests.py" "fft_test.m" "algo" "../" "./")
-
- ("/Users/Fabien/work/development/algorithms/dsp/" (22251 33299 0 0) "fft/" "doc/" ".DS_Store" "../" "./")
-
- ("/Users/Fabien/work/development/algorithms/" (22251 33278 0 0) "sort_algorithms/" "dsp/" ".DS_Store" "../" "./")
-
- ("/Users/Fabien/work/" (22249 34806 0 0) "website/" "org/" "music/" "Max_7/" "jobs/" "field_recordings/" "electronic/" "development/" "coursea/" ".DS_Store" "../" "./")
 
  ("/Users/Fabien/work/dsp/algorithms/fft/" (22247 34537 0 0) "sig_proc.h~" "sig_proc.h" "sig_proc.c~" "sig_proc.c" "objs/" "Makefile~" "Makefile" "main.c~" "main.c" "libsig_proc.so" "fft_tests.py~" "fft_tests.py" "fft_test.m" "algo" ".#sig_proc.c" "../" "./")
 
@@ -154,8 +205,6 @@
  ("/Users/Fabien/work/jobs/2016/template/CV/" (22242 24018 0 0) "tweaklist.sty" "PublicFabienCesari_CV.pdf" "pictures/" "moderncvstyleoldstyle.sty" "moderncvstyleempty.sty" "moderncvstyleclassic.sty" "moderncvstylecasual.sty" "moderncvstylebanking.sty" "moderncvcompatibility.sty" "moderncvcolorred.sty" "moderncvcolorpurple.sty" "moderncvcolororange.sty" "moderncvcolorgrey.sty" "moderncvcolorgreen.sty" "moderncvcolorblue.sty" "moderncvcolorblack.sty" "moderncv.cls" "FabienCesari_CV.tex~" "FabienCesari_CV.tex" "FabienCesari_CV.synctex.gz" "FabienCesari_CV.pdf" "FabienCesari_CV.out" "FabienCesari_CV.log" "FabienCesari_CV.aux" "cv_7.out" "cv_7.log" "cv_7.aux" "_FabienCesari_CV.tex~" "_FabienCesari_CV.tex" "_FabienCesari_CV.synctex.gz" "_FabienCesari_CV.out" "_FabienCesari_CV.log" "_FabienCesari_CV.aux" ".DS_Store" "../" "./")
 
  ("/Users/Fabien/work/development/signal_processing/" (21559 20744 0 0) "Digital Media Processing - DSP Algorithms Using C.pdf" "Dafx/" "../" "./")
-
- ("/Users/Fabien/work/development/" (21573 43745 0 0) "table_from_csv.sh~" "signal_processing/" "sequencer/" "pd_externals/" "matlab/" "kaggle/" "data_structures/" "algorithms/" "../" "./")
 
  ("/Users/Fabien/work/dsp/algorithms/" (22244 41379 0 0) "fft_tests.py" "fft/" "../" "./")
 

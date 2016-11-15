@@ -31,3 +31,6 @@
 [submodule "external/string-inflection"]
 	path = external/string-inflection
 	url = https://github.com/akicho8/string-inflection
+[submodule "exec-path-from-shell"]
+	path = exec-path-from-shell
+	url = https://github.com/purcell/exec-path-from-shell
