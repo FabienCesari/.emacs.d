@@ -262,6 +262,14 @@
 * OS specific configuaration
 ** OSX key bindings
    #+BEGIN_SRC emacs-lisp
+     mac-function-modifier
+     mac-control-modifier
+     mac-command-modifier
+     mac-option-modifier
+     mac-right-command-modifier
+     mac-right-control-modifier
+     mac-right-option-modifier
+     
      (setq mac-option-key-is-meta nil)
      (setq mac-command-key-is-meta t)
      (setq mac-command-modifier 'meta)
@@ -282,13 +290,28 @@
 * External plugins    
 ** Haskell - Tidal
    #+BEGIN_SRC emacs-lisp
+     ;;haskel
      (add-to-list 'load-path  "~/.emacs.d/external/haskell-mode")
-     (require 'haskell-mode-autoloads)
-     (add-to-list 'Info-default-directory-list  "~/.emacs.d/external/haskell-mode")
-     (add-to-list 'load-path "~/work/music/tidal")
-     (require 'haskell-mode)
-     (require 'tidal)
+     ;;(require 'haskell-mode-autoloads)
+     ;;(add-to-list 'Info-default-directory-list  "~/.emacs.d/external/haskell-mode")
+     ;;(add-to-list 'load-path "~/work/music/tidal")
+     ;;(require 'haskell-mode)
      
+     
+     (require 'package)
+     (custom-set-variables
+      ;; custom-set-variables was added by Custom.
+      ;; If you edit it by hand, you could mess it up, so be careful.
+      ;; Your init file should contain only one such instance.
+      ;; If there is more than one, they won't work right.
+      '(package-archives
+        (quote
+         (("gnu" . "http://elpa.gnu.org/packages/")
+          ("melpa-stable" . "http://stable.melpa.org/packages/")))))
+     (package-initialize)
+     
+     ;;tidal
+     (require 'tidal)
      (require 'package)
      (add-to-list 'package-archives 
          '("marmalade" .
