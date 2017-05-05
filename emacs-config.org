@@ -262,18 +262,18 @@
 * OS specific configuaration
 ** OSX key bindings
    #+BEGIN_SRC emacs-lisp
-     mac-function-modifier
-     mac-control-modifier
-     mac-command-modifier
-     mac-option-modifier
-     mac-right-command-modifier
-     mac-right-control-modifier
-     mac-right-option-modifier
+     ;;mac-function-modifier
+     ;;mac-control-modifier
+     ;;mac-command-modifier
+     ;;mac-option-modifier
+     ;;mac-right-command-modifier
+     ;;mac-right-control-modifier
+     ;;mac-right-option-modifier
      
-     (setq mac-option-key-is-meta nil)
-     (setq mac-command-key-is-meta t)
-     (setq mac-command-modifier 'meta)
-     (setq mac-option-modifier nil)
+     ;;(setq mac-option-key-is-meta nil)
+     ;;(setq mac-command-key-is-meta t)
+     ;;(setq mac-command-modifier 'meta)
+     ;;(setq mac-option-modifier nil)
      
      ;;(setq mac-option-modifier 'none)
      ;;(setq mac-command-modifier 'meta)
