@@ -3,8 +3,8 @@
 ;;; Code:
 
 
-;;;### (autoloads nil "eieio-core" "eieio-core.el" (22132 43034 0
-;;;;;;  0))
+;;;### (autoloads (eieio-defclass-autoload) "eieio-core" "eieio-core.el"
+;;;;;;  (22137 41159 360000 0))
 ;;; Generated autoloads from eieio-core.el
 
 (autoload 'eieio-defclass-autoload "eieio-core" "\
@@ -19,8 +19,8 @@ It creates an autoload function for CNAME's constructor.
 
 ;;;***
 
-;;;### (autoloads nil "eieio-custom" "eieio-custom.el" (22132 43034
-;;;;;;  0 0))
+;;;### (autoloads (customize-object) "eieio-custom" "eieio-custom.el"
+;;;;;;  (22137 41159 360000 0))
 ;;; Generated autoloads from eieio-custom.el
 
 (autoload 'customize-object "eieio-custom" "\
@@ -31,7 +31,9 @@ Optional argument GROUP is the sub-group of slots to display.
 
 ;;;***
 
-;;;### (autoloads nil "eieio-opt" "eieio-opt.el" (22132 43034 0 0))
+;;;### (autoloads (eieio-describe-generic eieio-describe-constructor
+;;;;;;  eieio-describe-class eieio-browse) "eieio-opt" "eieio-opt.el"
+;;;;;;  (22137 41159 360000 0))
 ;;; Generated autoloads from eieio-opt.el
 
 (autoload 'eieio-browse "eieio-opt" "\
@@ -65,7 +67,7 @@ Also extracts information about all methods specific to this generic.
 ;;;***
 
 ;;;### (autoloads nil nil ("chart.el" "eieio-base.el" "eieio-datadebug.el"
-;;;;;;  "eieio-speedbar.el" "eieio.el") (22136 37070 726116 0))
+;;;;;;  "eieio-speedbar.el" "eieio.el") (22796 50001 695238 684000))
 
 ;;;***
 

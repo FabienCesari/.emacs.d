@@ -15,13 +15,14 @@ File: dir,	Node: Top	This is the top of the INFO tree
 * Menu:
 
 Emacs
-* CEDET: (cedet).       Collection of Emacs Development Environment Tools
-* Semantic: (semantic). Infrastructure for parser based text analysis.
+* CEDET: (cedet).               Collection of Emacs Development Environment 
+                                  Tools
+* Semantic: (semantic).         Infrastructure for parser based text analysis.
 * Semantic Application Writer's guide: (semantic-appdev).
 * Semantic Grammar Framework: (grammar-fw).
 * Semantic Language Writer's guide: (semantic-langdev).
 * Semantic User's guide: (semantic-user).
-* cogre: (cogre).       Graphs & UML for Emacs
+* cogre: (cogre).               Graphs & UML for Emacs
 
 Emacs misc features
 * Bovine: (bovine).             Semantic bovine parser development.
