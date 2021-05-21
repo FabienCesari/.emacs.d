@@ -14,3 +14,7 @@ semanticdb/
 /external/cedet/lisp/cedet/cogre/loaddefs.el
 .org-id-locations
 *.org#
+*.data
+elpa/archives/gnu/archive-contents
+elpa/archives/melpa-stable/archive-contents
+elpa/archives/org/archive-contents
