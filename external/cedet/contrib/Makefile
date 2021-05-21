@@ -5,20 +5,20 @@
 # EDE is the Emacs Development Environment.
 # http://cedet.sourceforge.net/ede.shtml
 #
-setup_LISP=cedet-contrib.el
-require=$(foreach r,$(1),(require (quote $(r))))
-EMACSFLAGS=-batch --no-site-file --eval '(setq debug-on-error t)' -l "../cedet-remove-builtin.el"
-EMACS=@echo "    > $@";emacs
-AUTOGENFLAGS=-L ../lisp/cedet --eval '(progn (require (quote cedet-compat)) (require (quote mode-local)))'
 
 top=
 ede_FILES=Project.ede Makefile
 
 misc_AUX=ChangeLog
+EMACS=emacs
+LOADPATH= ../common/  ../ede/ ../semantic/ ../eieio/\
+    ../semantic/bovine/ ../speedbar/ ../semantic/wisent/
 LOADDEFS=contrib-loaddefs.el
 LOADDIRS=.
 init_LISP=cedet-contrib-load.el
-LOADPATH= ../lisp/cedet/ ../lisp/eieio/ ../ ./
+EMACSFLAGS=-batch --no-site-file
+ELISPPRELOAD= cedet-compat
+setup_LISP=cedet-contrib.el
 wy_SEMANTIC_GRAMMAR=wisent-csharp.wy wisent-ruby.wy wisent-php.wy
 wy_SEMANTIC_GRAMMAR_EL=wisent-csharp-wy.el wisent-ruby-wy.el wisent-php-wy.el
 lisp_LISP=wisent-csharp.el semantic-tag-folding.el eassist.el wisent-ruby.el wisent-php.el ede-gnustep.el semantic-ectag-scala.el
@@ -29,40 +29,63 @@ DISTDIR=$(top)Contrib-$(VERSION)
 
 all: autoloads init setup wy lisp
 
-.PHONY: clean-autoloads
-clean-autoloads: 
-	rm -f $(LOADDEFS)
-
 .PHONY: autoloads
 autoloads: 
-	$(EMACS) $(EMACSFLAGS) $(AUTOGENFLAGS) $(addprefix -L ,$(LOADPATH)) --eval '(progn $(call require, $(PRELOADS)) (setq generated-autoload-file "$(abspath $(LOADDEFS))"))' -f batch-update-autoloads $(abspath $(LOADDIRS))
-
-
-%.elc: %.el
-	$(EMACS) $(EMACSFLAGS) $(addprefix -L ,$(LOADPATH)) --eval '(progn $(call require, $(PRELOADS)))' -f batch-byte-compile $^
+	@echo "(add-to-list 'load-path nil)" > $@-compile-script
+	for loadpath in . ${LOADPATH}; do \
+	   echo "(add-to-list 'load-path \"$$loadpath\")" >> $@-compile-script; \
+	done;
+	@echo "(require 'cedet-autogen)" >> $@-compile-script
+	"$(EMACS)" -batch --no-site-file -l $@-compile-script -f cedet-batch-update-autoloads $(LOADDEFS) $(LOADDIRS)
 
 .PHONY: init
-init: $(addsuffix c, $(init_LISP))
+init: $(init_LISP)
+	@echo "(add-to-list 'load-path nil)" > $@-compile-script
+	for loadpath in . ${LOADPATH}; do \
+	   echo "(add-to-list 'load-path \"$$loadpath\")" >> $@-compile-script; \
+	done;
+	for preload in ${ELISPPRELOAD}; do \
+	   echo "(load \"$$preload\")" >> $@-compile-script; \
+	done;
+	@echo "(setq debug-on-error t)" >> $@-compile-script
+	"$(EMACS)" $(EMACSFLAGS) -l $@-compile-script -f batch-byte-compile $^
 
 .PHONY: setup
-setup: $(addsuffix c, $(setup_LISP))
-
-%-wy.el: %.wy
-	$(EMACS) $(EMACSFLAGS) $(addprefix -L ,$(LOADPATH)) --eval '(progn $(call require,$(PRELOADS)))' -f semantic-grammar-batch-build-packages $^
+setup: $(setup_LISP)
+	@echo "(add-to-list 'load-path nil)" > $@-compile-script
+	for loadpath in . ${LOADPATH}; do \
+	   echo "(add-to-list 'load-path \"$$loadpath\")" >> $@-compile-script; \
+	done;
+	@echo "(setq debug-on-error t)" >> $@-compile-script
+	"$(EMACS)" $(EMACSFLAGS) -l $@-compile-script -f batch-byte-compile $^
 
 .PHONY: wy
-wy: $(addsuffix -wy.elc, $(basename $(wy_SEMANTIC_GRAMMAR)))
-wy: PRELOADS=cedet-devel-load cedet-compat semantic/grammar semantic/bovine/grammar semantic/wisent/grammar
+wy: $(wy_SEMANTIC_GRAMMAR)
+	@echo "(add-to-list 'load-path nil)" > grammar-make-script
+	@for loadpath in . ${LOADPATH}; do \
+	   echo "(add-to-list 'load-path \"$$loadpath\")" >> grammar-make-script; \
+	done;
+	@echo "(require 'semantic-load)" >> grammar-make-script
+	@echo "(require 'semantic-grammar)" >> grammar-make-script
+	"$(EMACS)" -batch --no-site-file -l grammar-make-script -f semantic-grammar-batch-build-packages $^
 
-wy: EMACSFLAGS+= --eval '(setq max-specpdl-size 1500 max-lisp-eval-depth 700 cedet-minimum-setup t)'
 .PHONY: lisp
-lisp: $(addsuffix c, $(lisp_LISP))
+lisp: $(lisp_LISP)
+	@echo "(add-to-list 'load-path nil)" > $@-compile-script
+	for loadpath in . ${LOADPATH}; do \
+	   echo "(add-to-list 'load-path \"$$loadpath\")" >> $@-compile-script; \
+	done;
+	for preload in ${ELISPPRELOAD}; do \
+	   echo "(load \"$$preload\")" >> $@-compile-script; \
+	done;
+	@echo "(setq debug-on-error t)" >> $@-compile-script
+	"$(EMACS)" $(EMACSFLAGS) -l $@-compile-script -f batch-byte-compile $^
 
 tags: 
 
 
 clean:
-	rm -f *-by.el *-wy.el *.elc
+	rm -f *.elc
 
 .PHONY: dist
 
