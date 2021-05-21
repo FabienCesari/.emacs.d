@@ -307,8 +307,7 @@
       '(package-archives
         (quote
          (("gnu" . "http://elpa.gnu.org/packages/")
-          ("melpa-stable" . "http://stable.melpa.org/packages/")))))
-     (package-initialize)
+          ("melpa-stable" . "http://stable.melpa.org/packages/")))))     
      
      ;;tidal
      (require 'tidal)
@@ -316,7 +315,6 @@
      (add-to-list 'package-archives 
          '("marmalade" .
            "http://marmalade-repo.org/packages/"))
-     (package-initialize)
      (setq load-path (cons "~/work/music/tidal/" load-path))
      (require 'tidal)
      (setq tidal-interpreter "/opt/local/bin/ghci")
