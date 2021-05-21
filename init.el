@@ -6,18 +6,8 @@
 ;;Org mode de-activate Shift + arrow keybinding
 (setq org-replace-disputed-keys t)
 
-;;Load Org mode
-(add-to-list 'load-path "~/.emacs.d/external/org-mode/lisp")
-(add-to-list 'load-path "~/.emacs.d/external/org-mode/contrib/lisp" t)
-(require 'cl)
-
-;;Org Babel Setup.
-(setq org-babel-load-languages '((emacs-lisp . t )))
-(setq org-confirm-babel-evaluate nil)
- 
-;;Org install and keylist
-(require 'org-install)
-(add-to-list 'auto-mode-alist '("\\.org" . org-mode))
+(require 'package)
+(add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 
 ;;Block 
 ;;(require 'org-exp-blocks)
@@ -27,18 +17,6 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
 (setq org-log-done t)
-
-(require 'org)
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((sh         . t)
-   (emacs-lisp . t)
-   (lisp       . t)
-   (gnuplot    . t)
-   (R          . t)
-   (dot        . t)
-   (python     . t)))
-(setq org-confirm-babel-evaluate nil)
 
 ;;load neatly organized org file!
 (org-babel-load-file "~/.emacs.d/emacs-config.org")
@@ -51,3 +29,5 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:background "black" :foreground "grey"))))
  '(fringe ((t (:background "black")))))
+
+(define-obsolete-function-alias 'string-to-int 'string-to-number "22.1")
