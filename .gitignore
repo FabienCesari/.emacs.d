@@ -18,3 +18,4 @@ semanticdb/
 elpa/archives/gnu/archive-contents
 elpa/archives/melpa-stable/archive-contents
 elpa/archives/org/archive-contents
+*.last
