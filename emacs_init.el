@@ -1,0 +1,300 @@
+(setq user-full-name "Fabien Cesari"
+      user-mail-address "fabien.cesari@gmail.com")
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:background "black" :foreground "grey"))))
+ '(fringe ((t (:background "black")))))
+
+(add-to-list 'load-path "~/.emacs.d/externals/")
+
+;; change window focus with shift-arrows
+;;(require 'windmove)
+(windmove-default-keybindings)
+(setq windmove-wrap-around t)
+(require 'buffer-move)
+
+;;Key bindings
+(global-set-key (kbd "C-+") 'hs-toggle-hiding)
+
+(add-hook 'c-mode-common-hook   'hs-minor-mode)
+(add-hook 'emacs-lisp-mode-hook 'hs-minor-mode)
+(add-hook 'java-mode-hook       'hs-minor-mode)
+(add-hook 'espresso-mode-hook   'hs-minor-mode)
+(add-hook 'lisp-mode-hook       'hs-minor-mode)
+(add-hook 'perl-mode-hook       'hs-minor-mode)
+(add-hook 'sh-mode-hook         'hs-minor-mode)
+
+(global-set-key (kbd "<C-S-up>")     'buf-move-up)
+(global-set-key (kbd "<C-S-donw>")   'buf-move-down)
+(global-set-key (kbd "<C-S-left>")   'buf-move-left)
+(global-set-key (kbd "<C-S-right>")  'buf-move-right)
+
+;;; I prefer cmd key for meta
+(setq mac-command-modifier 'meta)
+(setq mac-right-option-modifier nil)
+
+;;; Remove Distracions on startup
+;;No splash screen
+(setq inhibit-startup-screen t)
+;; Prevent the cursor from blinking
+(blink-cursor-mode 0)
+;; Don't use messages that you don't read
+(setq initial-scratch-message "")
+(setq inhibit-startup-message t)
+;; Don't let Emacs hurt your ears
+;;(setq visible-bell t)
+
+;; You need to set `inhibit-startup-echo-area-message' from the
+;; customization interface:
+;; M-x customize-variable RET inhibit-startup-echo-area-message RET
+;; then enter your username
+(setq inhibit-startup-echo-area-message "cesari")
+
+;; This is bound to f11 in Emacs 24.4
+;;(toggle-frame-fullscreen) 
+
+(set-frame-parameter nil 'fullscreen 'fullboth)
+;; Who use the bar to scroll?
+(scroll-bar-mode 0)
+
+;;No toolbar
+(tool-bar-mode 0)
+(menu-bar-mode 0)
+
+;; You can also set the initial frame parameters
+;; (setq initial-frame-alist
+;;       '((menu-bar-lines . 0)
+;;         (tool-bar-lines . 0)))
+
+
+;; No mode line
+(defvar-local hidden-mode-line-mode nil)
+(defvar-local hide-mode-line nil)
+
+(define-minor-mode hidden-mode-line-mode
+  "Minor mode to hide the mode-line in the current buffer."
+  :init-value nil
+  :global nil
+  :variable hidden-mode-line-mode
+  :group 'editing-basics
+  (if hidden-mode-line-mode
+      (setq hide-mode-line mode-line-format
+	    mode-line-format nil)
+    (setq mode-line-format hide-mode-line
+	  hide-mode-line nil))
+  (force-mode-line-update)
+  ;; Apparently force-mode-line-update is not always enough to
+  ;; redisplay the mode-line
+  (redraw-display)
+  (when (and (called-interactively-p 'interactive)
+	     hidden-mode-line-mode)
+    (run-with-idle-timer
+     0 nil 'message
+     (concat "Hidden Mode Line Mode enabled.  "
+	     "Use M-x hidden-mode-line-mode to make the mode-line appear."))))
+
+;; Activate hidden-mode-line-mode
+;;(hidden-mode-line-mode 1)
+
+;; If you want to hide the mode-line in all new buffers
+;;(add-hook 'after-change-major-mode-hook 'hidden-mode-line-mode)
+
+;; Alternatively, you can paint your mode-line in White but then
+;; you'll have to manually paint it in black again
+;; (custom-set-faces
+;;  '(mode-line-highlight ((t nil)))
+;;  '(mode-line ((t (:foreground "white" :background "white"))))
+;;  '(mode-line-inactive ((t (:background "white" :foreground "white")))))
+
+;; A small minor mode to use a big fringe
+(defvar bzg-big-fringe-mode nil)
+(define-minor-mode bzg-big-fringe-mode
+  "Minor mode to use big fringe in the current buffer."
+  :init-value nil
+  :global t
+  :variable bzg-big-fringe-mode
+  :group 'editing-basics
+  (if (not bzg-big-fringe-mode)
+      (set-fringe-style nil)
+    (set-fringe-mode
+     (/ (- (frame-pixel-width)
+	   (* 100 (frame-char-width)))
+	2))))
+
+;; Now activate this global minor mode
+(bzg-big-fringe-mode 1)
+
+;; To activate the fringe by default and deactivate it when windows
+;; are split vertically, uncomment this:
+;; (add-hook 'window-configuration-change-hook
+;;           (lambda ()
+;;             (if (delq nil
+;;                       (let ((fw (frame-width)))
+;;                         (mapcar (lambda(w) (< (window-width w) fw))
+;;                                 (window-list))))
+;;                 (bzg-big-fringe-mode 0)
+;;               (bzg-big-fringe-mode 1))))
+
+;; Use a minimal cursor
+;; (setq default-cursor-type 'hbar)
+
+;; Get rid of the indicators in the fringe
+(mapcar (lambda(fb) (set-fringe-bitmap-face fb 'org-hide))
+	fringe-bitmaps)
+
+;; Set the color of the fringe
+;;(custom-set-faces
+ ;;'(fringe ((t (:background "white")))))
+
+;;Background color
+(custom-set-faces
+  '(default ((t (:background "black" :foreground "grey"))))
+  '(fringe ((t (:background "black")))))
+
+;;; emacs auto generate
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(gdb-max-frames 100)
+ '(global-subword-mode t)
+ '(ido-enable-flex-matching t)
+ '(ido-everywhere t)
+ '(ido-mode (quote both) nil (ido))
+ '(tool-bar-mode t))
+
+
+(set-face-attribute 'default nil :height 120)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+;; -*- mode: elisp -*-
+
+;; Disable the splash screen (to enable it agin, replace the t with 0)
+(setq inhibit-splash-screen t)
+
+;; Enable transient mark mode
+(transient-mark-mode 1)
+
+;;;;Org mode configuration
+;; Enable Org mode
+(require 'org)
+;; Make Org mode work with files ending in .org
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+;; The above is the default in recent emacsen
+
+;; Set to the location of your Org files on your local system
+(setq org-directory "~/work/org")
+
+;; Set to the name of the file where new notes will be stored
+(if (file-exists-p "~/work/org/flagged.org")
+    (setq org-mobile-inbox-for-pull "~/work/org/flagged.org")
+)
+
+;; Set to <your Dropbox root directory>/MobileOrg.
+(setq org-mobile-directory "~/Dropbox/Applications/MobileOrg")
+
+;;Load agneda files. 
+(if (file-exists-p "~/work/org/agenda.org")
+    (setq org-agenda-files (list "~/work/org/agenda.org"))
+  )
+
+;;LaTeX export
+(require 'ox-latex)
+(unless (boundp 'org-export-latex-classes)
+  (setq org-export-latex-classes nil))
+(add-to-list 'org-export-latex-classes
+             '("article"
+               "\\documentclass{article}"
+               ("\\section{%s}" . "\\section*{%s}")))
+
+(require 'ox-publish)
+(setq org-publish-project-alist
+      '(
+
+        ;;Path to org files
+        ("org-notes"
+         :base-directory "~/work/website/org/"
+         :base-extension "org"
+
+         ;;Path to jekyll
+         :publishing-directory "~/work/website/docs"
+         :recursive t
+         :publishing-function org-html-publish-to-html
+         :headline-levels 4
+         :html-extension "html"
+         :body-only t
+         )
+
+        ("org-static"
+         :base-directory "~/work/website/org/"
+         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+         :publishing-directory "~/work/website/docs"
+         :recursive t
+         :publishing-function org-publish-attachment
+         )                        
+        ("org" :components ("org-notes" "org-static")) ;;org is the project name here
+
+        ))
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right. 
+ '(org-agenda-files (quote ("~/work/org/ical.org" "~/work/org/everything.org" "~/work/org/agenda.org"))) 
+)
+
+(add-to-list 'org-modules 'org-mac-iCal)
+(setq org-agenda-include-diary t)
+
+(load "org-static-blog.el")
+(setq org-static-blog-publish-title "cesari_studio")
+(setq org-static-blog-publish-url "https://www.cesari.studio/")
+(setq org-static-blog-publish-directory "~/work/blog/")
+(setq org-static-blog-posts-directory "~/work/blog/posts/")
+(setq org-static-blog-drafts-directory "~/work/blog/drafts/")
+(setq org-static-blog-enable-tags t)
+(setq org-export-with-toc nil)
+(setq org-export-with-section-numbers nil)
+
+;; This header is inserted into the <head> section of every page:
+;;   (you will need to create the style sheet at
+;;    ~/work/blog/static/style.css
+;;    and the favicon at
+;;    ~/work/blog/static/favicon.ico)
+(setq org-static-blog-page-header
+      "<meta name=\"author\" content=\"John Dow\">
+<meta name=\"referrer\" content=\"no-referrer\">
+<link href= \"static/style.css\" rel=\"stylesheet\" type=\"text/css\" />
+<link rel=\"icon\" href=\"static/favicon.ico\">")
+
+;; This preamble is inserted at the beginning of the <body> of every page:
+;;   This particular HTML creates a <div> with a simple linked headline
+(setq org-static-blog-page-preamble
+      "<div class=\"header\">
+  <a href=\"https://staticblog.org\">My Static Org Blog</a>
+</div>")
+
+;; This postamble is inserted at the end of the <body> of every page:
+;;   This particular HTML creates a <div> with a link to the archive page
+;;   and a licensing stub.
+(setq org-static-blog-page-postamble
+      "<div id=\"archive\">
+  <a href=\"https://staticblog.org/archive.html\">Other posts</a>
+</div>
+<center><a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\"><img alt=\"Creative Commons License\" style=\"border-width:0\" src=\"https://i.creativecommons.org/l/by-sa/3.0/88x31.png\" /></a><br /><span xmlns:dct=\"https://purl.org/dc/terms/\" href=\"https://purl.org/dc/dcmitype/Text\" property=\"dct:title\" rel=\"dct:type\">bastibe.de</span> by <a xmlns:cc=\"https://creativecommons.org/ns#\" href=\"https://bastibe.de\" property=\"cc:attributionName\" rel=\"cc:attributionURL\">Bastian Bechtold</a> is licensed under a <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</center>")
+
+;; This HTML code is inserted into the index page between the preamble and
+;;   the blog posts
+(setq org-static-blog-index-front-matter
+      "<h1> Welcome to my blog </h1>\n")
