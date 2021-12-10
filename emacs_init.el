@@ -303,3 +303,5 @@
 ;;   the blog posts
 (setq org-static-blog-index-front-matter
       "")
+
+(add-to-list 'auto-mode-alist (cons (concat org-static-blog-posts-directory ".*\\.org\\'") 'org-static-blog-mode))
