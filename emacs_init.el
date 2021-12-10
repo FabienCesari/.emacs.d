@@ -287,6 +287,7 @@
           <a href=\"/\" title=\"Home\">cesari.studio</a>
         </h1>
         <ul class=\"nav\">
+          <li><a href=\"/index.html\">Home</a></li>          
           <li><a href=\"/projects.html\">Projects</a></li>
           <li><a href=\"about.html\">About</a></li>
         </ul>
