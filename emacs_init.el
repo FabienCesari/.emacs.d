@@ -1,4 +1,3 @@
-
 (setq user-full-name "Fabien Cesari"
       user-mail-address "fabien.cesari@gmail.com")
 
@@ -84,19 +83,19 @@
   :group 'editing-basics
   (if hidden-mode-line-mode
       (setq hide-mode-line mode-line-format
-            mode-line-format nil)
+	    mode-line-format nil)
     (setq mode-line-format hide-mode-line
-          hide-mode-line nil))
+	  hide-mode-line nil))
   (force-mode-line-update)
   ;; Apparently force-mode-line-update is not always enough to
   ;; redisplay the mode-line
   (redraw-display)
   (when (and (called-interactively-p 'interactive)
-             hidden-mode-line-mode)
+	     hidden-mode-line-mode)
     (run-with-idle-timer
      0 nil 'message
      (concat "Hidden Mode Line Mode enabled.  "
-             "Use M-x hidden-mode-line-mode to make the mode-line appear."))))
+	     "Use M-x hidden-mode-line-mode to make the mode-line appear."))))
 
 ;; Activate hidden-mode-line-mode
 ;;(hidden-mode-line-mode 1)
@@ -123,8 +122,8 @@
       (set-fringe-style nil)
     (set-fringe-mode
      (/ (- (frame-pixel-width)
-           (* 100 (frame-char-width)))
-        2))))
+	   (* 100 (frame-char-width)))
+	2))))
 
 ;; Now activate this global minor mode
 (bzg-big-fringe-mode 1)
@@ -145,7 +144,7 @@
 
 ;; Get rid of the indicators in the fringe
 (mapcar (lambda(fb) (set-fringe-bitmap-face fb 'org-hide))
-        fringe-bitmaps)
+	fringe-bitmaps)
 
 ;; Set the color of the fringe
 ;;(custom-set-faces
@@ -284,15 +283,16 @@
 (setq org-static-blog-page-preamble
 "<div class=\"container\">
    <header class=\"masthead\">
-        <h3 class=\"masthead-title\">
+        <h1 class=\"masthead-title\">
           <a href=\"/\" title=\"Home\">cesari.studio</a>
-        </h3>
+        </h1>
         <ul class=\"nav\">
-          <li><a href=\"/blog\">Projects</a></li>
-          <li><a href=\"/about\">About</a></li>
+          <li><a href=\"/projects.html\">Projects</a></li>
+          <li><a href=\"about.html\">About</a></li>
         </ul>
+
       </header>
-</div>")
+</Div>")
 ;; This postamble is inserted at the end of the <body> of every page:
 ;;   This particular HTML creates a <div> with a link to the archive page
 ;;   and a licensing stub.

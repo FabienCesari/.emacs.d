@@ -306,15 +306,16 @@
   (setq org-static-blog-page-preamble
   "<div class=\"container\">
      <header class=\"masthead\">
-          <h3 class=\"masthead-title\">
+          <h1 class=\"masthead-title\">
             <a href=\"/\" title=\"Home\">cesari.studio</a>
-          </h3>
+          </h1>
           <ul class=\"nav\">
-            <li><a href=\"/blog\">Projects</a></li>
-            <li><a href=\"/about\">About</a></li>
+            <li><a href=\"/projects.html\">Projects</a></li>
+            <li><a href=\"about.html\">About</a></li>
           </ul>
+
         </header>
-  </div>")
+  </Div>")
   ;; This postamble is inserted at the end of the <body> of every page:
   ;;   This particular HTML creates a <div> with a link to the archive page
   ;;   and a licensing stub.
