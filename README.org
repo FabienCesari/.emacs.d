@@ -2,11 +2,9 @@
 #+AUTHOR:  Fabien Cesari
 #+EMAIL: fabien.cesari@gmail.com
 
-===========
 * Description and Installation
-
-** This is my understandable emacs configuration repository. based on the babel org mode.
-** To Clone it properely into your home dir:
+ This is my emacs configuration written with org mode. the .el configuration file will be automatically generated at startup.
+  - To Clone it properely into your home dir:
 
 - git clone git://github.com/FabienCesari/EmacsConfig .emacs.d/
 - cd .emacs.d/
