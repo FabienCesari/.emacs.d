@@ -306,3 +306,5 @@
       "")
 
 (add-to-list 'auto-mode-alist (cons (concat org-static-blog-posts-directory ".*\\.org\\'") 'org-static-blog-mode))
+
+(load "org-journal.el")

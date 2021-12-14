@@ -330,3 +330,7 @@
 
   (add-to-list 'auto-mode-alist (cons (concat org-static-blog-posts-directory ".*\\.org\\'") 'org-static-blog-mode))
 #+END_SRC
+** Org-journal
+#+BEGIN_SRC emacs-lisp
+  (load "org-journal.el")
+#+END_SRC
