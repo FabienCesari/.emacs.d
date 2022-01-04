@@ -34,3 +34,6 @@
 [submodule "exec-path-from-shell"]
 	path = exec-path-from-shell
 	url = https://github.com/purcell/exec-path-from-shell
+[submodule "external/haskell-mode"]
+	path = external/haskell-mode
+	url = https://github.com/haskell/haskell-mode.git
