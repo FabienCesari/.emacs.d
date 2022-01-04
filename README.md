@@ -2,11 +2,13 @@
 #+AUTHOR:  Fabien Cesari
 #+EMAIL: fabien.cesari@gmail.com
 
-* Description and Installation
- This is my emacs configuration written with org mode. the .el configuration file will be automatically generated at startup.
-  - To Clone it properely into your home dir:
+## Description 
+  Emacs configuration file written with org mode. the .el configuration file will be automatically generated at startup.
 
-- git clone git://github.com/FabienCesari/EmacsConfig .emacs.d/
+## Installation
+ Clone it into your home dir:
+ `git clone git://github.com/FabienCesari/.emacs.d .emacs.d/`
+then
 - cd .emacs.d/
 - git submodule init
 - git submodule update
