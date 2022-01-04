@@ -37,3 +37,6 @@
 [submodule "external/haskell-mode"]
 	path = external/haskell-mode
 	url = https://github.com/haskell/haskell-mode.git
+[submodule "external/emacs-w3m"]
+	path = external/emacs-w3m
+	url = https://github.com/emacs-w3m/emacs-w3m

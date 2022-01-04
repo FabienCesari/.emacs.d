@@ -345,6 +345,15 @@
   (load "org-journal.el")
 #+END_SRC
 
+** Emacs w3m
+#+BEGIN_SRC emacs-lisp
+  (require 'w3m-load)
+  (require 'mime-w3m)
+  (setq browse-url-browser-function 'w3m-browse-url)
+  (autoload 'w3m-browse-url "w3m" "Ask a WWW browser to show a URL." t)
+  ;; optional keyboard short-cut
+  (global-set-key "\C-xm" 'browse-url-at-point)
+#+END_SRC
 * code modes
 ** Haskell mode
 Source: https://github.com/haskell/haskell-mode
@@ -355,5 +364,9 @@ Source: https://github.com/haskell/haskell-mode
   (add-to-list 'Info-default-directory-list "~/.emacs.d/external/haskell-mode/")
 #+END_SRC
 
-
-
+** supercollider
+#+BEGIN_SRC emacs-lisp
+  ;; Paste path from above, appending "/scel/el"
+  (add-to-list 'load-path "/home/fabien/.local/share/SuperCollider/downloaded-quarks/scel/el")	     
+  (require 'sclang)
+#+END_SRC
