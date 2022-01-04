@@ -348,22 +348,11 @@
 * code modes
 ** Haskell mode
 Source: https://github.com/haskell/haskell-mode
- run emacs, and evaluate:
-- M-x package-refresh-
-and then follow by
-- M-x package-install RET haskell-mode
+ 
 #+BEGIN_SRC emacs-lisp
-  (require 'package)
-  (custom-set-variables
-   ;; custom-set-variables was added by Custom.
-   ;; If you edit it by hand, you could mess it up, so be careful.
-   ;; Your init file should contain only one such instance.
-   ;; If there is more than one, they won't work right.
-   '(package-archives
-     (quote
-      (("gnu" . "https://elpa.gnu.org/packages/")
-       ("melpa" . "https://melpa.org/packages/")))))
-  (package-initialize)
+  (add-to-list 'load-path "~/.emacs.d/external/haskell-mode/")
+  (require 'haskell-mode-autoloads)
+  (add-to-list 'Info-default-directory-list "~/.emacs.d/external/haskell-mode/")
 #+END_SRC
 
 
