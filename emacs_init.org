@@ -1,6 +1,5 @@
 #+TITLE: Emacs Documented Configuration File.
 #+OPTIONS: toc:4 h:4 
-
 * basic Configuration
 ** Personal Informations
 #+BEGIN_SRC emacs-lisp
@@ -362,6 +361,16 @@ Source: https://github.com/haskell/haskell-mode
   (add-to-list 'load-path "~/.emacs.d/external/haskell-mode/")
   (require 'haskell-mode-autoloads)
   (add-to-list 'Info-default-directory-list "~/.emacs.d/external/haskell-mode/")
+
+
+  (custom-set-variables
+        ;; custom-set-variables was added by Custom.
+        ;; If you edit it by hand, you could mess it up, so be careful.
+        ;; Your init file should contain only one such instance.
+        ;; If there is more than one, they won't work right. 
+   '(interactive-haskell-mode t))
+
+
 #+END_SRC
 
 ** supercollider
