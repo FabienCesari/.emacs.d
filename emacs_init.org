@@ -1,7 +1,6 @@
 #+TITLE: Emacs Documented Configuration File.
 #+OPTIONS: toc:4 h:4 
-
-* basic Configuratio
+* basic Configuration
 ** Personal Informations
 #+BEGIN_SRC emacs-lisp
 (setq user-full-name "Fabien Cesari"
@@ -73,7 +72,8 @@
      (scroll-bar-mode 0)
 
      ;;No toolbar
-     (tool-bar-mode 0)
+     ;;(tool-bar-mode 0)
+     (tool-bar-mode -1)
      (menu-bar-mode 0)
 
      ;; You can also set the initial frame parameters
@@ -93,20 +93,20 @@
        :variable hidden-mode-line-mode
        :group 'editing-basics
        (if hidden-mode-line-mode
-	   (setq hide-mode-line mode-line-format
-		 mode-line-format nil)
-	 (setq mode-line-format hide-mode-line
-	       hide-mode-line nil))
+           (setq hide-mode-line mode-line-format
+                 mode-line-format nil)
+         (setq mode-line-format hide-mode-line
+               hide-mode-line nil))
        (force-mode-line-update)
        ;; Apparently force-mode-line-update is not always enough to
        ;; redisplay the mode-line
        (redraw-display)
        (when (and (called-interactively-p 'interactive)
-		  hidden-mode-line-mode)
-	 (run-with-idle-timer
-	  0 nil 'message
-	  (concat "Hidden Mode Line Mode enabled.  "
-		  "Use M-x hidden-mode-line-mode to make the mode-line appear."))))
+                  hidden-mode-line-mode)
+         (run-with-idle-timer
+          0 nil 'message
+          (concat "Hidden Mode Line Mode enabled.  "
+                  "Use M-x hidden-mode-line-mode to make the mode-line appear."))))
 
      ;; Activate hidden-mode-line-mode
      ;;(hidden-mode-line-mode 1)
@@ -130,11 +130,11 @@
        :variable bzg-big-fringe-mode
        :group 'editing-basics
        (if (not bzg-big-fringe-mode)
-	   (set-fringe-style nil)
-	 (set-fringe-mode
-	  (/ (- (frame-pixel-width)
-		(* 100 (frame-char-width)))
-	     2))))
+           (set-fringe-style nil)
+         (set-fringe-mode
+          (/ (- (frame-pixel-width)
+                (* 100 (frame-char-width)))
+             2))))
 
      ;; Now activate this global minor mode
      (bzg-big-fringe-mode 1)
@@ -155,7 +155,7 @@
 
      ;; Get rid of the indicators in the fringe
      (mapcar (lambda(fb) (set-fringe-bitmap-face fb 'org-hide))
-	     fringe-bitmaps)
+             fringe-bitmaps)
 
      ;; Set the color of the fringe
      ;;(custom-set-faces
@@ -343,3 +343,43 @@
 #+BEGIN_SRC emacs-lisp
   (load "org-journal.el")
 #+END_SRC
+
+** Emacs w3m
+#+BEGIN_SRC emacs-lisp
+  (require 'w3m-load)
+  (require 'mime-w3m)
+  (setq browse-url-browser-function 'w3m-browse-url)
+  (autoload 'w3m-browse-url "w3m" "Ask a WWW browser to show a URL." t)
+  ;; optional keyboard short-cut
+  (global-set-key "\C-xm" 'browse-url-at-point)
+#+END_SRC
+* code modes
+** Haskell mode
+Source: https://github.com/haskell/haskell-mode
+ 
+#+BEGIN_SRC emacs-lisp
+    (add-to-list 'load-path "~/.emacs.d/external/haskell-mode/")
+    (add-to-list 'Info-default-directory-list "~/.emacs.d/external/haskell-mode/")
+    (custom-set-variables
+          ;; custom-set-variables was added by Custom.
+          ;; If you edit it by hand, you could mess it up, so be careful.
+          ;; Your init file should contain only one such instance.
+          ;; If there is more than one, they won't work right. 
+     '(interactive-haskell-mode t))
+    (require 'haskell-mode-autoloads)
+
+#+END_SRC
+
+** supercollider
+#+BEGIN_SRC emacs-lisp
+  ;; Paste path from above, appending "/scel/el"
+  (add-to-list 'load-path "/home/fabien/.local/share/SuperCollider/downloaded-quarks/scel/el")	     
+  (require 'sclang)
+#+END_SRC
+** Tidal Cycles
+#+BEGIN_SRC emacs-lisp
+  (require 'haskell-mode)
+  (require 'tidal)
+#+END_SRC
+
+

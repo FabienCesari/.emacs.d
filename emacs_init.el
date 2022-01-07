@@ -62,7 +62,8 @@
 (scroll-bar-mode 0)
 
 ;;No toolbar
-(tool-bar-mode 0)
+;;(tool-bar-mode 0)
+(tool-bar-mode -1)
 (menu-bar-mode 0)
 
 ;; You can also set the initial frame parameters
@@ -83,19 +84,19 @@
   :group 'editing-basics
   (if hidden-mode-line-mode
       (setq hide-mode-line mode-line-format
-	    mode-line-format nil)
+            mode-line-format nil)
     (setq mode-line-format hide-mode-line
-	  hide-mode-line nil))
+          hide-mode-line nil))
   (force-mode-line-update)
   ;; Apparently force-mode-line-update is not always enough to
   ;; redisplay the mode-line
   (redraw-display)
   (when (and (called-interactively-p 'interactive)
-	     hidden-mode-line-mode)
+             hidden-mode-line-mode)
     (run-with-idle-timer
      0 nil 'message
      (concat "Hidden Mode Line Mode enabled.  "
-	     "Use M-x hidden-mode-line-mode to make the mode-line appear."))))
+             "Use M-x hidden-mode-line-mode to make the mode-line appear."))))
 
 ;; Activate hidden-mode-line-mode
 ;;(hidden-mode-line-mode 1)
@@ -122,8 +123,8 @@
       (set-fringe-style nil)
     (set-fringe-mode
      (/ (- (frame-pixel-width)
-	   (* 100 (frame-char-width)))
-	2))))
+           (* 100 (frame-char-width)))
+        2))))
 
 ;; Now activate this global minor mode
 (bzg-big-fringe-mode 1)
@@ -144,7 +145,7 @@
 
 ;; Get rid of the indicators in the fringe
 (mapcar (lambda(fb) (set-fringe-bitmap-face fb 'org-hide))
-	fringe-bitmaps)
+        fringe-bitmaps)
 
 ;; Set the color of the fringe
 ;;(custom-set-faces
@@ -276,7 +277,16 @@
       "<meta name=\"author\" content=\"Fabien Cesari\">
 <meta name=\"referrer\" content=\"no-referrer\">
 <link href= \"static/style.css\" rel=\"stylesheet\" type=\"text/css\" />
-<link rel=\"icon\" href=\"static/favicon.ico\">")
+<link rel=\"icon\" href=\"static/favicon.ico\">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src=\"https://www.googletagmanager.com/gtag/js?id=G-1J5LZRTXCB\"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1J5LZRTXCB');
+  </script>
+" )
 
 ;; This preamble is inserted at the beginning of the <body> of every page:
 ;;   This particular HTML creates a <div> with a simple linked headline
@@ -293,7 +303,7 @@
         </ul>
 
       </header>
-</Div>")
+</Div>" )
 ;; This postamble is inserted at the end of the <body> of every page:
 ;;   This particular HTML creates a <div> with a link to the archive page
 ;;   and a licensing stub.
@@ -308,3 +318,13 @@
 (add-to-list 'auto-mode-alist (cons (concat org-static-blog-posts-directory ".*\\.org\\'") 'org-static-blog-mode))
 
 (load "org-journal.el")
+
+(add-to-list 'load-path "~/.emacs.d/external/haskell-mode/")
+(require 'haskell-mode-autoloads)
+(add-to-list 'Info-default-directory-list "~/.emacs.d/external/haskell-mode/")
+
+;; Paste path from above, appending "/scel/el"
+(add-to-list 'load-path "/home/fabien/.local/share/SuperCollider/downloaded-quarks/scel/el")	     
+(require 'sclang)
+;; in ~/.emacs - for help browser
+(require 'w3m)
