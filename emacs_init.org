@@ -343,15 +343,20 @@
 #+BEGIN_SRC emacs-lisp
   (load "org-journal.el")
 #+END_SRC
+** Org-clock
+#+BEGIN_SRC emacs-lisp
+  (setq org-clock-persist 'history)
+  (org-clock-persistence-insinuate)
+#+END_SRC
 
 ** Emacs w3m
 #+BEGIN_SRC emacs-lisp
-  (require 'w3m-load)
-  (require 'mime-w3m)
-  (setq browse-url-browser-function 'w3m-browse-url)
-  (autoload 'w3m-browse-url "w3m" "Ask a WWW browser to show a URL." t)
+  ;;(require 'w3m-load)
+  ;;(require 'mime-w3m)
+  ;;(setq browse-url-browser-function 'w3m-browse-url)
+  ;;(autoload 'w3m-browse-url "w3m" "Ask a WWW browser to show a URL." t)
   ;; optional keyboard short-cut
-  (global-set-key "\C-xm" 'browse-url-at-point)
+  ;;(global-set-key "\C-xm" 'browse-url-at-point)
 #+END_SRC
 * code modes
 ** Haskell mode
