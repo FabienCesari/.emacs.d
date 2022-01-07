@@ -122,7 +122,7 @@ From branch \"emacs-26\", added for compatibility.
     '((t (:foreground "#600000" :slant italic)))
   "Face for highlighting future org-journal entries in M-x calendar.")
 
-(defcustom org-journal-file-type 'daily
+(defcustom org-journal-file-type 'monthly
   "What type of journal file to create.
 
 When switching from daily to weekly, monthly, yearly, or from weekly,
