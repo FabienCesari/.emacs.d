@@ -279,6 +279,7 @@
 #+END_SRC
 
 ** Org-mode Static blog
+Source: https://github.com/bastibe/org-static-blog
 #+BEGIN_SRC emacs-lisp
       (load "org-static-blog.el")
       (setq org-static-blog-publish-title "cesari.studio")
@@ -334,8 +335,8 @@
 
       (setq org-static-blog-post-comments      
       "<script src=\"https://utteranc.es/client.js\"
-          repo=\"blog\"
-          issue-term=\"FabienCesari/blog\"
+          repo=\"FabienCesari/blog\"
+          issue-term=\"title\"
           theme=\"github-light\"
           crossorigin=\"anonymous\"
           async>
