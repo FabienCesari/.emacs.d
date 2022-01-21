@@ -281,23 +281,24 @@
 ** Org-mode Static blog
 Source: https://github.com/bastibe/org-static-blog
 #+BEGIN_SRC emacs-lisp
-      (load "org-static-blog.el")
-      (setq org-static-blog-publish-title "cesari.studio")
-      (setq org-static-blog-publish-url "https://www.cesari.studio/")
-      (setq org-static-blog-publish-directory "~/work/blog/")
-      (setq org-static-blog-posts-directory "~/work/blog/posts/")
-      (setq org-static-blog-drafts-directory "~/work/blog/drafts/")
-      (setq org-static-blog-enable-tags t)
-      (setq org-export-with-toc nil)
-      (setq org-export-with-section-numbers nil)
+  (load "org-static-blog.el")
+  (setq org-static-blog-publish-title "cesari.studio")
+  (setq org-static-blog-publish-url "https://www.cesari.studio/")
+  (setq org-static-blog-publish-directory "~/work/blog/")
+  (setq org-static-blog-posts-directory "~/work/blog/posts/")
+  (setq org-static-blog-drafts-directory "~/work/blog/drafts/")
+  (setq org-static-blog-enable-tags t)
+  (setq org-export-with-toc nil)
+  (setq org-export-with-section-numbers nil)
+  (setq org-static-blog-use-preview t)
 
-      ;; This header is inserted into the <head> section of every page:
-      ;;   (you will need to create the style sheet at
-      ;;    ~/work/blog/static/style.css
-      ;;    and the favicon at
-      ;;    ~/work/blog/static/favicon.ico)
-      (setq org-static-blog-page-header
-            "<meta name=\"author\" content=\"Fabien Cesari\">
+  ;; This header is inserted into the <head> section of every page:
+  ;;   (you will need to create the style sheet at
+  ;;    ~/work/blog/static/style.css
+  ;;    and the favicon at
+  ;;    ~/work/blog/static/favicon.ico)
+  (setq org-static-blog-page-header
+        "<meta name=\"author\" content=\"Fabien Cesari\">
       <meta name=\"referrer\" content=\"no-referrer\">
       <link href= \"static/style.css\" rel=\"stylesheet\" type=\"text/css\" />
       <link rel=\"icon\" href=\"static/favicon.ico\">
@@ -311,10 +312,10 @@ Source: https://github.com/bastibe/org-static-blog
         </script>
       " )
 
-      ;; This preamble is inserted at the beginning of the <body> of every page:
-      ;;   This particular HTML creates a <div> with a simple linked headline
-      (setq org-static-blog-page-preamble
-      "<div class=\"container\">
+  ;; This preamble is inserted at the beginning of the <body> of every page:
+  ;;   This particular HTML creates a <div> with a simple linked headline
+  (setq org-static-blog-page-preamble
+        "<div class=\"container\">
          <header class=\"masthead\">
               <h1 class=\"masthead-title\">
                 <a href=\"/\" title=\"Home\">cesari.studio</a>
@@ -324,17 +325,11 @@ Source: https://github.com/bastibe/org-static-blog
                 <li><a href=\"/projects.html\">Projects</a></li>
                 <li><a href=\"about.html\">About</a></li>
               </ul>
-
             </header>
       </Div>" )
-      ;; This postamble is inserted at the end of the <body> of every page:
-      ;;   This particular HTML creates a <div> with a link to the archive page
-      ;;   and a licensing stub.
-      (setq org-static-blog-page-postamble
-      "")      
 
-      (setq org-static-blog-post-comments      
-      "<script src=\"https://utteranc.es/client.js\"
+  (setq org-static-blog-post-comments      
+        "<script src=\"https://utteranc.es/client.js\"
           repo=\"FabienCesari/blog\"
           issue-term=\"title\"
           theme=\"github-light\"
@@ -343,12 +338,17 @@ Source: https://github.com/bastibe/org-static-blog
   </script>
     ")      
 
-      ;; This HTML code is inserted into the index page between the preamble and
-      ;;   the blog posts
-      (setq org-static-blog-index-front-matter
-            "")
+  ;; This postamble is inserted at the end of the <body> of every page:
+  ;;   This particular HTML creates a <div> with a link to the archive page
+  ;;   and a licensing stub.
+  (setq org-static-blog-page-postamble
+        "")      
 
-      (add-to-list 'auto-mode-alist (cons (concat org-static-blog-posts-directory ".*\\.org\\'") 'org-static-blog-mode))
+  ;; This HTML code is inserted into the index page between the preamble and
+  ;;   the blog posts
+  (setq org-static-blog-index-front-matter
+        "")
+  (add-to-list 'auto-mode-alist (cons (concat org-static-blog-posts-directory ".*\\.org\\'") 'org-static-blog-mode))
 #+END_SRC
 ** Org-journal
 #+BEGIN_SRC emacs-lisp
