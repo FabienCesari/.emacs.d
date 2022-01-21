@@ -389,8 +389,8 @@ Source: https://github.com/haskell/haskell-mode
 ** supercollider
 #+BEGIN_SRC emacs-lisp
   ;; Paste path from above, appending "/scel/el"
-  ;;;(add-to-list 'load-path "/home/fabien/.local/share/SuperCollider/downloaded-quarks/scel/el")
-  ;;;(require 'sclang)
+  (add-to-list 'load-path "/home/fabien/.local/share/SuperCollider/downloaded-quarks/scel/el")
+  (require 'sclang)
 #+END_SRC
 ** Tidal Cycles
 #+BEGIN_SRC emacs-lisp
