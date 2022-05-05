@@ -13,19 +13,23 @@ then
 cd .emacs.d/
 git submodule init
 git submodule update
-
+```
+```
 cd externals/emacs-w3m
 autoconf
 ./configure
 make
 make install
-
+```
+```
 cd ../haskell-mode
 make EMACS=emacs
+```
 
 install SuperCollider emacs interface scel -
-
 evaluate in SC:
+
+```
 Quarks.install("https://github.com/supercollider/scel");
 
 ```
