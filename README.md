@@ -6,10 +6,9 @@
  ```
  git clone git://github.com/FabienCesari/.emacs.d --recursive
  ```
- require texinfo
+ requires texinfo
 
 then
-```
 ```
 cd externals/emacs-w3m
 autoconf
