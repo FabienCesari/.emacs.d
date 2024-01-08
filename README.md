@@ -10,9 +10,6 @@
 
 then
 ```
-git submodule init
-git submodule update
-```
 ```
 cd externals/emacs-w3m
 autoconf
