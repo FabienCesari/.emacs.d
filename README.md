@@ -4,13 +4,12 @@
 ### Installation
  Clone it into your home dir:
  ```
- git clone git://github.com/FabienCesari/.emacs.d .emacs.d/
+ git clone git://github.com/FabienCesari/.emacs.d --recursive
  ```
  require texinfo
 
 then
 ```
-cd .emacs.d/
 git submodule init
 git submodule update
 ```
